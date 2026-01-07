@@ -8,10 +8,19 @@ declare global {
     ecwid_script_defer: boolean;
     ecwid_dynamic_widgets: boolean;
     _xnext_initialization_scripts: any[];
+    ec: any;
   }
 }
 
 const STORE_ID = "128774264";
+
+export const ECWID_CATEGORIES = [
+  { name: "Home Printers", slug: "Home-Printers", id: "193853315" },
+  { name: "Office Printers", slug: "Office-Printers", id: "193853316" },
+  { name: "Inkjet Printers", slug: "Inkjet-Printers", id: "193853317" },
+  { name: "Laser Printers", slug: "Laser-Printers", id: "193853318" },
+  { name: "Document Scanners", slug: "Document-Scanners", id: "193853319" },
+];
 
 export default function Shop() {
   const [isLoading, setIsLoading] = useState(true);

@@ -4,13 +4,27 @@ import { Menu, X, ShoppingCart, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
-const links = [
+const categoryLinks = [
+  { slug: "Home-Printers", id: "193853315", label: "Home Printers" },
+  { slug: "Office-Printers", id: "193853316", label: "Office Printers" },
+  { slug: "Inkjet-Printers", id: "193853317", label: "Inkjet Printers" },
+  { slug: "Laser-Printers", id: "193853318", label: "Laser Printers" },
+  { slug: "Document-Scanners", id: "193853319", label: "Document Scanners" },
+];
+
+type NavLink = {
+  href: string;
+  label: string;
+  isCategory?: boolean;
+};
+
+const links: NavLink[] = [
   { href: "/", label: "Home" },
-  { href: "/shop", label: "Home Printers" },
-  { href: "/shop", label: "Office Printers" },
-  { href: "/shop", label: "Inkjet Printers" },
-  { href: "/shop", label: "Laser Printers" },
-  { href: "/shop", label: "Document Scanners" },
+  ...categoryLinks.map(cat => ({ 
+    href: `/shop#!/${cat.slug}/c/${cat.id}`, 
+    label: cat.label,
+    isCategory: true
+  })),
   { href: "/contact", label: "Contact" },
 ];
 
@@ -60,18 +74,31 @@ export function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6">
             {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  location === link.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                )}
-              >
-                {link.label}
-              </Link>
+              link.isCategory ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+                  )}
+                  data-testid={`link-category-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary",
+                    location === link.href
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -108,19 +135,33 @@ export function Header() {
         <div className="md:hidden border-t bg-background">
           <div className="space-y-1 px-4 py-4">
             {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  "block px-3 py-2 text-base font-medium rounded-md transition-colors",
-                  location === link.href
-                    ? "bg-primary/10 text-primary"
-                    : "text-foreground hover:bg-muted"
-                )}
-              >
-                {link.label}
-              </Link>
+              link.isCategory ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "block px-3 py-2 text-base font-medium rounded-md transition-colors text-foreground hover:bg-muted"
+                  )}
+                  data-testid={`link-mobile-category-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "block px-3 py-2 text-base font-medium rounded-md transition-colors",
+                    location === link.href
+                      ? "bg-primary/10 text-primary"
+                      : "text-foreground hover:bg-muted"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
         </div>
