@@ -27,7 +27,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <EcwidScript storeId="128774264" />
+        <EcwidScript />
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">

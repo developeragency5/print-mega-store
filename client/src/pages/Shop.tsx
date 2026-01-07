@@ -1,25 +1,80 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
 
+declare global {
+  interface Window {
+    xProductBrowser: (...args: string[]) => void;
+    Ecwid: any;
+    ecwid_script_defer: boolean;
+    ecwid_dynamic_widgets: boolean;
+    _xnext_initialization_scripts: any[];
+  }
+}
+
+const STORE_ID = "128774264";
+
 export default function Shop() {
-  const storeRef = useRef<HTMLDivElement>(null);
-  const storeId = "128774264";
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // This function will re-initialize the product browser if we navigate back to this page
-    if (window.xProductBrowser && storeRef.current) {
-      // Clear any existing content to prevent duplication if re-rendering aggressively
-      storeRef.current.innerHTML = "";
-      
+    window.ecwid_script_defer = true;
+    window.ecwid_dynamic_widgets = true;
+
+    const initEcwid = () => {
+      if (typeof window.Ecwid !== "undefined") {
+        window.Ecwid.init();
+        window.Ecwid.OnAPILoaded.add(() => {
+          setIsLoading(false);
+        });
+        window.Ecwid.OnPageLoaded.add(() => {
+          setIsLoading(false);
+        });
+      }
+    };
+
+    const existingScript = document.getElementById("ecwid-script");
+    if (existingScript) {
+      initEcwid();
+      if (typeof window.xProductBrowser === "function") {
+        window.xProductBrowser(
+          "categoriesPerRow=3",
+          "views=grid(20,3) list(60) table(60)",
+          "categoryView=grid",
+          "searchView=list",
+          `id=my-store-${STORE_ID}`
+        );
+        setIsLoading(false);
+      }
+    } else {
       const script = document.createElement("script");
+      script.id = "ecwid-script";
       script.type = "text/javascript";
-      script.text = `xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-${storeId}");`;
-      storeRef.current.appendChild(script);
+      script.src = `https://app.ecwid.com/script.js?${STORE_ID}&data_platform=code`;
+      script.async = true;
+      script.onload = () => {
+        initEcwid();
+        if (typeof window.xProductBrowser === "function") {
+          window.xProductBrowser(
+            "categoriesPerRow=3",
+            "views=grid(20,3) list(60) table(60)",
+            "categoryView=grid",
+            "searchView=list",
+            `id=my-store-${STORE_ID}`
+          );
+        }
+      };
+      document.body.appendChild(script);
     }
+
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <div className="bg-gray-50 min-h-screen py-12">
+    <div className="bg-gray-50 dark:bg-gray-900 min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">Our Catalog</h1>
@@ -28,15 +83,14 @@ export default function Shop() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm border p-4 sm:p-8 min-h-[600px]">
-          {/* Ecwid Store Container */}
-          <div id={`my-store-${storeId}`} ref={storeRef}>
-             {/* Loading State Placeholder */}
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border p-4 sm:p-8 min-h-[600px]">
+          {isLoading && (
             <div className="flex flex-col items-center justify-center h-96 text-muted-foreground">
-               <Loader2 className="w-10 h-10 animate-spin mb-4 text-primary" />
-               <p>Loading catalog...</p>
+              <Loader2 className="w-10 h-10 animate-spin mb-4 text-primary" />
+              <p>Loading catalog...</p>
             </div>
-          </div>
+          )}
+          <div id={`my-store-${STORE_ID}`}></div>
         </div>
       </div>
     </div>
