@@ -1,37 +1,21 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ShoppingCart, Phone } from "lucide-react";
+import { Menu, X, ShoppingCart, Phone, ChevronDown, Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-
-const categoryLinks = [
-  { slug: "Home-Printers", id: "193853315", label: "Home Printers" },
-  { slug: "Office-Printers", id: "193853316", label: "Office Printers" },
-  { slug: "Inkjet-Printers", id: "193853317", label: "Inkjet Printers" },
-  { slug: "Laser-Printers", id: "193853318", label: "Laser Printers" },
-  { slug: "Document-Scanners", id: "193853319", label: "Document Scanners" },
-];
-
-type NavLink = {
-  href: string;
-  label: string;
-  isCategory?: boolean;
-};
-
-const links: NavLink[] = [
-  { href: "/", label: "Home" },
-  ...categoryLinks.map(cat => ({ 
-    href: `/shop#!/${cat.slug}/c/${cat.id}`, 
-    label: cat.label,
-    isCategory: true
-  })),
-  { href: "/contact", label: "Contact" },
-];
+import { useEcwid, getCategoryUrl } from "@/lib/ecwid";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
+  const { categories, isLoading } = useEcwid();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,15 +24,6 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Initialize Minicart on location change to ensure it renders if the script is loaded
-  useEffect(() => {
-    if (window.xMinicart) {
-      // Ecwid's xMinicart usually attaches itself to existing DOM elements or creates one
-      // We trigger a re-render/check here if needed
-      window.xMinicart("style=","layout=MiniAttachToProductBrowser");
-    }
-  }, [location]);
 
   return (
     <header
@@ -60,9 +35,8 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+        <div className="flex h-16 items-center justify-between gap-4">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">P</span>
             </div>
@@ -71,58 +45,105 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
-            {links.map((link) => (
-              link.isCategory ? (
-                <a
-                  key={link.href}
-                  href={link.href}
+          <nav className="hidden lg:flex items-center gap-1">
+            <Link
+              href="/"
+              className={cn(
+                "px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-muted",
+                location === "/" ? "text-primary" : "text-muted-foreground"
+              )}
+            >
+              Home
+            </Link>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button 
+                  variant="ghost" 
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+                    "text-sm font-medium gap-1",
+                    location.startsWith("/shop") ? "text-primary" : "text-muted-foreground"
                   )}
-                  data-testid={`link-category-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                  data-testid="dropdown-categories"
                 >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary",
-                    location === link.href
-                      ? "text-primary"
-                      : "text-muted-foreground"
+                  Categories
+                  {isLoading ? (
+                    <Loader2 className="w-3 h-3 animate-spin" />
+                  ) : (
+                    <ChevronDown className="w-3 h-3" />
                   )}
-                >
-                  {link.label}
-                </Link>
-              )
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-56">
+                <DropdownMenuItem asChild>
+                  <a 
+                    href="/shop" 
+                    className="cursor-pointer"
+                    data-testid="link-all-products"
+                  >
+                    All Products
+                  </a>
+                </DropdownMenuItem>
+                {categories.map((category) => (
+                  <DropdownMenuItem key={category.id} asChild>
+                    <a
+                      href={getCategoryUrl(category)}
+                      className="cursor-pointer"
+                      data-testid={`link-category-${category.id}`}
+                    >
+                      {category.name}
+                      {category.productCount !== undefined && (
+                        <span className="ml-auto text-xs text-muted-foreground">
+                          ({category.productCount})
+                        </span>
+                      )}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {categories.slice(0, 5).map((category) => (
+              <a
+                key={category.id}
+                href={getCategoryUrl(category)}
+                className="px-3 py-2 text-sm font-medium text-muted-foreground transition-colors rounded-md hover:bg-muted hover:text-foreground"
+                data-testid={`link-nav-category-${category.id}`}
+              >
+                {category.name}
+              </a>
             ))}
+
+            <Link
+              href="/contact"
+              className={cn(
+                "px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-muted",
+                location === "/contact" ? "text-primary" : "text-muted-foreground"
+              )}
+            >
+              Contact
+            </Link>
           </nav>
 
-          {/* Actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" className="hidden sm:flex" asChild>
               <Link href="/contact">
                 <Phone className="w-5 h-5" />
               </Link>
             </Button>
             
-            <div id="my-cart-128774264" className="ecwid-minicart-wrapper min-w-[32px] min-h-[32px]">
-              {/* Fallback cart icon if Ecwid hasn't loaded */}
-              <Link href="/shop" className="relative group">
-                 <ShoppingCart className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-              </Link>
-            </div>
+            <Button variant="ghost" size="icon" asChild>
+              <a href="/shop">
+                <ShoppingCart className="w-5 h-5" />
+              </a>
+            </Button>
 
-            {/* Mobile Menu Toggle */}
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="lg:hidden"
               onClick={() => setIsOpen(!isOpen)}
+              data-testid="button-mobile-menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -130,39 +151,57 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden border-t bg-background">
+        <div className="lg:hidden border-t bg-background">
           <div className="space-y-1 px-4 py-4">
-            {links.map((link) => (
-              link.isCategory ? (
+            <Link
+              href="/"
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                "block px-3 py-2 text-base font-medium rounded-md transition-colors",
+                location === "/" ? "bg-primary/10 text-primary" : "text-foreground hover:bg-muted"
+              )}
+            >
+              Home
+            </Link>
+            
+            <a
+              href="/shop"
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 text-base font-medium rounded-md transition-colors text-foreground hover:bg-muted"
+            >
+              All Products
+            </a>
+
+            {isLoading ? (
+              <div className="px-3 py-2 flex items-center gap-2 text-muted-foreground">
+                <Loader2 className="w-4 h-4 animate-spin" />
+                Loading categories...
+              </div>
+            ) : (
+              categories.map((category) => (
                 <a
-                  key={link.href}
-                  href={link.href}
+                  key={category.id}
+                  href={getCategoryUrl(category)}
                   onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "block px-3 py-2 text-base font-medium rounded-md transition-colors text-foreground hover:bg-muted"
-                  )}
-                  data-testid={`link-mobile-category-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="block px-3 py-2 text-base font-medium rounded-md transition-colors text-foreground hover:bg-muted pl-6"
+                  data-testid={`link-mobile-category-${category.id}`}
                 >
-                  {link.label}
+                  {category.name}
                 </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "block px-3 py-2 text-base font-medium rounded-md transition-colors",
-                    location === link.href
-                      ? "bg-primary/10 text-primary"
-                      : "text-foreground hover:bg-muted"
-                  )}
-                >
-                  {link.label}
-                </Link>
-              )
-            ))}
+              ))
+            )}
+
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className={cn(
+                "block px-3 py-2 text-base font-medium rounded-md transition-colors",
+                location === "/contact" ? "bg-primary/10 text-primary" : "text-foreground hover:bg-muted"
+              )}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       )}

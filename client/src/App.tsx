@@ -3,7 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { EcwidScript } from "@/components/EcwidScript";
+import { EcwidProvider } from "@/lib/ecwid";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -27,14 +27,15 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <EcwidScript />
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-1">
-            <Router />
-          </main>
-          <Footer />
-        </div>
+        <EcwidProvider>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">
+              <Router />
+            </main>
+            <Footer />
+          </div>
+        </EcwidProvider>
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>
