@@ -348,57 +348,58 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="space-y-0">
             {featuredProducts.map((product, index) => {
               const category = STORE_CATEGORIES.find(c => c.slug === product.categorySlug);
+              const isImageLeft = index % 2 === 0;
+              const isLast = index === featuredProducts.length - 1;
               
               return (
                 <motion.div
                   key={product.productId}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.6 }}
+                  className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 md:py-16 ${!isLast ? 'border-b border-gray-100' : ''}`}
                 >
-                  <Card className="h-full border border-gray-200 hover:border-[#37AFE1] hover:shadow-lg transition-all duration-200 bg-white">
-                    <CardContent className="p-0 flex flex-col h-full">
-                      <a 
-                        href={product.productUrl} 
-                        className="block"
-                        data-testid={`link-product-${product.productId}`}
-                      >
-                        <div className="aspect-square bg-white p-4 border-b border-gray-100">
-                          <img 
-                            src={product.image} 
-                            alt={product.name}
-                            className="w-full h-full object-contain"
-                            data-testid={`img-product-${product.productId}`}
-                          />
-                        </div>
-                      </a>
+                  <div className={`${!isImageLeft ? 'lg:order-2' : ''}`}>
+                    <a 
+                      href={product.productUrl} 
+                      className="block group"
+                      data-testid={`link-product-${product.productId}`}
+                    >
+                      <div className="aspect-square bg-white rounded-md border border-gray-200 p-6 flex items-center justify-center">
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                          data-testid={`img-product-${product.productId}`}
+                        />
+                      </div>
+                    </a>
+                  </div>
+
+                  <div className={`${!isImageLeft ? 'lg:order-1' : ''}`}>
+                    <div className="space-y-4">
+                      <span className="inline-block text-xs font-semibold text-[#37AFE1] uppercase tracking-wider">
+                        {category?.name || product.categorySlug.replace('-', ' ')}
+                      </span>
                       
-                      <div className="p-5 flex flex-col flex-1">
-                        <span className="text-xs font-semibold text-[#37AFE1] uppercase tracking-wide mb-2">
-                          {category?.name || product.categorySlug.replace('-', ' ')}
-                        </span>
-                        
-                        <h3 className="text-base font-bold text-black mb-3 line-clamp-2 leading-tight">
-                          {product.name}
-                        </h3>
-                        
-                        <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-1">
-                          {product.description}
-                        </p>
-                        
-                        <Button asChild className="w-full bg-[#37AFE1] hover:bg-[#2d9bc7] text-white">
+                      <h3 className="text-2xl lg:text-3xl font-extrabold text-black">{product.name}</h3>
+                      
+                      <p className="text-gray-600 text-base lg:text-lg leading-relaxed">{product.description}</p>
+
+                      <div className="pt-4">
+                        <Button asChild className="bg-[#37AFE1] hover:bg-[#2d9bc7] text-white">
                           <a href={product.productUrl} data-testid={`button-view-${product.productId}`}>
                             View Product
                             <ArrowRight className="ml-2 w-4 h-4" />
                           </a>
                         </Button>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </motion.div>
               );
             })}
