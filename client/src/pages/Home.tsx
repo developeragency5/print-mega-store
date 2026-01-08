@@ -822,9 +822,9 @@ export default function Home() {
                 color: "from-[#37AFE1] to-[#2d8bb8]"
               },
               {
-                icon: <Users className="w-8 h-8" />,
-                title: "Expert Guidance",
-                desc: "Our knowledgeable team helps you find the perfect printer or scanner based on your specific requirements.",
+                icon: <FileText className="w-8 h-8" />,
+                title: "Detailed Product Info",
+                desc: "Browse comprehensive specifications, features, and comparison guides to find the perfect printer or scanner for your needs.",
                 color: "from-purple-500 to-purple-600"
               },
               {
