@@ -202,7 +202,7 @@ export default function Home() {
               { icon: <Truck className="w-6 h-6" />, title: "Fast Shipping", desc: "Quick delivery to your door" },
               { icon: <Tag className="w-6 h-6" />, title: "Best Prices", desc: "Competitive rates guaranteed" },
               { icon: <ShieldCheck className="w-6 h-6" />, title: "Secure Checkout", desc: "SSL encrypted payments" },
-              { icon: <BadgeCheck className="w-6 h-6" />, title: "Trusted Platform", desc: "Powered by Ecwid" },
+              { icon: <BadgeCheck className="w-6 h-6" />, title: "Trusted Shopping", desc: "100% buyer protection" },
             ].map((benefit, i) => (
               <motion.div
                 key={i}
@@ -235,22 +235,27 @@ export default function Home() {
           >
             <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">About Print Mega Store</span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Your Trusted Source for Printers & Scanners</h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Welcome to Print Mega Store, your online destination to buy printers, scanners, and professional printing equipment at competitive prices.
+            <p className="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed">
+              Welcome to Print Mega Store, your premier online destination to buy printers, scanners, and professional printing equipment at competitive prices. We are committed to providing top-quality printing solutions for homes, offices, and businesses of all sizes. Our carefully selected product range includes the latest technology from trusted manufacturers, ensuring you get reliable performance and exceptional value with every purchase.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8 mb-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-md border border-gray-200 p-8"
+              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(55, 175, 225, 0.15)" }}
+              transition={{ duration: 0.3 }}
+              className="bg-white rounded-lg border border-gray-200 p-8 cursor-pointer"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
-                  <ShieldCheck className="w-6 h-6 text-[#37AFE1]" />
-                </div>
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                >
+                  <ShieldCheck className="w-7 h-7 text-white" />
+                </motion.div>
                 <h3 className="text-xl font-bold text-black">Who We Are</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
@@ -262,12 +267,17 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-md border border-gray-200 p-8"
+              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(55, 175, 225, 0.15)" }}
+              transition={{ duration: 0.3 }}
+              className="bg-white rounded-lg border border-gray-200 p-8 cursor-pointer"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
-                  <Printer className="w-6 h-6 text-[#37AFE1]" />
-                </div>
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                >
+                  <Printer className="w-7 h-7 text-white" />
+                </motion.div>
                 <h3 className="text-xl font-bold text-black">What We Offer</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
@@ -281,13 +291,17 @@ export default function Home() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white rounded-md border border-gray-200 p-8"
+              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(55, 175, 225, 0.15)" }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              className="bg-white rounded-lg border border-gray-200 p-8 cursor-pointer"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
-                  <Briefcase className="w-6 h-6 text-[#37AFE1]" />
-                </div>
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                >
+                  <Briefcase className="w-7 h-7 text-white" />
+                </motion.div>
                 <h3 className="text-xl font-bold text-black">Solutions for Everyone</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
@@ -299,13 +313,17 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white rounded-md border border-gray-200 p-8"
+              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(55, 175, 225, 0.15)" }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              className="bg-white rounded-lg border border-gray-200 p-8 cursor-pointer"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-md bg-[#37AFE1]/10 flex items-center justify-center">
-                  <Headphones className="w-6 h-6 text-[#37AFE1]" />
-                </div>
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                >
+                  <Headphones className="w-7 h-7 text-white" />
+                </motion.div>
                 <h3 className="text-xl font-bold text-black">Easy Online Shopping</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
