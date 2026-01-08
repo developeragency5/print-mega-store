@@ -470,6 +470,89 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      <section className="py-16 md:py-24 bg-gray-50" data-testid="trust-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <div className="w-20 h-20 bg-[#37AFE1]/10 rounded-full flex items-center justify-center">
+                  <Headphones className="w-10 h-10 text-[#37AFE1]" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
+                Customer Satisfaction Is Our Priority
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We aim to deliver exceptional customer service along every step of the way. Whether you need to know which printer is right for your home office, how to set up your new scanner, or how to troubleshoot printing issues, our friendly and professional team is ready to assist you.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mt-4">
+                You may also browse through our product categories to find detailed information about specifications, features, and compatibility. However, if you cannot find what you are looking for and you have questions about your purchase, simply send us a message through our <a href="/contact" className="text-[#37AFE1] hover:underline">contact page</a>.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mt-4">
+                If our customer support is offline, leave a message and we will get back to you as soon as we can. You can also contact us via phone or email.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <div className="w-20 h-20 bg-[#37AFE1]/10 rounded-full flex items-center justify-center">
+                  <BadgeCheck className="w-10 h-10 text-[#37AFE1]" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
+                Quality Products You Can Trust
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Print Mega Store has always offered quality printers and scanners from trusted manufacturers. From the beginning, we have provided reliable printing equipment to households and businesses at competitive prices. We take pride in offering products that deliver consistent results.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mt-4">
+                That is why we carefully select each product in our catalog. If you are not completely satisfied with your purchase, please read our return policy for more information on how we can help resolve any concerns.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mt-4">
+                For any questions about product specifications or compatibility, contact our customer support team for assistance.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <div className="w-20 h-20 bg-[#37AFE1]/10 rounded-full flex items-center justify-center">
+                  <Printer className="w-10 h-10 text-[#37AFE1]" />
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
+                Why Choose Print Mega Store?
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Print Mega Store is your reliable independent destination for high-quality printers and scanners at budget-friendly prices. We have a wide selection of products that work perfectly for home offices, small businesses, and enterprise environments.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mt-4">
+                We only offer products from reputable manufacturers to ensure the best printing results for every page. Our curated catalog includes home printers, office printers, inkjet printers, laser printers, and document scanners from leading brands.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed mt-4">
+                Print Mega Store has established a track record of dependability and excellence. Our prices are competitive but we never cut corners when it comes to quality. We aim to make it easier for our customers to quickly find affordable solutions to their printing needs. Shop now and find the perfect printer today.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
