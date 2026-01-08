@@ -30,11 +30,11 @@ const categoryIcons: Record<string, React.ReactNode> = {
 };
 
 const categoryDescriptions: Record<string, string> = {
-  "Home-Printers": "Compact and efficient for personal use",
-  "Office-Printers": "High-capacity workhorses for teams",
-  "Inkjet-Printers": "Vibrant color printing for photos",
-  "Laser-Printers": "Fast, crisp document printing",
-  "Document-Scanners": "Digitize with precision and speed",
+  "Home-Printers": "Compact wireless printers for everyday home printing needs",
+  "Office-Printers": "High-volume all-in-one printers for business productivity",
+  "Inkjet-Printers": "Color inkjet printers for photos and creative projects",
+  "Laser-Printers": "Fast monochrome laser printers for documents and reports",
+  "Document-Scanners": "Professional scanners to digitize documents and archives",
 };
 
 const featuredProducts = [
@@ -120,7 +120,7 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white leading-tight"
                 >
-                  Premium Printers & Scanners for Every Business Need
+                  Buy Printers & Scanners Online for Home and Office
                 </motion.h1>
 
                 <motion.p 
@@ -129,9 +129,9 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
                 >
-                  Discover enterprise-grade printing solutions designed for productivity. 
-                  From compact home printers to high-volume office workhorses, find the perfect 
-                  match for your printing needs with free shipping and expert support.
+                  Shop inkjet printers, laser printers, and document scanners for home offices and businesses. 
+                  Find wireless all-in-one printers, compact home printers, and high-volume office printing solutions 
+                  at competitive prices with secure checkout and fast shipping.
                 </motion.p>
 
                 <motion.div 
@@ -197,19 +197,19 @@ export default function Home() {
             
             <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
               <p>
-                Welcome to Print Mega Store, an independent online retailer dedicated to providing high-quality printing and scanning equipment for homes, offices, and businesses of all sizes. We are not affiliated with, sponsored by, or endorsed by any printer manufacturer. Instead, we operate as a standalone ecommerce destination committed to helping you find the right printing solution at competitive prices.
+                Welcome to Print Mega Store, your independent online destination to buy printers, scanners, and professional printing equipment at competitive prices. As an independent ecommerce retailer, we are not affiliated with, sponsored by, or endorsed by any printer manufacturer. Our mission is simple: help homes, offices, and businesses find the best printers and scanners to meet their unique document and imaging needs.
               </p>
               
               <p>
-                Our curated catalog features a comprehensive selection of products across five main categories: Home Printers for everyday personal use, Office Printers built for professional environments and team productivity, Inkjet Printers ideal for vibrant photo printing and color documents, Laser Printers designed for fast and crisp monochrome output, and Document Scanners that help you digitize paperwork with precision and efficiency.
+                Our online printer store features a carefully curated selection across five essential categories. Shop <strong>Home Printers</strong> perfect for everyday printing tasks like homework, recipes, and personal documents. Explore <strong>Office Printers</strong> engineered for high-volume printing and team productivity in professional workplaces. Discover <strong>Inkjet Printers</strong> that deliver vibrant photo prints and stunning color documents for creative projects. Find <strong>Laser Printers</strong> offering fast, crisp black-and-white output ideal for text-heavy documents and reports. Browse <strong>Document Scanners</strong> designed to digitize paperwork, receipts, and archives with precision and speed.
               </p>
               
               <p>
-                Whether you are a remote worker setting up a home office, a small business owner looking to streamline document workflows, a creative professional who needs gallery-quality photo prints, or an enterprise team requiring high-volume printing capabilities, Print Mega Store offers equipment to match your specific requirements. We understand that every printing need is unique, which is why we provide detailed product information and specifications to help you make informed purchasing decisions.
+                Whether you need a compact wireless printer for your home office, a multifunction all-in-one printer for a small business, a high-speed laser printer for your corporate department, or an enterprise document scanner for bulk digitization, Print Mega Store has printing solutions to match every requirement and budget. We serve remote workers, freelancers, startups, small businesses, creative professionals, and enterprise teams looking to buy quality printers online with confidence.
               </p>
               
               <p>
-                At Print Mega Store, we prioritize customer satisfaction through competitive pricing, secure checkout, and reliable shipping. Our goal is to simplify the process of finding and purchasing printing equipment online, saving you time while ensuring you receive products that meet your expectations. We believe that quality printing solutions should be accessible to everyone, from individual consumers to growing businesses.
+                Shopping for printers and scanners online should be straightforward. That is why Print Mega Store provides detailed product specifications, comparison information, and transparent pricing to help you make informed purchasing decisions. We offer secure checkout, competitive shipping rates, and dedicated customer support to ensure a smooth buying experience from browsing to delivery. Find the perfect printer or scanner for your home, office, or business today.
               </p>
               
               <p className="text-sm text-gray-500 border-t border-gray-200 pt-6 mt-8">
@@ -228,10 +228,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Find Your Perfect Match</h2>
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Shop By Category</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Browse Printers & Scanners</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Explore our selection of professional printing solutions across five product categories
+              Find the right printing solution for your needs across five product categories including home printers, office printers, and document scanners
             </p>
           </motion.div>
 
@@ -278,10 +278,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Featured Products</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Top Picks from Each Category</h2>
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Featured Printers & Scanners</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">Popular Printing Equipment</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Discover our best-selling products handpicked for quality and performance
+              Explore popular printers and scanners selected for reliability, features, and value across all categories
             </p>
           </motion.div>
 
@@ -401,9 +401,9 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">Ready to Upgrade?</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-white">Ready to Buy a Printer or Scanner?</h2>
             <p className="text-xl text-white/90 mb-10">
-              Explore our catalog of premium printing equipment and find the perfect solution for your needs.
+              Browse our complete catalog of printers and scanners. Find home printers, office printers, laser printers, inkjet printers, and document scanners at competitive prices.
             </p>
             <Button asChild size="lg" className="bg-white text-black hover:bg-gray-100 text-lg font-bold">
               <a href="/shop" data-testid="button-browse-catalog">
