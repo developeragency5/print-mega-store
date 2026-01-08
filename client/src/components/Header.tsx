@@ -31,10 +31,13 @@ export function Header() {
     return () => window.removeEventListener("hashchange", updateHash);
   }, []);
 
+  // Ecwid URLs are formatted as #!/{slug}/c/{id}
   const isActiveCategory = (categorySlug: string) => {
-    return currentHash.includes(`/category/${categorySlug}`);
+    // Check if the hash contains the category slug followed by /c/
+    return currentHash.includes(`#!/${categorySlug}/c/`);
   };
 
+  const hasActiveCategory = STORE_CATEGORIES.some(cat => isActiveCategory(cat.slug));
   const isShopPage = location === "/shop" || window.location.pathname === "/shop";
 
   useEffect(() => {
@@ -169,7 +172,7 @@ export function Header() {
               href="/shop"
               className={cn(
                 "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                isShopPage && !currentHash.includes("/category/")
+                isShopPage && !hasActiveCategory
                   ? "border-primary text-primary"
                   : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
               )}
@@ -233,7 +236,7 @@ export function Header() {
             onClick={() => setIsOpen(false)}
             className={cn(
               "block px-4 py-3 text-base font-medium rounded-xl transition-colors",
-              isShopPage && !currentHash.includes("/category/")
+              isShopPage && !hasActiveCategory
                 ? "bg-primary/10 text-primary"
                 : "text-foreground hover:bg-gray-100"
             )}
