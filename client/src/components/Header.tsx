@@ -198,6 +198,19 @@ export function Header() {
             ))}
 
             <Link
+              href="/about"
+              className={cn(
+                "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
+                location === "/about" 
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+              )}
+              data-testid="link-about"
+            >
+              About
+            </Link>
+
+            <Link
               href="/contact"
               className={cn(
                 "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
@@ -261,6 +274,18 @@ export function Header() {
               {category.name}
             </a>
           ))}
+
+          <Link
+            href="/about"
+            onClick={() => setIsOpen(false)}
+            className={cn(
+              "block px-4 py-3 text-base font-medium rounded-xl transition-colors",
+              location === "/about" ? "bg-primary/10 text-primary" : "text-foreground hover:bg-gray-100"
+            )}
+            data-testid="link-mobile-about"
+          >
+            About
+          </Link>
 
           <Link
             href="/contact"

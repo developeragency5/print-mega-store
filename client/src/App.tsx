@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import Shop from "@/pages/Shop";
 import Contact from "@/pages/Contact";
+import About from "@/pages/About";
 import Privacy from "@/pages/Privacy";
 import TermsOfService from "@/pages/TermsOfService";
 import PurchaseTerms from "@/pages/PurchaseTerms";
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/shop" component={Shop} />
       <Route path="/contact" component={Contact} />
+      <Route path="/about" component={About} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={TermsOfService} />
       <Route path="/purchase-terms" component={PurchaseTerms} />
