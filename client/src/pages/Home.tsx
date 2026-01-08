@@ -592,34 +592,82 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white" data-testid="seo-content-section">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#37AFE1]/5 via-white to-purple-50" data-testid="seo-content-section">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-8">
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Shop With Confidence</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
               Buy Printers Online with Confidence
             </h2>
-            <div className="space-y-6 text-gray-600 leading-relaxed">
-              <p>
-                Looking to <strong>buy a printer online</strong>? Print Mega Store makes it easy to find the perfect printing solution for your home or business. Whether you need a <strong>wireless inkjet printer</strong> for everyday documents, a <strong>high-speed laser printer</strong> for busy offices, or a <strong>professional document scanner</strong> for digitizing important files, our curated selection has you covered.
-              </p>
-              <p>
-                Our <strong>home printers</strong> are designed for families and remote workers who need reliable, compact devices that handle everything from school projects to work reports. For larger teams, our <strong>office printers</strong> deliver high-volume printing with fast output speeds and multifunction capabilities including printing, scanning, copying, and faxing all in one machine.
-              </p>
-              <p>
-                Photographers and creative professionals love our <strong>inkjet printers</strong> for their vibrant color reproduction and ability to print stunning photos on various paper types. Meanwhile, businesses that prioritize speed and efficiency prefer our <strong>laser printers</strong> for their crisp text quality and lower cost-per-page on high-volume document printing.
-              </p>
-              <p>
-                Going paperless? Our <strong>document scanners</strong> help you digitize receipts, contracts, photos, and archives quickly and efficiently. From portable scanners for on-the-go professionals to high-capacity sheet-fed scanners for enterprise document management, we have scanning solutions for every workflow.
-              </p>
-              <p className="text-center font-medium text-black">
-                Shop today and discover why thousands of customers trust Print Mega Store for their printing and scanning needs.
-              </p>
-            </div>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Looking to buy a printer online? Print Mega Store makes it easy to find the perfect printing solution for your home or business.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
+            {[
+              {
+                icon: <Printer className="w-7 h-7" />,
+                title: "Home & Office Printers",
+                desc: "Our home printers are designed for families and remote workers who need reliable, compact devices. For larger teams, our office printers deliver high-volume printing with multifunction capabilities including printing, scanning, copying, and faxing.",
+                color: "from-[#37AFE1] to-[#2d8bb8]"
+              },
+              {
+                icon: <FileText className="w-7 h-7" />,
+                title: "Inkjet & Photo Printers",
+                desc: "Photographers and creative professionals love our inkjet printers for their vibrant color reproduction and stunning photo quality on various paper types. Perfect for printing memorable photos at home with vivid colors and fine details.",
+                color: "from-purple-500 to-purple-600"
+              },
+              {
+                icon: <Zap className="w-7 h-7" />,
+                title: "Laser Printers",
+                desc: "Businesses that prioritize speed and efficiency prefer our laser printers for their crisp text quality and lower cost-per-page on high-volume document printing. Get sharp, smudge-free results every time.",
+                color: "from-orange-500 to-orange-600"
+              },
+              {
+                icon: <ScanLine className="w-7 h-7" />,
+                title: "Document Scanners",
+                desc: "Going paperless? Our document scanners help you digitize receipts, contracts, photos, and archives quickly. From portable scanners to high-capacity sheet-fed scanners for enterprise document management.",
+                color: "from-green-500 to-green-600"
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
+                className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group flex gap-6"
+              >
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg shrink-0`}
+                >
+                  <span className="text-white">{item.icon}</span>
+                </motion.div>
+                <div>
+                  <h3 className="text-xl font-bold text-black mb-2 group-hover:text-[#37AFE1] transition-colors">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <p className="text-lg font-medium text-black bg-[#37AFE1]/10 rounded-xl py-4 px-6 inline-block">
+              Shop today and discover why thousands of customers trust Print Mega Store for their printing and scanning needs.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -630,32 +678,98 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-8">
+            <span className="inline-block text-[#37AFE1] font-semibold text-sm uppercase tracking-wider mb-4">Printer Buying Guide</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
               How to Choose the Right Printer for Your Needs
             </h2>
-            <div className="space-y-6 text-gray-600 leading-relaxed">
-              <p>
-                Choosing the <strong>best printer for home use</strong> or <strong>office printing</strong> depends on your specific requirements. Consider how often you print, what types of documents you produce, and whether you need color or monochrome output. Understanding these factors will help you make an informed decision when you <strong>shop for printers online</strong>.
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Choosing the best printer depends on your specific requirements. Consider how often you print, document types, and color needs.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 mb-10">
+            {[
+              {
+                step: "01",
+                title: "Photo & Creative Work",
+                desc: "For photo printing and creative projects, an inkjet printer with high resolution delivers stunning results on glossy paper. Perfect for photographers, artists, and families who want vibrant colors and fine details.",
+                color: "from-pink-500 to-pink-600"
+              },
+              {
+                step: "02",
+                title: "Documents & Reports",
+                desc: "If your primary need is printing text documents, reports, or business correspondence, a monochrome laser printer offers the best value with sharp, smudge-free text and lower cost per page.",
+                color: "from-[#37AFE1] to-[#2d8bb8]"
+              },
+              {
+                step: "03",
+                title: "All-in-One Solutions",
+                desc: "Small businesses and home offices benefit from all-in-one printers that combine printing, scanning, copying, and faxing. Look for wireless connectivity and mobile printing support.",
+                color: "from-purple-500 to-purple-600"
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                whileHover={{ y: -8, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
+                className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group relative overflow-visible"
+              >
+                <div className={`absolute -top-4 -left-2 w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg`}>
+                  <span className="text-white font-bold text-lg">{item.step}</span>
+                </div>
+                <div className="pt-6">
+                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#37AFE1] transition-colors">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
+              className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                  <ScanLine className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-black group-hover:text-[#37AFE1] transition-colors">Enterprise Scanning</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                For enterprise environments handling large volumes of documents, our high-capacity document scanners streamline workflows with automatic document feeders, OCR text recognition, and direct-to-cloud scanning.
               </p>
-              <p>
-                For <strong>photo printing</strong> and creative projects, an <strong>inkjet printer with high resolution</strong> delivers stunning results on glossy paper. These printers excel at reproducing vivid colors and fine details, making them ideal for photographers, artists, and families who want to print memorable photos at home.
-              </p>
-              <p>
-                If your primary need is <strong>printing text documents</strong>, reports, or business correspondence, a <strong>monochrome laser printer</strong> offers the best value. Laser technology produces sharp, smudge-free text at high speeds, with a lower <strong>cost per page</strong> compared to inkjet alternatives. Many models also include <strong>duplex printing</strong> to save paper automatically.
-              </p>
-              <p>
-                Small businesses and home offices benefit from <strong>all-in-one printers</strong> that combine printing, scanning, copying, and faxing capabilities. These <strong>multifunction printers</strong> save desk space and reduce equipment costs while providing comprehensive document handling. Look for models with <strong>wireless connectivity</strong> and <strong>mobile printing support</strong> to print from smartphones and tablets.
-              </p>
-              <p>
-                For enterprise environments handling large volumes of documents, our <strong>high-capacity document scanners</strong> streamline workflows with automatic document feeders, <strong>OCR text recognition</strong>, and direct-to-cloud scanning. Digitize your paper archives and create searchable PDF files with professional-grade scanning equipment.
-              </p>
-              <p className="text-center font-medium text-black">
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
+              className="bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] rounded-xl p-8 cursor-pointer group text-white"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                  <Headphones className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold">Need Help Choosing?</h3>
+              </div>
+              <p className="text-white/90 leading-relaxed mb-4">
                 Not sure which printer is right for you? Browse our categories or contact our team for personalized recommendations.
               </p>
-            </div>
-          </motion.div>
+              <Button asChild variant="secondary" className="bg-white text-[#37AFE1] hover:bg-gray-100">
+                <a href="/contact">Get Recommendations</a>
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
 
