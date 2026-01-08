@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, User, ShoppingCart } from "lucide-react";
+import { Menu, X, Phone, User, ShoppingCart, Printer } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
@@ -86,13 +86,26 @@ export function Header() {
       )}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between gap-4">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 shrink-0 group" data-testid="link-logo">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg bg-primary">
-                <span className="font-bold text-xl text-white">P</span>
+            {/* Logo - inkjets.com style */}
+            <Link href="/" className="flex items-center gap-2 shrink-0 group" data-testid="link-logo">
+              <div className="relative">
+                <Printer className="w-8 h-8" style={{ color: '#37AFE1' }} />
+                {/* Swoosh accent like inkjets.com */}
+                <svg 
+                  className="absolute -top-1 -right-1 w-4 h-4"
+                  viewBox="0 0 20 20" 
+                  fill="none"
+                >
+                  <path 
+                    d="M2 14C6 6 14 4 18 6" 
+                    stroke="#4CC9FE" 
+                    strokeWidth="2.5" 
+                    strokeLinecap="round"
+                  />
+                </svg>
               </div>
-              <span className="text-xl font-bold tracking-tight font-display text-foreground">
-                Print<span className="text-primary">Mega</span>Store
+              <span className="text-xl font-bold tracking-tight font-display text-gray-800">
+                print <span style={{ color: '#37AFE1' }}>mega</span> store
               </span>
             </Link>
 
