@@ -90,7 +90,7 @@ export function Header() {
             <Link href="/" className="flex items-center gap-2 shrink-0 group" data-testid="link-logo">
               <Printer className="w-8 h-8 text-[#37AFE1]" />
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-[#37AFE1]">PRINT MEGA</span> <span className="text-gray-900">STORE</span>
+                <span className="text-gray-900">PRINT</span> <span className="text-[#37AFE1]">MEGA</span> <span className="text-gray-900">STORE</span>
               </span>
             </Link>
 
