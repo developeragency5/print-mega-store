@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -10,25 +9,41 @@ import {
   Briefcase,
   ArrowRight,
   Zap,
-  FileText
+  FileText,
+  Star,
+  CheckCircle2
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 
 const categoryIcons: Record<string, React.ReactNode> = {
-  "Home-Printers": <Printer className="w-12 h-12 mb-4" />,
-  "Office-Printers": <Briefcase className="w-12 h-12 mb-4" />,
-  "Inkjet-Printers": <FileText className="w-12 h-12 mb-4" />,
-  "Laser-Printers": <Zap className="w-12 h-12 mb-4" />,
-  "Document-Scanners": <ScanLine className="w-12 h-12 mb-4" />,
+  "Home-Printers": <Printer className="w-10 h-10" />,
+  "Office-Printers": <Briefcase className="w-10 h-10" />,
+  "Inkjet-Printers": <FileText className="w-10 h-10" />,
+  "Laser-Printers": <Zap className="w-10 h-10" />,
+  "Document-Scanners": <ScanLine className="w-10 h-10" />,
 };
 
 const categoryDescriptions: Record<string, string> = {
-  "Home-Printers": "Compact and efficient printers for personal use.",
-  "Office-Printers": "High-capacity workhorses for teams and businesses.",
-  "Inkjet-Printers": "Vibrant color printing for photos and graphics.",
-  "Laser-Printers": "Fast, crisp printing for high-volume documents.",
-  "Document-Scanners": "Digitize documents with precision and speed.",
+  "Home-Printers": "Compact and efficient for personal use",
+  "Office-Printers": "High-capacity workhorses for teams",
+  "Inkjet-Printers": "Vibrant color printing for photos",
+  "Laser-Printers": "Fast, crisp document printing",
+  "Document-Scanners": "Digitize with precision and speed",
+};
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 }
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
 };
 
 export default function Home() {
@@ -36,147 +51,224 @@ export default function Home() {
   const scannersCategory = STORE_CATEGORIES.find(c => c.slug === "Document-Scanners");
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <section className="relative bg-gray-900 text-white overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-gray-900 to-gray-900"></div>
+    <div className="flex flex-col">
+      <section className="relative min-h-[90vh] flex items-center gradient-hero overflow-hidden">
+        <div className="absolute inset-0 gradient-mesh opacity-60"></div>
         
-        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <motion.h1 
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-4xl">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8"
             >
-              Professional Printing <br />
-              <span className="text-primary">Solutions</span> for Everyone
+              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+              <span className="text-white/90 text-sm font-medium">Trusted by 10,000+ businesses</span>
+            </motion.div>
+
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-white leading-tight"
+            >
+              Professional Printing{" "}
+              <span className="text-gradient">Solutions</span>
+              <br />for Every Need
             </motion.h1>
+
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-2xl leading-relaxed"
             >
-              Upgrade your home office or enterprise with top-tier printers and scanners. 
-              Reliable, high-quality, and built to last.
+              Premium printers and scanners for home, office, and enterprise. 
+              Quality you can trust, prices you'll love.
             </motion.p>
+
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4"
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 mb-12"
             >
-              <Button asChild size="lg" className="text-base font-semibold">
+              <Button asChild size="lg" className="text-lg font-semibold h-14 px-8 btn-glow">
                 <a href={printersCategory ? getCategoryUrl(printersCategory) : "/shop"} data-testid="button-shop-printers">
                   Shop Printers
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-base font-semibold border-white/20 hover:bg-white/10 text-white hover:text-white">
+              <Button asChild variant="outline" size="lg" className="text-lg font-semibold h-14 px-8 border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm">
                 <a href={scannersCategory ? getCategoryUrl(scannersCategory) : "/shop"} data-testid="button-shop-scanners">
                   Shop Scanners
                 </a>
               </Button>
             </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-wrap gap-6 text-white/80"
+            >
+              {["Free Shipping $500+", "2-Year Warranty", "Expert Support"].map((item, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium">{item}</span>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-6 -mt-16 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <BenefitCard 
-              icon={<Truck className="w-8 h-8 text-primary" />}
-              title="Fast Shipping"
-              description="Free shipping on orders over $500. Quick delivery nationwide."
-            />
-            <BenefitCard 
-              icon={<ShieldCheck className="w-8 h-8 text-primary" />}
-              title="Secure Checkout"
-              description="Your data is protected with enterprise-grade encryption."
-            />
-            <BenefitCard 
-              icon={<Briefcase className="w-8 h-8 text-primary" />}
-              title="Business Grade"
-              description="Products selected for durability and high-volume performance."
-            />
-            <BenefitCard 
-              icon={<Headphones className="w-8 h-8 text-primary" />}
-              title="Expert Support"
-              description="Our team of specialists is here to help you choose right."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-12 flex-wrap gap-4">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight mb-4">Shop by Category</h2>
-              <p className="text-muted-foreground">Find exactly what you need for your setup.</p>
-            </div>
-            <a href="/shop" className="hidden sm:flex items-center text-primary font-medium hover:underline" data-testid="link-view-all">
-              View all products <ArrowRight className="ml-2 w-4 h-4" />
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {STORE_CATEGORIES.map((category) => (
-              <CategoryCard 
-                key={category.id}
-                title={category.name}
-                description={categoryDescriptions[category.slug] || "Browse our selection."}
-                href={getCategoryUrl(category)}
-                icon={categoryIcons[category.slug] || <Printer className="w-12 h-12 mb-4" />}
-              />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { icon: <Truck className="w-6 h-6" />, title: "Fast Shipping", desc: "Free over $500" },
+              { icon: <ShieldCheck className="w-6 h-6" />, title: "Secure Checkout", desc: "256-bit encryption" },
+              { icon: <Briefcase className="w-6 h-6" />, title: "Business Grade", desc: "Professional quality" },
+              { icon: <Headphones className="w-6 h-6" />, title: "Expert Support", desc: "24/7 available" },
+            ].map((benefit, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="card-glass p-5 flex items-center gap-4"
+              >
+                <div className="p-3 rounded-xl bg-primary/10 text-primary shrink-0">
+                  {benefit.icon}
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm">{benefit.title}</h3>
+                  <p className="text-xs text-muted-foreground">{benefit.desc}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
-          
-          <div className="mt-8 text-center sm:hidden">
-            <Button asChild variant="ghost" className="text-primary">
-              <a href="/shop" data-testid="link-view-all-mobile">View all products</a>
+        </div>
+      </section>
+
+      <section className="section-padding bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Browse Categories</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Find Your Perfect Match</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Explore our carefully curated selection of professional printing solutions
+            </p>
+          </motion.div>
+
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6"
+          >
+            {STORE_CATEGORIES.map((category, i) => (
+              <motion.div
+                key={category.id}
+                variants={fadeInUp}
+                transition={{ delay: i * 0.1 }}
+              >
+                <a href={getCategoryUrl(category)} data-testid={`card-category-${category.slug}`}>
+                  <Card className="group h-full card-elevated cursor-pointer overflow-hidden">
+                    <CardContent className="p-6 flex flex-col items-center text-center h-full">
+                      <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mb-5 group-hover:from-primary group-hover:to-primary/80 transition-all duration-300">
+                        <div className="text-primary group-hover:text-white transition-colors duration-300">
+                          {categoryIcons[category.slug] || <Printer className="w-10 h-10" />}
+                        </div>
+                      </div>
+                      <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{category.name}</h3>
+                      <p className="text-sm text-muted-foreground">{categoryDescriptions[category.slug]}</p>
+                      <div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        Shop Now <ArrowRight className="w-4 h-4 ml-1" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Why Choose Us</span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Built for Professionals</h2>
+              <p className="text-muted-foreground text-lg mb-12">
+                We partner with leading brands to bring you the best printing technology at competitive prices
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { number: "10K+", label: "Happy Customers" },
+                { number: "500+", label: "Products Available" },
+                { number: "99%", label: "Satisfaction Rate" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-8"
+                >
+                  <div className="text-5xl font-extrabold text-gradient mb-2">{stat.number}</div>
+                  <div className="text-muted-foreground font-medium">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding gradient-primary relative overflow-hidden">
+        <div className="absolute inset-0 gradient-mesh opacity-30"></div>
+        
+        <div className="container relative mx-auto px-4 text-center max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Upgrade?</h2>
+            <p className="text-xl text-white/80 mb-10">
+              Explore our catalog of premium printing equipment and find the perfect solution for your needs.
+            </p>
+            <Button asChild size="lg" variant="secondary" className="h-14 px-10 text-lg font-semibold shadow-xl">
+              <a href="/shop" data-testid="button-browse-catalog">
+                Browse Full Catalog
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center max-w-2xl">
-          <h2 className="text-3xl font-bold mb-6">Ready to upgrade your workflow?</h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Explore our catalog of premium printing equipment and accessories.
-          </p>
-          <Button asChild size="lg" variant="secondary">
-            <a href="/shop" data-testid="button-browse-catalog">Browse Catalog</a>
-          </Button>
+          </motion.div>
         </div>
       </section>
     </div>
-  );
-}
-
-function BenefitCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
-  return (
-    <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white border border-transparent hover:border-blue-100 hover:shadow-lg transition-all duration-300">
-      <div className="mb-4 p-3 bg-blue-50 rounded-full">{icon}</div>
-      <h3 className="font-semibold text-lg mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
-    </div>
-  );
-}
-
-function CategoryCard({ title, description, href, icon }: { title: string, description: string, href: string, icon: React.ReactNode }) {
-  return (
-    <a href={href} data-testid={`card-category-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-      <Card className="h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden group">
-        <CardContent className="p-6 flex flex-col items-center text-center h-full justify-center bg-white group-hover:bg-blue-50/30 transition-colors">
-          <div className="text-gray-400 group-hover:text-primary transition-colors duration-300 transform group-hover:scale-110">
-            {icon}
-          </div>
-          <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{title}</h3>
-          <p className="text-sm text-muted-foreground">{description}</p>
-        </CardContent>
-      </Card>
-    </a>
   );
 }

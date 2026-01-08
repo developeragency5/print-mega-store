@@ -14,7 +14,6 @@ declare global {
 export default function Shop() {
   const [isLoading, setIsLoading] = useState(true);
   const widgetInitialized = useRef(false);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     window.ecwid_script_defer = true;
@@ -96,16 +95,17 @@ export default function Shop() {
   }, []);
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 min-h-screen py-8">
+    <div className="bg-gray-50 min-h-screen pt-24 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div 
-          ref={containerRef}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border p-4 sm:p-6 min-h-[600px]"
-        >
+        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 min-h-[600px]">
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-96 text-muted-foreground">
-              <Loader2 className="w-10 h-10 animate-spin mb-4 text-primary" data-testid="loading-spinner" />
-              <p>Loading store...</p>
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+                <Loader2 className="relative w-12 h-12 animate-spin text-primary" data-testid="loading-spinner" />
+              </div>
+              <p className="mt-6 text-lg font-medium">Loading store...</p>
+              <p className="text-sm text-muted-foreground mt-1">Please wait while we prepare your shopping experience</p>
             </div>
           )}
           <div id={`my-store-${STORE_ID}`} data-testid="ecwid-store-container"></div>
