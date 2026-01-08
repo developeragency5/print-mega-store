@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ShoppingCart, Phone } from "lucide-react";
+import { Menu, X, Phone, User, ShoppingCart } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
+import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
+  const cartWidgetRef = useRef<HTMLDivElement>(null);
+  const loginWidgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,30 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const initEcwidWidgets = () => {
+      if (typeof window.Ecwid !== "undefined") {
+        if (cartWidgetRef.current && cartWidgetRef.current.children.length === 0) {
+          window.Ecwid.init();
+        }
+      }
+    };
+
+    const checkEcwid = setInterval(() => {
+      if (typeof window.Ecwid !== "undefined") {
+        initEcwidWidgets();
+        clearInterval(checkEcwid);
+      }
+    }, 100);
+
+    const timeout = setTimeout(() => clearInterval(checkEcwid), 10000);
+
+    return () => {
+      clearInterval(checkEcwid);
+      clearTimeout(timeout);
+    };
+  }, []);
+
   const isHome = location === "/";
 
   return (
@@ -25,57 +51,164 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-100"
+          ? "bg-white/95 backdrop-blur-xl shadow-lg"
           : isHome
-            ? "bg-transparent"
-            : "bg-white border-b border-gray-100"
+            ? "bg-gradient-to-b from-black/50 to-transparent"
+            : "bg-white shadow-sm"
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3 shrink-0 group">
-            <div className={cn(
-              "w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg",
-              scrolled || !isHome ? "bg-primary" : "bg-white/20 backdrop-blur-sm border border-white/30"
-            )}>
+      {/* Top Bar - Logo, Contact, Login, Cart */}
+      <div className={cn(
+        "border-b transition-colors duration-300",
+        scrolled || !isHome ? "border-gray-100" : "border-white/10"
+      )}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between gap-4">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-3 shrink-0 group" data-testid="link-logo">
+              <div className={cn(
+                "w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 shadow-lg",
+                scrolled || !isHome ? "bg-primary" : "bg-white/20 backdrop-blur-sm border border-white/30"
+              )}>
+                <span className="font-bold text-xl text-white">P</span>
+              </div>
               <span className={cn(
-                "font-bold text-xl",
-                scrolled || !isHome ? "text-white" : "text-white"
-              )}>P</span>
-            </div>
-            <span className={cn(
-              "text-xl font-bold tracking-tight font-display transition-colors duration-300",
-              scrolled || !isHome ? "text-foreground" : "text-white"
-            )}>
-              Print<span className="text-primary">Mega</span>Store
-            </span>
-          </Link>
+                "text-xl font-bold tracking-tight font-display transition-colors duration-300",
+                scrolled || !isHome ? "text-foreground" : "text-white"
+              )}>
+                Print<span className="text-primary">Mega</span>Store
+              </span>
+            </Link>
 
-          <nav className="hidden xl:flex items-center gap-1">
+            {/* Right Side Actions */}
+            <div className="flex items-center gap-2 sm:gap-4">
+              {/* Phone */}
+              <a 
+                href="tel:+15551234567"
+                className={cn(
+                  "hidden md:flex items-center gap-2 text-sm font-medium transition-colors",
+                  scrolled || !isHome ? "text-muted-foreground hover:text-foreground" : "text-white/80 hover:text-white"
+                )}
+                data-testid="link-phone"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="hidden lg:inline">+1 (555) 123-4567</span>
+              </a>
+
+              <div className={cn(
+                "hidden md:block w-px h-6",
+                scrolled || !isHome ? "bg-gray-200" : "bg-white/20"
+              )} />
+
+              {/* Ecwid Login Widget */}
+              <a
+                href="/shop#!/~/signin"
+                className={cn(
+                  "flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all",
+                  scrolled || !isHome 
+                    ? "text-muted-foreground hover:text-foreground hover:bg-gray-100" 
+                    : "text-white/80 hover:text-white hover:bg-white/10"
+                )}
+                data-testid="button-login"
+              >
+                <User className="w-5 h-5" />
+                <span className="hidden sm:inline">Sign In</span>
+              </a>
+
+              {/* Ecwid Cart Widget */}
+              <div className="relative">
+                <div 
+                  ref={cartWidgetRef}
+                  id="my-cart-widget"
+                  className={cn(
+                    "ec-cart-widget [&_.ec-cart-widget]:!bg-transparent",
+                    scrolled || !isHome ? "[&_svg]:!fill-foreground" : "[&_svg]:!fill-white"
+                  )}
+                >
+                  <a
+                    href="/shop#!/~/cart"
+                    className={cn(
+                      "flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all",
+                      scrolled || !isHome 
+                        ? "text-muted-foreground hover:text-foreground hover:bg-gray-100" 
+                        : "text-white/80 hover:text-white hover:bg-white/10"
+                    )}
+                    data-testid="button-cart"
+                  >
+                    <ShoppingCart className="w-5 h-5" />
+                    <span className="hidden sm:inline">Cart</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Mobile Menu Button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "lg:hidden transition-colors",
+                  !scrolled && isHome && "text-white hover:bg-white/10"
+                )}
+                onClick={() => setIsOpen(!isOpen)}
+                data-testid="button-mobile-menu"
+              >
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Nav Bar - Navigation Links */}
+      <div className={cn(
+        "hidden lg:block transition-colors duration-300",
+        scrolled || !isHome ? "bg-gray-50/80" : "bg-black/20 backdrop-blur-sm"
+      )}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="flex items-center justify-center gap-1">
             <Link
               href="/"
               className={cn(
-                "px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg",
+                "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
                 location === "/" 
-                  ? "text-primary" 
+                  ? scrolled || !isHome
+                    ? "border-primary text-primary"
+                    : "border-white text-white"
                   : scrolled || !isHome
-                    ? "text-muted-foreground hover:text-foreground hover:bg-gray-100"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    ? "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                    : "border-transparent text-white/80 hover:text-white hover:border-white/50"
               )}
               data-testid="link-home"
             >
               Home
             </Link>
 
+            <a
+              href="/shop"
+              className={cn(
+                "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
+                location === "/shop"
+                  ? scrolled || !isHome
+                    ? "border-primary text-primary"
+                    : "border-white text-white"
+                  : scrolled || !isHome
+                    ? "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                    : "border-transparent text-white/80 hover:text-white hover:border-white/50"
+              )}
+              data-testid="link-shop"
+            >
+              All Products
+            </a>
+
             {STORE_CATEGORIES.map((category) => (
               <a
                 key={category.id}
                 href={getCategoryUrl(category)}
                 className={cn(
-                  "px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg",
+                  "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2 border-transparent",
                   scrolled || !isHome
-                    ? "text-muted-foreground hover:text-foreground hover:bg-gray-100"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    ? "text-muted-foreground hover:text-foreground hover:border-gray-300"
+                    : "text-white/80 hover:text-white hover:border-white/50"
                 )}
                 data-testid={`link-nav-${category.slug}`}
               >
@@ -86,65 +219,27 @@ export function Header() {
             <Link
               href="/contact"
               className={cn(
-                "px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg",
+                "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
                 location === "/contact" 
-                  ? "text-primary" 
+                  ? scrolled || !isHome
+                    ? "border-primary text-primary"
+                    : "border-white text-white"
                   : scrolled || !isHome
-                    ? "text-muted-foreground hover:text-foreground hover:bg-gray-100"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    ? "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                    : "border-transparent text-white/80 hover:text-white hover:border-white/50"
               )}
               data-testid="link-contact"
             >
               Contact
             </Link>
           </nav>
-
-          <div className="flex items-center gap-3">
-            <Button 
-              variant={scrolled || !isHome ? "ghost" : "ghost"} 
-              size="icon" 
-              className={cn(
-                "hidden sm:flex transition-colors",
-                !scrolled && isHome && "text-white hover:bg-white/10"
-              )}
-              asChild
-            >
-              <Link href="/contact" data-testid="button-phone">
-                <Phone className="w-5 h-5" />
-              </Link>
-            </Button>
-            
-            <Button 
-              variant={scrolled || !isHome ? "default" : "secondary"}
-              size="sm"
-              className="hidden sm:flex gap-2 font-medium"
-              asChild
-            >
-              <a href="/shop" data-testid="button-cart">
-                <ShoppingCart className="w-4 h-4" />
-                Shop Now
-              </a>
-            </Button>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "xl:hidden transition-colors",
-                !scrolled && isHome && "text-white hover:bg-white/10"
-              )}
-              onClick={() => setIsOpen(!isOpen)}
-              data-testid="button-mobile-menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </Button>
-          </div>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       <div className={cn(
-        "xl:hidden overflow-hidden transition-all duration-300",
-        isOpen ? "max-h-[500px] border-t bg-white" : "max-h-0"
+        "lg:hidden overflow-hidden transition-all duration-300",
+        isOpen ? "max-h-[600px] border-t bg-white" : "max-h-0"
       )}>
         <div className="space-y-1 px-4 py-4">
           <Link
@@ -158,6 +253,15 @@ export function Header() {
           >
             Home
           </Link>
+
+          <a
+            href="/shop"
+            onClick={() => setIsOpen(false)}
+            className="block px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
+            data-testid="link-mobile-shop"
+          >
+            All Products
+          </a>
 
           {STORE_CATEGORIES.map((category) => (
             <a
@@ -183,13 +287,23 @@ export function Header() {
             Contact
           </Link>
 
-          <div className="pt-4">
-            <Button className="w-full" asChild>
-              <a href="/shop">
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Shop Now
-              </a>
-            </Button>
+          <div className="pt-4 space-y-2">
+            <a
+              href="/shop#!/~/signin"
+              className="flex items-center gap-2 px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
+              data-testid="link-mobile-signin"
+            >
+              <User className="w-5 h-5" />
+              Sign In / Register
+            </a>
+            <a
+              href="/shop#!/~/cart"
+              className="flex items-center gap-2 px-4 py-3 text-base font-medium rounded-xl transition-colors text-foreground hover:bg-gray-100"
+              data-testid="link-mobile-cart"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              View Cart
+            </a>
           </div>
         </div>
       </div>
