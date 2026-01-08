@@ -16,6 +16,11 @@ import {
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 import printerImage from "@assets/stock_images/hp_printer_professio_855d99b4.jpg";
+import homePrinterImg from "@assets/stock_images/home_printer_compact_563d38fc.jpg";
+import officePrinterImg from "@assets/stock_images/large_office_multifu_ed611672.jpg";
+import inkjetPrinterImg from "@assets/stock_images/inkjet_printer_color_ff5b9fc9.jpg";
+import laserPrinterImg from "@assets/stock_images/laser_printer_fast_d_67ea17ad.jpg";
+import scannerImg from "@assets/stock_images/document_scanner_fla_06670a5f.jpg";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <Printer className="w-10 h-10" />,
@@ -32,6 +37,54 @@ const categoryDescriptions: Record<string, string> = {
   "Laser-Printers": "Fast, crisp document printing",
   "Document-Scanners": "Digitize with precision and speed",
 };
+
+const featuredProducts = [
+  {
+    categorySlug: "Home-Printers",
+    name: "EcoTank Home Pro 4000",
+    description: "Perfect for home offices and personal use. This compact wireless printer delivers exceptional quality prints with ultra-low running costs. Features automatic duplex printing and mobile connectivity.",
+    price: "$249.99",
+    features: ["Wireless connectivity", "Auto duplex printing", "Low-cost ink system"],
+    image: homePrinterImg,
+    productId: "home-printer-1"
+  },
+  {
+    categorySlug: "Office-Printers",
+    name: "WorkForce Pro MX-8500",
+    description: "Built for demanding office environments. High-speed multifunction printer with print, scan, copy, and fax capabilities. Handles up to 50,000 pages per month with ease.",
+    price: "$899.99",
+    features: ["50,000 pages/month", "All-in-one functionality", "Network ready"],
+    image: officePrinterImg,
+    productId: "office-printer-1"
+  },
+  {
+    categorySlug: "Inkjet-Printers",
+    name: "PhotoSmart Elite X700",
+    description: "Create stunning photo prints at home. 6-color ink system produces gallery-quality photos with vivid colors and exceptional detail. Perfect for photographers and creative professionals.",
+    price: "$399.99",
+    features: ["6-color ink system", "Borderless printing", "Photo paper support"],
+    image: inkjetPrinterImg,
+    productId: "inkjet-printer-1"
+  },
+  {
+    categorySlug: "Laser-Printers",
+    name: "LaserJet Enterprise M600",
+    description: "Lightning-fast document printing for busy offices. Prints up to 55 pages per minute with crisp, professional quality text. Built-in security features protect your sensitive documents.",
+    price: "$599.99",
+    features: ["55 ppm speed", "Enterprise security", "Low cost per page"],
+    image: laserPrinterImg,
+    productId: "laser-printer-1"
+  },
+  {
+    categorySlug: "Document-Scanners",
+    name: "ScanPro Elite DS-500",
+    description: "Professional document scanning at unprecedented speeds. Scans up to 80 pages per minute with automatic document feeder. Perfect for digitizing large document archives.",
+    price: "$449.99",
+    features: ["80 ppm scanning", "Auto document feeder", "OCR included"],
+    image: scannerImg,
+    productId: "scanner-1"
+  }
+];
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -227,7 +280,97 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
+      {/* Featured Products Showcase */}
+      <section className="section-padding bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">Featured Products</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Top Picks from Each Category</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Discover our best-selling products handpicked for quality and performance
+            </p>
+          </motion.div>
+
+          <div className="space-y-16">
+            {featuredProducts.map((product, index) => {
+              const category = STORE_CATEGORIES.find(c => c.slug === product.categorySlug);
+              const isImageLeft = index % 2 === 0;
+              
+              return (
+                <motion.div
+                  key={product.productId}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${!isImageLeft ? 'lg:flex-row-reverse' : ''}`}
+                >
+                  {/* Image */}
+                  <div className={`${!isImageLeft ? 'lg:order-2' : ''}`}>
+                    <a 
+                      href={category ? getCategoryUrl(category) : "/shop"} 
+                      className="block group"
+                      data-testid={`link-product-${product.productId}`}
+                    >
+                      <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                          data-testid={`img-product-${product.productId}`}
+                        />
+                        <div className="absolute top-4 left-4 z-20">
+                          <span className="bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                            {category?.name || product.categorySlug.replace('-', ' ')}
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  {/* Content */}
+                  <div className={`${!isImageLeft ? 'lg:order-1' : ''}`}>
+                    <div className="space-y-4">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-foreground">{product.name}</h3>
+                      <p className="text-muted-foreground text-lg leading-relaxed">{product.description}</p>
+                      
+                      <div className="flex flex-wrap gap-2 pt-2">
+                        {product.features.map((feature, i) => (
+                          <span 
+                            key={i} 
+                            className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-sm text-muted-foreground px-3 py-1.5 rounded-full"
+                          >
+                            <CheckCircle2 className="w-4 h-4 text-primary" />
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-6 pt-4">
+                        <span className="text-3xl font-bold text-primary">{product.price}</span>
+                        <Button asChild>
+                          <a href={category ? getCategoryUrl(category) : "/shop"} data-testid={`button-view-${product.productId}`}>
+                            View in Store
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
