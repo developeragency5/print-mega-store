@@ -75,26 +75,26 @@ export function CategoryBanner() {
 
   return (
     <section 
-      className="bg-gray-100 dark:bg-gray-800 rounded-md p-6 md:p-8 mb-6"
+      className="bg-white rounded-xl border border-gray-100 p-6 md:p-10 mb-8"
       data-testid={`category-banner-${categorySlug}`}
     >
-      <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
         <div className="w-full md:w-3/5 text-center md:text-left">
           <h1 
-            className="text-3xl font-bold text-foreground mb-4"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
             data-testid="category-banner-title"
           >
             {banner.title}
           </h1>
           <p 
-            className="text-muted-foreground leading-relaxed mb-6"
+            className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg"
             data-testid="category-banner-description"
           >
             {banner.description}
           </p>
           <button
             onClick={scrollToProducts}
-            className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition-all"
+            className="inline-flex items-center gap-2 bg-[#37AFE1] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#2d8bb8] transition-all"
             data-testid="category-banner-browse-button"
           >
             Browse Collection
@@ -105,7 +105,7 @@ export function CategoryBanner() {
           <img
             src={banner.image}
             alt={banner.title}
-            className="max-h-[250px] md:max-h-[280px] w-auto object-contain"
+            className="max-h-[220px] md:max-h-[260px] w-auto object-contain"
             data-testid="category-banner-image"
           />
         </div>
