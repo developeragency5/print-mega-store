@@ -53,7 +53,12 @@ export function CategoryBanner() {
 
   useEffect(() => {
     const handleHashChange = () => {
-      setCategorySlug(parseCategorySlugFromHash(window.location.hash));
+      const newSlug = parseCategorySlugFromHash(window.location.hash);
+      setCategorySlug(newSlug);
+      
+      if (newSlug && categoryBanners[newSlug]) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     };
 
     window.addEventListener("hashchange", handleHashChange);
