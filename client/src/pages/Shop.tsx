@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Loader2 } from "lucide-react";
 import { STORE_ID } from "@/lib/ecwid";
+import { CategoryBanner } from "@/components/CategoryBanner";
 
 declare global {
   interface Window {
@@ -97,6 +98,7 @@ export default function Shop() {
   return (
     <div className="bg-gray-50 min-h-screen pt-24 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <CategoryBanner />
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 min-h-[600px]">
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-96 text-muted-foreground">
