@@ -159,10 +159,10 @@ export default function Home() {
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { icon: <Truck className="w-6 h-6" />, title: "Fast Shipping", desc: "Free over $500" },
-              { icon: <ShieldCheck className="w-6 h-6" />, title: "Secure Checkout", desc: "256-bit encryption" },
-              { icon: <Briefcase className="w-6 h-6" />, title: "Business Grade", desc: "Professional quality" },
-              { icon: <Headphones className="w-6 h-6" />, title: "Expert Support", desc: "24/7 available" },
+              { icon: <Truck className="w-6 h-6" />, title: "Fast Shipping", desc: "Quick delivery to your door" },
+              { icon: <Tag className="w-6 h-6" />, title: "Best Prices", desc: "Competitive rates guaranteed" },
+              { icon: <ShieldCheck className="w-6 h-6" />, title: "Secure Checkout", desc: "SSL encrypted payments" },
+              { icon: <BadgeCheck className="w-6 h-6" />, title: "Trusted Platform", desc: "Powered by Ecwid" },
             ].map((benefit, i) => (
               <motion.div
                 key={i}
