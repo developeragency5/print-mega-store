@@ -764,7 +764,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
                   <Headphones className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold">Find Your Perfect Printer</h3>
+                <h3 className="text-xl font-bold text-white">Find Your Perfect Printer</h3>
               </div>
               <p className="text-white/90 leading-relaxed mb-4">
                 Not sure which printer is right for you? Browse our categories to explore options for home, office, or business use.
