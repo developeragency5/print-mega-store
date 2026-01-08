@@ -20,7 +20,7 @@ export default function ShippingPolicy() {
             <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
               <p className="text-gray-700">
                 <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> support@printmegastore.com<br />
+                <strong>Email:</strong> info@printmegastore.com<br />
                 <strong>Phone:</strong> +1 (555) 123-4567<br />
                 <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
               </p>
@@ -103,7 +103,7 @@ export default function ShippingPolicy() {
                   <li><strong>U.S. Territories:</strong> Puerto Rico, Guam, U.S. Virgin Islands (additional charges may apply)</li>
                 </ul>
                 <p>
-                  We do not currently ship to international destinations, APO/FPO addresses, or P.O. Boxes for large items. If you require international shipping, please contact our customer support team to discuss available options.
+                  We do not currently ship to international destinations, APO/FPO addresses, or P.O. Boxes for large items. If you require international shipping, please contact our team to discuss available options.
                 </p>
               </section>
 
@@ -155,7 +155,7 @@ export default function ShippingPolicy() {
                   If you have any questions about our Shipping Policy or need assistance with your order, please contact us:
                 </p>
                 <p className="mt-4">
-                  <strong>Email:</strong> support@printmegastore.com<br />
+                  <strong>Email:</strong> info@printmegastore.com<br />
                   <strong>Phone:</strong> +1 (555) 123-4567<br />
                   <strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST<br />
                   <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States

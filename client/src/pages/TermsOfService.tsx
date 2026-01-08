@@ -147,7 +147,7 @@ export default function TermsOfService() {
                   If you have any questions about these Terms of Service, please contact us at:
                 </p>
                 <p className="mt-4">
-                  <strong>Email:</strong> support@printmegastore.com<br />
+                  <strong>Email:</strong> info@printmegastore.com<br />
                   <strong>Phone:</strong> +1 (555) 123-4567<br />
                   <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001
                 </p>

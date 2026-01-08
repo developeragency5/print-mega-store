@@ -79,7 +79,7 @@ export default function PurchaseTerms() {
                   <strong>Refund Process:</strong> Once we receive and inspect your return, we will process your refund within 5-7 business days. Refunds will be credited to the original payment method. Shipping charges are non-refundable unless the return is due to our error.
                 </p>
                 <p className="mt-4">
-                  To initiate a return, please contact our customer support team at support@printmegastore.com with your order number and reason for return.
+                  To initiate a return, please contact our team at info@printmegastore.com with your order number and reason for return.
                 </p>
               </section>
 
@@ -89,7 +89,7 @@ export default function PurchaseTerms() {
                   Products sold by Print Mega Store are covered by the manufacturer's warranty. Warranty terms vary by product and manufacturer. We recommend reviewing the warranty information included with your product or on the manufacturer's website.
                 </p>
                 <p className="mt-4">
-                  For warranty claims, you may need to contact the manufacturer directly. However, our customer support team is happy to assist you with the warranty claim process and provide guidance.
+                  For warranty claims, you may need to contact the manufacturer directly. However, our team is happy to assist you with the warranty claim process and provide guidance.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 mt-4">
                   <li>Print Mega Store does not provide additional warranties beyond manufacturer warranties unless explicitly stated</li>
@@ -112,7 +112,7 @@ export default function PurchaseTerms() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4" data-testid="heading-order-cancellation">Order Cancellation</h2>
                 <p>
-                  You may request to cancel your order before it has shipped by contacting our customer support team immediately. Once an order has shipped, it cannot be cancelled but may be returned according to our Return Policy.
+                  You may request to cancel your order before it has shipped by contacting our team immediately. Once an order has shipped, it cannot be cancelled but may be returned according to our Return Policy.
                 </p>
                 <p className="mt-4">
                   Print Mega Store reserves the right to cancel orders due to:
@@ -135,7 +135,7 @@ export default function PurchaseTerms() {
                   All items purchased from Print Mega Store are shipped pursuant to a shipment contract. The risk of loss and title for such items pass to you upon delivery of the items to the carrier. We are not responsible for any loss, damage, or delay once the package is in the carrier's possession.
                 </p>
                 <p className="mt-4">
-                  If your package is lost or damaged during shipping, please contact our customer support team. We will work with the carrier to resolve the issue and may file a claim on your behalf. For high-value orders, we recommend selecting shipping insurance at checkout.
+                  If your package is lost or damaged during shipping, please contact our team. We will work with the carrier to resolve the issue and may file a claim on your behalf. For high-value orders, we recommend selecting shipping insurance at checkout.
                 </p>
               </section>
 
@@ -145,7 +145,7 @@ export default function PurchaseTerms() {
                   At this time, Print Mega Store ships only to addresses within the United States, including Puerto Rico and US territories. We do not ship to international destinations.
                 </p>
                 <p className="mt-4">
-                  If you are located outside the United States and wish to purchase our products, please contact us at support@printmegastore.com to discuss potential options. Note that international shipping, if arranged, would be subject to customs duties, import taxes, and other fees which are the responsibility of the buyer.
+                  If you are located outside the United States and wish to purchase our products, please contact us at info@printmegastore.com to discuss potential options. Note that international shipping, if arranged, would be subject to customs duties, import taxes, and other fees which are the responsibility of the buyer.
                 </p>
               </section>
 
@@ -155,7 +155,7 @@ export default function PurchaseTerms() {
                   If you have any questions about these Purchase Terms or need assistance with an order, please contact us at:
                 </p>
                 <p className="mt-4">
-                  <strong>Email:</strong> support@printmegastore.com<br />
+                  <strong>Email:</strong> info@printmegastore.com<br />
                   <strong>Phone:</strong> +1 (555) 123-4567<br />
                   <strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST<br />
                   <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001

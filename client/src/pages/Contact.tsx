@@ -51,7 +51,7 @@ export default function Contact() {
     {
       icon: <Phone className="w-6 h-6 text-white" />,
       color: "from-blue-500 to-blue-600",
-      title: "Phone Support",
+      title: "Call Us",
       subtitle: "Mon-Fri from 9am to 6pm EST",
       content: "+1 (555) 123-4567",
       href: "tel:+15551234567"
@@ -61,8 +61,8 @@ export default function Contact() {
       color: "from-green-500 to-green-600",
       title: "Email Us",
       subtitle: "We'll respond within 24 hours",
-      content: "support@printmegastore.com",
-      href: "mailto:support@printmegastore.com"
+      content: "info@printmegastore.com",
+      href: "mailto:info@printmegastore.com"
     },
     {
       icon: <MapPin className="w-6 h-6 text-white" />,
@@ -74,7 +74,7 @@ export default function Contact() {
     }
   ];
 
-  const supportTopics = [
+  const helpTopics = [
     {
       icon: <HelpCircle className="w-6 h-6 text-white" />,
       color: "from-orange-500 to-orange-600",
@@ -84,14 +84,14 @@ export default function Contact() {
     {
       icon: <Headphones className="w-6 h-6 text-white" />,
       color: "from-pink-500 to-pink-600",
-      title: "Order Support",
+      title: "Order Inquiries",
       desc: "Questions about your order, shipping, or delivery? We're here to help track and resolve any issues."
     },
     {
       icon: <MessageCircle className="w-6 h-6 text-white" />,
       color: "from-indigo-500 to-indigo-600",
-      title: "Technical Support",
-      desc: "Having trouble with setup or need technical assistance? Our experts are ready to assist."
+      title: "Technical Assistance",
+      desc: "Having trouble with setup or need technical help? Our experts are ready to assist."
     },
     {
       icon: <Clock className="w-6 h-6 text-white" />,
@@ -271,7 +271,7 @@ export default function Contact() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {supportTopics.map((topic, i) => (
+              {helpTopics.map((topic, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -333,7 +333,7 @@ export default function Contact() {
               <div className="text-center mt-8 pt-6 border-t border-gray-100">
                 <p className="text-gray-600 mb-4">Still have questions?</p>
                 <Button asChild className="bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1]">
-                  <a href="mailto:support@printmegastore.com">
+                  <a href="mailto:info@printmegastore.com">
                     Email Us Directly
                   </a>
                 </Button>

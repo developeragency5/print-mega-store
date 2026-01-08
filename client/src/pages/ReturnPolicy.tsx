@@ -20,7 +20,7 @@ export default function ReturnPolicy() {
             <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
               <p className="text-gray-700">
                 <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> support@printmegastore.com<br />
+                <strong>Email:</strong> info@printmegastore.com<br />
                 <strong>Phone:</strong> +1 (555) 123-4567<br />
                 <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
               </p>
@@ -76,7 +76,7 @@ export default function ReturnPolicy() {
                 <p className="mb-4">To start a return, please follow these steps:</p>
                 <ol className="list-decimal pl-6 space-y-3">
                   <li>
-                    <strong>Contact Customer Support:</strong> Email us at support@printmegastore.com or call +1 (555) 123-4567 with your order number and reason for return.
+                    <strong>Contact Us:</strong> Email us at info@printmegastore.com or call +1 (555) 123-4567 with your order number and reason for return.
                   </li>
                   <li>
                     <strong>Receive Return Authorization:</strong> Our team will review your request and provide a Return Merchandise Authorization (RMA) number within 1-2 business days.
@@ -122,7 +122,7 @@ export default function ReturnPolicy() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Exchanges</h2>
                 <p>
-                  If you received a defective item or would like to exchange for a different product, please contact our customer support team. We will arrange for the return of your original item and ship the replacement as quickly as possible. Exchanges are subject to product availability. If the replacement item has a different price, we will charge or refund the difference accordingly.
+                  If you received a defective item or would like to exchange for a different product, please contact our team. We will arrange for the return of your original item and ship the replacement as quickly as possible. Exchanges are subject to product availability. If the replacement item has a different price, we will charge or refund the difference accordingly.
                 </p>
               </section>
 
@@ -144,7 +144,7 @@ export default function ReturnPolicy() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Warranty Claims</h2>
                 <p className="mb-4">
-                  Many products sold by Print Mega Store include manufacturer warranties. Warranty coverage and duration vary by product and manufacturer. For warranty claims, you may need to contact the manufacturer directly. However, our customer support team can assist you in understanding your warranty options and provide guidance on the claims process.
+                  Many products sold by Print Mega Store include manufacturer warranties. Warranty coverage and duration vary by product and manufacturer. For warranty claims, you may need to contact the manufacturer directly. However, our team can assist you in understanding your warranty options and provide guidance on the claims process.
                 </p>
                 <p>
                   Print Mega Store is not the manufacturer of the products we sell and cannot extend or modify manufacturer warranty terms. Please refer to the product documentation for specific warranty information.
@@ -168,10 +168,10 @@ export default function ReturnPolicy() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Contact Us</h2>
                 <p>
-                  If you have any questions about our Return & Refund Policy, please contact our customer support team:
+                  If you have any questions about our Return & Refund Policy, please contact our team:
                 </p>
                 <p className="mt-4">
-                  <strong>Email:</strong> support@printmegastore.com<br />
+                  <strong>Email:</strong> info@printmegastore.com<br />
                   <strong>Phone:</strong> +1 (555) 123-4567<br />
                   <strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST<br />
                   <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States

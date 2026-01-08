@@ -45,7 +45,7 @@ export default function About() {
                   <div>
                     <h3 className="font-semibold text-black mb-1">Contact Us</h3>
                     <p className="text-gray-600 text-sm">
-                      Email: support@printmegastore.com<br />
+                      Email: info@printmegastore.com<br />
                       Phone: +1 (555) 123-4567
                     </p>
                   </div>
@@ -95,7 +95,7 @@ export default function About() {
                     </div>
                     <div>
                       <p className="text-lg text-gray-700 italic">
-                        "Our mission is to simplify the process of finding and purchasing quality printing equipment. We believe everyone deserves access to reliable, high-performance printers and scanners at competitive prices, backed by knowledgeable customer support and hassle-free shopping experience."
+                        "Our mission is to simplify the process of finding and purchasing quality printing equipment. We believe everyone deserves access to reliable, high-performance printers and scanners at competitive prices, backed by knowledgeable assistance and hassle-free shopping experience."
                       </p>
                     </div>
                   </div>
@@ -116,7 +116,7 @@ export default function About() {
                       icon: <HeartHandshake className="w-6 h-6 text-white" />,
                       color: "from-green-500 to-green-600",
                       title: "Customer First",
-                      desc: "Your satisfaction is our priority. We provide responsive customer support and stand behind every product we sell."
+                      desc: "Your satisfaction is our priority. We provide responsive assistance and stand behind every product we sell."
                     },
                     {
                       icon: <Award className="w-6 h-6 text-white" />,
@@ -169,7 +169,7 @@ export default function About() {
                     "Competitive pricing with free shipping on orders over $50",
                     "30-day hassle-free return policy",
                     "Secure checkout with multiple payment options",
-                    "Dedicated customer support team",
+                    "Dedicated assistance team",
                     "Detailed product information and buying guides",
                     "Fast order processing and reliable delivery",
                   ].map((item, i) => (
@@ -219,7 +219,7 @@ export default function About() {
                     <div>
                       <h3 className="font-semibold text-black mb-2">Contact Information</h3>
                       <p className="text-sm text-gray-600">
-                        <strong>Email:</strong> support@printmegastore.com<br />
+                        <strong>Email:</strong> info@printmegastore.com<br />
                         <strong>Phone:</strong> +1 (555) 123-4567<br />
                         <strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST
                       </p>

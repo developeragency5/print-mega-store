@@ -20,7 +20,7 @@ export default function Privacy() {
             <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
               <p className="text-gray-700">
                 <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> support@printmegastore.com<br />
+                <strong>Email:</strong> info@printmegastore.com<br />
                 <strong>Phone:</strong> +1 (555) 123-4567<br />
                 <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
               </p>
@@ -68,7 +68,7 @@ export default function Privacy() {
                   <li>Process and fulfill your orders</li>
                   <li>Send you order confirmations and shipping updates</li>
                   <li>Send promotional emails if you have subscribed to our newsletter</li>
-                  <li>Respond to your inquiries and provide customer support</li>
+                  <li>Respond to your inquiries and provide assistance</li>
                   <li>Improve our website and services</li>
                   <li>Detect and prevent fraud</li>
                 </ul>
@@ -150,7 +150,7 @@ export default function Privacy() {
                   <li>Withdraw consent where processing is based on consent</li>
                 </ul>
                 <p className="mt-4">
-                  To exercise any of these rights, please contact us at support@printmegastore.com. California residents may also visit our <a href="/do-not-sell" className="text-[#37AFE1] hover:underline">Do Not Sell My Personal Information</a> page.
+                  To exercise any of these rights, please contact us at info@printmegastore.com. California residents may also visit our <a href="/do-not-sell" className="text-[#37AFE1] hover:underline">Do Not Sell My Personal Information</a> page.
                 </p>
               </section>
 
@@ -176,7 +176,7 @@ export default function Privacy() {
                   If you have any questions about this Privacy Policy or our data practices, please contact us at:
                 </p>
                 <p className="mt-4">
-                  <strong>Email:</strong> support@printmegastore.com<br />
+                  <strong>Email:</strong> info@printmegastore.com<br />
                   <strong>Phone:</strong> +1 (555) 123-4567<br />
                   <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001
                 </p>

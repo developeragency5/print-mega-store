@@ -334,7 +334,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-black">Easy Online Shopping</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Shopping for printers and scanners online should be straightforward. That is why Print Mega Store provides detailed product specifications, transparent pricing, secure checkout, competitive shipping rates, and dedicated customer support for a smooth buying experience.
+                Shopping for printers and scanners online should be straightforward. That is why Print Mega Store provides detailed product specifications, transparent pricing, secure checkout, competitive shipping rates, and hassle-free returns for a smooth buying experience.
               </p>
             </motion.div>
           </div>
@@ -524,9 +524,9 @@ export default function Home() {
                 color: "from-pink-500 to-pink-600"
               },
               {
-                icon: <Headphones className="w-8 h-8" />,
-                title: "Dedicated Customer Support",
-                desc: "Have questions about which printer is right for you? Our knowledgeable support team is here to help you choose the perfect printing solution for your home office or business needs.",
+                icon: <Award className="w-8 h-8" />,
+                title: "Satisfaction Guaranteed",
+                desc: "We stand behind every product we sell with hassle-free returns and exchanges. Shop with confidence knowing your satisfaction is our top priority.",
                 color: "from-indigo-500 to-indigo-600"
               },
             ].map((item, i) => (
@@ -764,13 +764,13 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
                   <Headphones className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold">Need Help Choosing?</h3>
+                <h3 className="text-xl font-bold">Find Your Perfect Printer</h3>
               </div>
               <p className="text-white/90 leading-relaxed mb-4">
-                Not sure which printer is right for you? Browse our categories or contact our team for personalized recommendations.
+                Not sure which printer is right for you? Browse our categories to explore options for home, office, or business use.
               </p>
               <Button asChild variant="secondary" className="bg-white text-[#37AFE1] hover:bg-gray-100">
-                <a href="/contact">Get Recommendations</a>
+                <a href="/shop">Browse All Products</a>
               </Button>
             </motion.div>
           </div>
@@ -916,7 +916,7 @@ export default function Home() {
                 You may also browse through our product categories to find detailed information about specifications, features, and compatibility. However, if you cannot find what you are looking for and you have questions about your purchase, simply send us a message through our <a href="/contact" className="text-[#37AFE1] hover:underline">contact page</a>.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed mt-4">
-                If our customer support is offline, leave a message and we will get back to you as soon as we can. You can also contact us via phone or email.
+                If we are unavailable, leave a message and we will get back to you as soon as we can. You can also reach us via phone or email.
               </p>
             </motion.div>
 
@@ -942,7 +942,7 @@ export default function Home() {
                 That is why we carefully select each product in our catalog. If you are not completely satisfied with your purchase, please read our return policy for more information on how we can help resolve any concerns.
               </p>
               <p className="text-gray-600 text-sm leading-relaxed mt-4">
-                For any questions about product specifications or compatibility, contact our customer support team for assistance.
+                For any questions about product specifications or compatibility, feel free to reach out to us for assistance.
               </p>
             </motion.div>
 

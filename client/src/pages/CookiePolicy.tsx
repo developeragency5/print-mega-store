@@ -20,7 +20,7 @@ export default function CookiePolicy() {
             <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
               <p className="text-gray-700">
                 <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> support@printmegastore.com<br />
+                <strong>Email:</strong> info@printmegastore.com<br />
                 <strong>Phone:</strong> +1 (555) 123-4567<br />
                 <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
               </p>
@@ -167,7 +167,7 @@ export default function CookiePolicy() {
                   If you have any questions about our use of cookies or this Cookie Policy, please contact us:
                 </p>
                 <p className="mt-4">
-                  <strong>Email:</strong> support@printmegastore.com<br />
+                  <strong>Email:</strong> info@printmegastore.com<br />
                   <strong>Phone:</strong> +1 (555) 123-4567<br />
                   <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
                 </p>

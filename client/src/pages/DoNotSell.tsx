@@ -21,7 +21,7 @@ export default function DoNotSell() {
             <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
               <p className="text-gray-700">
                 <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> support@printmegastore.com<br />
+                <strong>Email:</strong> info@printmegastore.com<br />
                 <strong>Phone:</strong> +1 (555) 123-4567<br />
                 <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
               </p>
@@ -73,7 +73,7 @@ export default function DoNotSell() {
                 </p>
                 <div className="bg-[#37AFE1]/10 rounded-xl p-6 mb-6">
                   <p className="mb-4">
-                    <strong>Email:</strong> support@printmegastore.com<br />
+                    <strong>Email:</strong> info@printmegastore.com<br />
                     <strong>Subject Line:</strong> "Do Not Sell My Personal Information"
                   </p>
                   <p className="mb-4">Please include in your email:</p>
@@ -85,7 +85,7 @@ export default function DoNotSell() {
                   </ul>
                 </div>
                 <Button asChild className="bg-[#37AFE1] hover:bg-[#2d8bb8] text-white mb-6">
-                  <a href="mailto:support@printmegastore.com?subject=Do%20Not%20Sell%20My%20Personal%20Information">
+                  <a href="mailto:info@printmegastore.com?subject=Do%20Not%20Sell%20My%20Personal%20Information">
                     Submit Opt-Out Request via Email
                   </a>
                 </Button>
@@ -165,7 +165,7 @@ export default function DoNotSell() {
                   If you have any questions about this page or your California privacy rights, please contact us:
                 </p>
                 <p className="mt-4">
-                  <strong>Email:</strong> support@printmegastore.com<br />
+                  <strong>Email:</strong> info@printmegastore.com<br />
                   <strong>Phone:</strong> +1 (555) 123-4567<br />
                   <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
                 </p>
