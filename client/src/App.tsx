@@ -11,6 +11,13 @@ import Home from "@/pages/Home";
 import Shop from "@/pages/Shop";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
+import TermsOfService from "@/pages/TermsOfService";
+import PurchaseTerms from "@/pages/PurchaseTerms";
+import ShippingPolicy from "@/pages/ShippingPolicy";
+import ReturnPolicy from "@/pages/ReturnPolicy";
+import Disclaimer from "@/pages/Disclaimer";
+import CookiePolicy from "@/pages/CookiePolicy";
+import DoNotSell from "@/pages/DoNotSell";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +27,13 @@ function Router() {
       <Route path="/shop" component={Shop} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={TermsOfService} />
+      <Route path="/purchase-terms" component={PurchaseTerms} />
+      <Route path="/shipping" component={ShippingPolicy} />
+      <Route path="/returns" component={ReturnPolicy} />
+      <Route path="/disclaimer" component={Disclaimer} />
+      <Route path="/cookies" component={CookiePolicy} />
+      <Route path="/do-not-sell" component={DoNotSell} />
       <Route component={NotFound} />
     </Switch>
   );

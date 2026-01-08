@@ -80,11 +80,16 @@ export function Footer() {
             <div className="lg:col-span-2">
               <h3 className="text-white font-bold text-lg mb-6">Support</h3>
               <ul className="space-y-4">
-                {["FAQ", "Shipping Info", "Returns", "Warranty", "Track Order"].map((item, i) => (
+                {[
+                  { name: "Shipping Info", href: "/shipping" },
+                  { name: "Returns & Refunds", href: "/returns" },
+                  { name: "Purchase Terms", href: "/purchase-terms" },
+                  { name: "Contact Us", href: "/contact" },
+                ].map((item, i) => (
                   <li key={i}>
-                    <a href="#" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 group">
+                    <a href={item.href} className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 group">
                       <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                      {item}
+                      {item.name}
                     </a>
                   </li>
                 ))}
@@ -146,15 +151,19 @@ export function Footer() {
             <strong>Disclaimer:</strong> Print Mega Store is an independent retailer and is not affiliated with, endorsed by, or sponsored by HP Inc., Hewlett-Packard Company, or any other manufacturer. All product images, logos, and trademarks are the property of their respective owners. Product images are used for informational purposes only under fair use guidelines. HP, LaserJet, and related trademarks are registered trademarks of HP Inc. All other trademarks are the property of their respective owners. All product information, specifications, and pricing are subject to change without notice. We make every effort to ensure accuracy but cannot guarantee that all information is complete or error-free. Please verify product details with the manufacturer before making a purchase decision.
           </p>
         </div>
-        <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
+        <div className="py-4 border-t border-white/10">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs text-gray-500 mb-4">
+            <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a>
+            <a href="/shipping" className="hover:text-primary transition-colors">Shipping Policy</a>
+            <a href="/returns" className="hover:text-primary transition-colors">Return & Refund Policy</a>
+            <a href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</a>
+            <a href="/cookies" className="hover:text-primary transition-colors">Cookie Policy</a>
+            <a href="/do-not-sell" className="hover:text-primary transition-colors">Do Not Sell My Info</a>
+          </div>
+          <p className="text-sm text-gray-500 text-center">
             &copy; {new Date().getFullYear()} Print Mega Store. All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-            <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
-          </div>
         </div>
       </div>
     </footer>
