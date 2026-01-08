@@ -823,8 +823,8 @@ export default function Home() {
               },
               {
                 icon: <FileText className="w-8 h-8" />,
-                title: "Detailed Product Info",
-                desc: "Browse comprehensive specifications, features, and comparison guides to find the perfect printer or scanner for your needs.",
+                title: "Trusted Brands",
+                desc: "Shop from leading manufacturers known for quality and innovation in printing technology.",
                 color: "from-purple-500 to-purple-600"
               },
               {
