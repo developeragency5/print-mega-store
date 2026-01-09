@@ -31,8 +31,8 @@ export function Footer() {
                 </span>
               </Link>
               <p className="text-base leading-relaxed text-gray-400 max-w-sm">
-                Your independent online destination for professional printing and scanning equipment. 
-                Quality products, competitive prices, and reliable customer service.
+                Where quality meets convenience. Find the perfect printing solution for every need, 
+                from home offices to enterprise workspaces.
               </p>
             </div>
 
