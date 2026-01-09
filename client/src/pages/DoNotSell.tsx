@@ -57,7 +57,7 @@ export default function DoNotSell() {
                   <li><strong>Inferences:</strong> Such as preferences and characteristics derived from your browsing behavior</li>
                 </ul>
                 <p className="mt-4">
-                  This information may be shared with advertising partners including Google, Microsoft, and Meta to deliver targeted advertisements and measure campaign effectiveness.
+                  This information may be shared with our advertising partners to deliver targeted advertisements and measure campaign effectiveness.
                 </p>
               </section>
 
@@ -95,9 +95,9 @@ export default function DoNotSell() {
                   You can also opt out directly with our advertising partners:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Google:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Google Ad Settings</a></li>
-                  <li><strong>Microsoft:</strong> <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Microsoft Privacy Dashboard</a></li>
-                  <li><strong>Meta (Facebook):</strong> <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Facebook Ad Preferences</a></li>
+                  <li><strong>Search engine advertising platforms:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Ad Settings</a></li>
+                  <li><strong>Other search advertising platforms:</strong> <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Privacy Dashboard</a></li>
+                  <li><strong>Social media advertising platforms:</strong> <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Ad Preferences</a></li>
                 </ul>
 
                 <h3 className="text-xl font-semibold text-black mb-3 mt-6">Option 3: Industry Opt-Out Tools</h3>
