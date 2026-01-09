@@ -39,7 +39,7 @@ export default function Privacy() {
                 <p className="mb-4">We may collect information about you in a variety of ways, including:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>Personal Data:</strong> Name, email address, phone number, shipping address, and billing information when you make a purchase or create an account.</li>
-                  <li><strong>Payment Information:</strong> Credit card details and billing information processed securely through our payment provider.</li>
+                  <li><strong>Payment Information:</strong> Credit card details and billing information processed securely through our payment provider (Ecwid/Lightspeed).</li>
                   <li><strong>Usage Data:</strong> Information about how you interact with our website, including pages visited, time spent, and browsing patterns.</li>
                   <li><strong>Device Information:</strong> Browser type, operating system, IP address, and device identifiers.</li>
                 </ul>
@@ -84,7 +84,7 @@ export default function Privacy() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Third-Party Services</h2>
                 <p>
-                  Our website uses a third-party ecommerce platform to process orders and payments. When you make a purchase, your information is also subject to our ecommerce provider's privacy policy. We may also use third-party analytics services to understand how visitors use our website.
+                  Our website uses Ecwid (Lightspeed) as our ecommerce platform. When you make a purchase, your information is also subject to Ecwid's privacy policy. We may also use third-party analytics services to understand how visitors use our website.
                 </p>
               </section>
 
@@ -120,20 +120,19 @@ export default function Privacy() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">Advertising & Remarketing</h2>
                 <p className="mb-4">
-                  We work with various advertising partners to display relevant advertisements to you on other websites after you visit our site. These partners use cookies and similar technologies to track your browsing activity and serve personalized advertisements based on your interests.
+                  We use advertising and remarketing services to show you relevant ads on other websites after you visit our site. These services use cookies and similar technologies to track your browsing activity and serve personalized advertisements.
                 </p>
-                <p className="mb-4"><strong>Our advertising partners include:</strong></p>
+                <p className="mb-4"><strong>Advertising platforms we use:</strong></p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
-                  <li><strong>Search Engine Advertising Partners:</strong> We work with major search engine advertising platforms to display ads in search results and across partner websites. These platforms may collect data about your visits to serve relevant ads.</li>
-                  <li><strong>Social Media Advertising Partners:</strong> We partner with social media platforms to measure ad effectiveness and serve targeted advertisements. These platforms may use tracking technologies to deliver personalized content.</li>
-                  <li><strong>Display Advertising Networks:</strong> We use display advertising networks to show relevant ads across various websites. These networks may use cookies to serve ads based on your browsing history.</li>
+                  <li><strong>Microsoft Advertising (Bing Ads):</strong> We use Microsoft Advertising to display ads on Microsoft properties and partner sites. Microsoft may collect data about your visits to serve relevant ads. For more information, see <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Microsoft's Privacy Statement</a>.</li>
+                  <li><strong>Google Ads:</strong> We use Google Ads for search and display advertising. Google may use cookies to serve ads based on your prior visits. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Google's Privacy Policy</a>.</li>
+                  <li><strong>Meta (Facebook) Pixel:</strong> We use Meta Pixel to measure ad effectiveness and serve targeted ads on Facebook and Instagram. For more information, see <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Meta's Privacy Policy</a>.</li>
                 </ul>
                 <p className="mb-4"><strong>Opting Out of Personalized Advertising:</strong></p>
-                <p className="mb-4">You can opt out of personalized advertising through the following methods:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Major search engine advertising platform: <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Search Engine Ad Settings</a></li>
-                  <li>Alternative search engine advertising platform: <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Privacy Dashboard</a></li>
-                  <li>Social media advertising platform: <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Social Media Ad Preferences</a></li>
+                  <li>Google: <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Google Ad Settings</a></li>
+                  <li>Microsoft: <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Microsoft Privacy Dashboard</a></li>
+                  <li>Meta: <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Facebook Ad Preferences</a></li>
                   <li>Industry-wide opt-out: <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#37AFE1] hover:underline">Digital Advertising Alliance</a></li>
                 </ul>
               </section>

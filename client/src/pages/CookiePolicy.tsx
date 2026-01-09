@@ -69,8 +69,8 @@ export default function CookiePolicy() {
                   These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and anonymous.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
-                  <li><strong>Website Analytics:</strong> Used to analyze website traffic and user behavior</li>
-                  <li><strong>Tag Management:</strong> Used to manage analytics and marketing tags</li>
+                  <li><strong>Google Analytics:</strong> Used to analyze website traffic and user behavior</li>
+                  <li><strong>Google Tag Manager:</strong> Used to manage analytics and marketing tags</li>
                 </ul>
 
                 <h3 className="text-xl font-semibold text-black mb-3 mt-6">Functional Cookies</h3>
@@ -88,9 +88,9 @@ export default function CookiePolicy() {
                   These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other sites. They do not store directly personal information but are based on uniquely identifying your browser and internet device.
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Search engine advertising platforms:</strong> Used for conversion tracking and remarketing on search engine properties and partner networks</li>
-                  <li><strong>Display advertising networks:</strong> Used for conversion tracking and remarketing across display advertising networks</li>
-                  <li><strong>Social media advertising platforms:</strong> Used for conversion tracking and remarketing on social media platforms</li>
+                  <li><strong>Microsoft Advertising (Bing Ads):</strong> Used for conversion tracking and remarketing on Microsoft properties</li>
+                  <li><strong>Google Ads:</strong> Used for conversion tracking and remarketing across Google's network</li>
+                  <li><strong>Meta (Facebook) Pixel:</strong> Used for conversion tracking and remarketing on Facebook and Instagram</li>
                 </ul>
               </section>
 
@@ -100,10 +100,10 @@ export default function CookiePolicy() {
                   In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the website and deliver advertisements on and through the website. These third parties include:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Ecommerce Platform:</strong> Our ecommerce platform uses cookies for shopping cart functionality, checkout, and order processing.</li>
-                  <li><strong>Analytics Providers:</strong> For website analytics and performance measurement services.</li>
-                  <li><strong>Advertising Partners:</strong> For advertising and remarketing services across various networks.</li>
-                  <li><strong>Social Media Platforms:</strong> For social media integration and advertising.</li>
+                  <li><strong>Ecwid (Lightspeed):</strong> Our ecommerce platform uses cookies for shopping cart functionality, checkout, and order processing.</li>
+                  <li><strong>Google:</strong> For analytics and advertising services.</li>
+                  <li><strong>Microsoft:</strong> For advertising and analytics services.</li>
+                  <li><strong>Meta:</strong> For advertising and social media integration.</li>
                   <li><strong>Payment Processors:</strong> For secure payment processing.</li>
                 </ul>
               </section>
