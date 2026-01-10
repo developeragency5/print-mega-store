@@ -203,7 +203,7 @@ export default function Home() {
             return (
               <div
                 key={index}
-                className={`${index === currentSlide ? 'block' : 'hidden'} relative w-full`}
+                className={`${index === 0 ? 'relative' : 'absolute inset-0'} w-full transition-opacity duration-500 ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
               >
                 <img
                   src={banner}
