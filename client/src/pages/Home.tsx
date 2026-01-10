@@ -22,10 +22,11 @@ import {
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useCreateSubscriber } from "@/hooks/use-subscribers";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
-import heroBannerImg from "@assets/KSP_SMB_3_Desktop.jpg_1767984873397.avif";
+import heroBanner1 from "@assets/KSP_SMB_3_Desktop.jpg_1767984873397.avif";
+import heroBanner2 from "@assets/KSP_1_Desktop.png_1768007400545.avif";
 import homePrinterImg from "@assets/61g0ZhtFErL._AC_SL1500__1767904909151.jpg";
 import officePrinterImg from "@assets/HP_OfficeJet_Pro_8135e_Wireless_All-in-One_Printer_with_3_Mont_1767904971940.png";
 import inkjetPrinterImg from "@assets/HP_ENVY_Inspire_7955e_All-in-One_Printer_with_3_Months_of_Inst_1767905095614.jpg";
@@ -181,56 +182,92 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const banners = [heroBanner1, heroBanner2];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % banners.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [banners.length]);
+
   return (
     <div className="flex flex-col">
-      <section className="relative w-full" data-testid="hero-section">
+      <section className="relative w-full overflow-hidden" data-testid="hero-section">
         <div className="relative w-full">
-          <img
-            src={heroBannerImg}
-            alt="Print Mega Store - Professional Printing Solutions for Enterprise and Home"
-            className="w-full h-auto object-cover"
-            data-testid="img-hero-banner"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
-          <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-xl">
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white leading-tight"
-                >
-                  Buy Printers & Scanners Online for Home and Office
-                </motion.h1>
+          {banners.map((banner, index) => (
+            <div
+              key={index}
+              className={`${index === currentSlide ? 'block' : 'hidden'} relative w-full`}
+            >
+              <img
+                src={banner}
+                alt={`Print Mega Store - Professional Printing Solutions ${index + 1}`}
+                className="w-full h-auto object-cover"
+                data-testid={`img-hero-banner-${index}`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/50 to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-end">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="max-w-xl ml-auto text-right">
+                    <motion.h1
+                      key={`title-${currentSlide}`}
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white leading-tight"
+                    >
+                      Buy Printers & Scanners Online for Home and Office
+                    </motion.h1>
 
-                <motion.p
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
-                >
-                  Shop inkjet printers, laser printers, and document scanners
-                  for home offices and businesses. Find wireless all-in-one
-                  printers, compact home printers, and high-volume office
-                  printing solutions at competitive prices with secure checkout
-                  and fast shipping.
-                </motion.p>
+                    <motion.p
+                      key={`desc-${currentSlide}`}
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 0.1 }}
+                      className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
+                    >
+                      Shop inkjet printers, laser printers, and document scanners
+                      for home offices and businesses. Find wireless all-in-one
+                      printers, compact home printers, and high-volume office
+                      printing solutions at competitive prices with secure checkout
+                      and fast shipping.
+                    </motion.p>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  <Button asChild size="lg" className="text-lg font-semibold">
-                    <a href="/shop" data-testid="button-shop-now">
-                      Shop Now
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </a>
-                  </Button>
-                </motion.div>
+                    <motion.div
+                      key={`btn-${currentSlide}`}
+                      initial={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      className="flex justify-end"
+                    >
+                      <Button asChild size="lg" className="text-lg font-semibold">
+                        <a href="/shop" data-testid="button-shop-now">
+                          Shop Now
+                          <ArrowRight className="ml-2 w-5 h-5" />
+                        </a>
+                      </Button>
+                    </motion.div>
+                  </div>
+                </div>
               </div>
             </div>
+          ))}
+          
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
+            {banners.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === currentSlide 
+                    ? 'bg-white scale-125' 
+                    : 'bg-white/50 hover:bg-white/75'
+                }`}
+                data-testid={`hero-dot-${index}`}
+              />
+            ))}
           </div>
         </div>
       </section>
