@@ -83,32 +83,38 @@ export function Footer() {
               <p className="text-gray-400 mb-6">
                 Subscribe for exclusive deals, tips, and product updates.
               </p>
-              <form onSubmit={handleSubscribe} className="space-y-3">
-                <div className="flex gap-2">
-                  <Input
-                    placeholder="Enter your email"
-                    className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary h-12 rounded-xl"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    type="email"
-                    data-testid="input-newsletter-email"
-                  />
-                  <Button 
-                    type="submit" 
-                    className="h-12 px-6 rounded-xl"
-                    data-testid="button-subscribe"
-                  >
-                    Subscribe
-                  </Button>
-                </div>
-                {showSuccess && (
-                  <div className="flex items-center gap-2 text-green-400 text-sm">
-                    <CheckCircle className="w-4 h-4" />
-                    <span>Thank you for subscribing!</span>
+              {showSuccess ? (
+                <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 text-center shadow-xl">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-10 h-10 text-white" />
                   </div>
-                )}
-              </form>
+                  <h3 className="text-xl font-bold text-white mb-2">Successfully Subscribed!</h3>
+                  <p className="text-white/90 text-sm">
+                    Thank you for joining our newsletter. You'll receive exclusive deals, tips, and product updates directly to your inbox.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubscribe} className="space-y-3">
+                  <div className="flex gap-2">
+                    <Input
+                      placeholder="Enter your email"
+                      className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary h-12 rounded-xl"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      type="email"
+                      data-testid="input-newsletter-email"
+                    />
+                    <Button 
+                      type="submit" 
+                      className="h-12 px-6 rounded-xl"
+                      data-testid="button-subscribe"
+                    >
+                      Subscribe
+                    </Button>
+                  </div>
+                </form>
+              )}
 
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-4 text-gray-400">

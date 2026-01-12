@@ -175,90 +175,123 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
             >
               <Card className="shadow-xl border-0 rounded-3xl overflow-hidden">
-                <div className="p-8 pb-4 bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8]">
-                  <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                    <Send className="w-6 h-6" />
-                    Send us a Message
-                  </h2>
-                  <p className="text-white/80 mt-2">Fill out the form below and we'll get back to you soon.</p>
-                </div>
-                <CardContent className="p-8">
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-sm font-medium">Full Name</FormLabel>
-                            <FormControl>
-                              <Input 
-                                placeholder="John Doe" 
-                                className="h-12 rounded-xl" 
-                                data-testid="input-name"
-                                {...field} 
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-sm font-medium">Email Address</FormLabel>
-                            <FormControl>
-                              <Input 
-                                placeholder="john@example.com" 
-                                type="email" 
-                                className="h-12 rounded-xl"
-                                data-testid="input-email"
-                                {...field} 
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-sm font-medium">Your Message</FormLabel>
-                            <FormControl>
-                              <SimpleTextarea 
-                                placeholder="How can we help you? Tell us about your printing needs..." 
-                                data-testid="input-message"
-                                {...field} 
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
+                {showSuccess ? (
+                  <div className="p-8 md:p-12">
+                    <div className="text-center py-8">
+                      <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                        <CheckCircle className="w-14 h-14 text-white" />
+                      </div>
+                      <h2 className="text-3xl font-bold text-black mb-4">Message Sent Successfully!</h2>
+                      <p className="text-gray-600 text-lg mb-6 max-w-md mx-auto">
+                        Thank you for reaching out to us. Our team will review your message and get back to you within 24 hours.
+                      </p>
+                      <div className="bg-gradient-to-br from-[#37AFE1]/10 to-[#37AFE1]/5 rounded-xl p-6 border border-[#37AFE1]/20 max-w-sm mx-auto">
+                        <p className="text-sm text-gray-600 mb-2">In the meantime, feel free to:</p>
+                        <ul className="text-sm text-gray-700 space-y-2">
+                          <li className="flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-500" />
+                            Browse our product catalog
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-500" />
+                            Check out our latest deals
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-500" />
+                            Read our FAQ section below
+                          </li>
+                        </ul>
+                      </div>
                       <Button 
-                        type="submit" 
-                        className="w-full h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1] transition-all duration-300"
-                        data-testid="button-submit-contact"
+                        onClick={() => setShowSuccess(false)}
+                        className="mt-8 bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1]"
+                        data-testid="button-send-another"
                       >
-                        Send Message
+                        Send Another Message
                       </Button>
-                      
-                      {showSuccess && (
-                        <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700">
-                          <CheckCircle className="w-5 h-5 text-green-600" />
-                          <span>Thank you for your message! We'll get back to you soon.</span>
-                        </div>
-                      )}
-                    </form>
-                  </Form>
-                </CardContent>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <div className="p-8 pb-4 bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8]">
+                      <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+                        <Send className="w-6 h-6" />
+                        Send us a Message
+                      </h2>
+                      <p className="text-white/80 mt-2">Fill out the form below and we'll get back to you soon.</p>
+                    </div>
+                    <CardContent className="p-8">
+                      <Form {...form}>
+                        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                          <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-sm font-medium">Full Name</FormLabel>
+                                <FormControl>
+                                  <Input 
+                                    placeholder="John Doe" 
+                                    className="h-12 rounded-xl" 
+                                    data-testid="input-name"
+                                    {...field} 
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          
+                          <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-sm font-medium">Email Address</FormLabel>
+                                <FormControl>
+                                  <Input 
+                                    placeholder="john@example.com" 
+                                    type="email" 
+                                    className="h-12 rounded-xl"
+                                    data-testid="input-email"
+                                    {...field} 
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="message"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel className="text-sm font-medium">Your Message</FormLabel>
+                                <FormControl>
+                                  <SimpleTextarea 
+                                    placeholder="How can we help you? Tell us about your printing needs..." 
+                                    data-testid="input-message"
+                                    {...field} 
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <Button 
+                            type="submit" 
+                            className="w-full h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1] transition-all duration-300"
+                            data-testid="button-submit-contact"
+                          >
+                            Send Message
+                          </Button>
+                        </form>
+                      </Form>
+                    </CardContent>
+                  </>
+                )}
               </Card>
             </motion.div>
           </div>
