@@ -1,7 +1,9 @@
 import { useEffect, useState, useRef } from "react";
-import { Loader2, ShieldCheck } from "lucide-react";
+import { Loader2, ShieldCheck, ArrowDown } from "lucide-react";
 import { STORE_ID } from "@/lib/ecwid";
 import { CategoryBanner } from "@/components/CategoryBanner";
+import { motion } from "framer-motion";
+import shopBannerImg from "@assets/HP_OfficeJet_8015e_All-in-One_Printer_with_6_Months_of_Instant_1767897902002.jpg";
 
 function parseCategorySlugFromHash(hash: string): string | null {
   const match = hash.match(/^#!\/([^/]+)\/c\//);
@@ -111,9 +113,59 @@ export default function Shop() {
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
+  const scrollToProducts = () => {
+    const storeContainer = document.querySelector('[id^="my-store-"]');
+    if (storeContainer) {
+      storeContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="bg-gray-50 min-h-screen pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Shop Page Hero Banner - shows when no category selected */}
+        {!categorySlug && (
+          <motion.section 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-xl border border-gray-100 p-6 md:p-10 mb-6"
+            data-testid="shop-hero-banner"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="w-full md:w-3/5 text-center md:text-left">
+                <h1 
+                  className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+                  data-testid="shop-banner-title"
+                >
+                  Printers & Scanners
+                </h1>
+                <p 
+                  className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg"
+                  data-testid="shop-banner-description"
+                >
+                  Explore our complete collection of HP printers and document scanners. From compact home printers to high-performance office equipment, find the perfect solution for all your printing and scanning needs.
+                </p>
+                <button
+                  onClick={scrollToProducts}
+                  className="inline-flex items-center gap-2 bg-[#33cccc] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#29a3a3] transition-all"
+                  data-testid="shop-banner-browse-button"
+                >
+                  Browse Products
+                  <ArrowDown className="w-4 h-4" />
+                </button>
+              </div>
+              <div className="w-full md:w-2/5 flex justify-center">
+                <img
+                  src={shopBannerImg}
+                  alt="Printers and Scanners"
+                  className="max-h-[220px] md:max-h-[260px] w-auto object-contain"
+                  data-testid="shop-banner-image"
+                />
+              </div>
+            </div>
+          </motion.section>
+        )}
+
         <CategoryBanner />
         
         {/* Catalog Introduction Section */}
