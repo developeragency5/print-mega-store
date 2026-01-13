@@ -44,6 +44,7 @@ import buildingIcon from "@assets/building_1768342862353.png";
 import inkjetIcon from "@assets/3d-printer_(1)_1768343431514.png";
 import laserIcon from "@assets/printer_(1)_1768343182930.png";
 import scannerIcon from "@assets/scanner_1768343254954.png";
+import dollarGif from "@assets/dollar_1768343622664.gif";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -714,7 +715,7 @@ export default function Home() {
                 color: "from-purple-500 to-purple-600",
               },
               {
-                icon: <DollarSign className="w-8 h-8" />,
+                icon: <img src={dollarGif} alt="Competitive Pricing" className="w-8 h-8" />,
                 title: "Competitive Pricing",
                 desc: "We offer excellent value compared to the suggested retail price.",
                 color: "from-green-500 to-green-600",
