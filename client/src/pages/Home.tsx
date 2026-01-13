@@ -745,9 +745,9 @@ export default function Home() {
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mx-auto mb-4`}
+                  className="w-16 h-16 rounded-xl bg-white flex items-center justify-center shadow-lg mx-auto mb-4"
                 >
-                  <span className="text-white">{item.icon}</span>
+                  <span className="text-[#33cccc]">{item.icon}</span>
                 </motion.div>
                 <h3 className="text-lg font-bold text-black mb-2 group-hover:text-[#33cccc] transition-colors">
                   {item.title}
