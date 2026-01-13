@@ -27,6 +27,11 @@ import { useCreateSubscriber } from "@/hooks/use-subscribers";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
+import Lottie from "lottie-react";
+import briefcaseAnimation from "@assets/briefcase_1768334865450.json";
+import giftAnimation from "@assets/gift_1768334880508.json";
+import ideaAnimation from "@assets/idea_1768334892456.json";
+import shoppingCartAnimation from "@assets/shopping-cart_1768334943652.json";
 import heroBanner1 from "@assets/KSP_SMB_3_Desktop.jpg_1767984873397.avif";
 import heroBanner2 from "@assets/KSP_1_Desktop.png_1768007400545.avif";
 import homePrinterImg from "@assets/61g0ZhtFErL._AC_SL1500__1767904909151.jpg";
@@ -393,9 +398,9 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg overflow-hidden"
                 >
-                  <ShieldCheck className="w-7 h-7 text-white" />
+                  <Lottie animationData={briefcaseAnimation} loop={true} className="w-10 h-10" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-black">Who We Are</h3>
               </div>
@@ -423,9 +428,9 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: -5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg overflow-hidden"
                 >
-                  <Printer className="w-7 h-7 text-white" />
+                  <Lottie animationData={giftAnimation} loop={true} className="w-10 h-10" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-black">What We Offer</h3>
               </div>
@@ -455,9 +460,9 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg overflow-hidden"
                 >
-                  <Briefcase className="w-7 h-7 text-white" />
+                  <Lottie animationData={ideaAnimation} loop={true} className="w-10 h-10" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-black">
                   Solutions for Everyone
@@ -486,9 +491,9 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-6">
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: -5 }}
-                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] flex items-center justify-center shadow-lg overflow-hidden"
                 >
-                  <Headphones className="w-7 h-7 text-white" />
+                  <Lottie animationData={shoppingCartAnimation} loop={true} className="w-10 h-10" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-black">
                   Easy Online Shopping
