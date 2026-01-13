@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, Printer, User } from "lucide-react";
+import { Menu, X, Phone, User } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
+import logoImg from "@/assets/logo.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,11 +87,12 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between gap-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0 group" data-testid="link-logo">
-              <Printer className="w-8 h-8 text-[#37AFE1]" />
-              <span className="text-xl font-bold tracking-tight">
-                <span className="text-gray-900">PRINT</span> <span className="text-[#37AFE1]">MEGA</span> <span className="text-gray-900">STORE</span>
-              </span>
+            <Link href="/" className="flex items-center shrink-0" data-testid="link-logo">
+              <img 
+                src={logoImg} 
+                alt="Print Mega Store" 
+                className="h-12 w-auto object-contain" 
+              />
             </Link>
 
             {/* Right Side Actions */}
