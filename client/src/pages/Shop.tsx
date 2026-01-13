@@ -167,6 +167,35 @@ export default function Shop() {
           )}
           <div id={`my-store-${STORE_ID}`} data-testid="ecwid-store-container"></div>
         </div>
+
+        {/* Ordering, Shipping & Support Summary */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 mt-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">Ordering, Shipping & Support</h2>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold">•</span>
+                <span>Orders are processed securely online and shipped within the United States</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold">•</span>
+                <span>Tracking information is provided after purchase</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold">•</span>
+                <span>Returns and refunds are handled according to our <a href="/returns" className="text-primary hover:underline">Return & Refund Policy</a></span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold">•</span>
+                <span>Manufacturer warranty and technical support are provided by HP</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary font-bold">•</span>
+                <span>Our team is available to assist with order status, billing, and product information</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
