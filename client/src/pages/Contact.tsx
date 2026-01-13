@@ -109,10 +109,10 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#33cccc] to-[#29a3a3] mb-6">
               <Mail className="w-10 h-10 text-white" />
             </div>
-            <p className="text-sm font-semibold text-[#37AFE1] uppercase tracking-wider mb-2">Print Mega Store</p>
+            <p className="text-sm font-semibold text-[#33cccc] uppercase tracking-wider mb-2">Print Mega Store</p>
             <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-contact">
               Contact Us
             </h1>
@@ -134,11 +134,11 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-black text-sm mb-1">Email</h3>
-                <a href="mailto:info@printmegastore.com" className="text-[#37AFE1] text-sm hover:underline">info@printmegastore.com</a>
+                <a href="mailto:info@printmegastore.com" className="text-[#33cccc] text-sm hover:underline">info@printmegastore.com</a>
               </div>
               <div>
                 <h3 className="font-bold text-black text-sm mb-1">Phone</h3>
-                <a href="tel:+15551234567" className="text-[#37AFE1] text-sm hover:underline">+1 (555) 123-4567</a>
+                <a href="tel:+15551234567" className="text-[#33cccc] text-sm hover:underline">+1 (555) 123-4567</a>
               </div>
             </div>
             <div className="border-t border-gray-100 mt-4 pt-4 text-center">
@@ -167,7 +167,7 @@ export default function Contact() {
                       <p className="text-sm text-gray-500 mb-2">{item.subtitle}</p>
                       <a 
                         href={item.href} 
-                        className="text-[#37AFE1] hover:underline font-medium"
+                        className="text-[#33cccc] hover:underline font-medium"
                         data-testid={`link-contact-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                       >
                         {item.content}
@@ -177,7 +177,7 @@ export default function Contact() {
                 </Card>
               ))}
 
-              <div className="bg-gradient-to-br from-[#37AFE1]/10 to-[#37AFE1]/5 rounded-xl p-6 border border-[#37AFE1]/20 mt-8">
+              <div className="bg-gradient-to-br from-[#33cccc]/10 to-[#33cccc]/5 rounded-xl p-6 border border-[#33cccc]/20 mt-8">
                 <h3 className="font-bold text-black mb-2">Business Hours</h3>
                 <div className="space-y-2 text-gray-600">
                   <p className="flex justify-between">
@@ -212,7 +212,7 @@ export default function Contact() {
                       <p className="text-gray-600 text-lg mb-6 max-w-md mx-auto">
                         Thank you for reaching out to us. Our team will review your message and get back to you within 24 hours.
                       </p>
-                      <div className="bg-gradient-to-br from-[#37AFE1]/10 to-[#37AFE1]/5 rounded-xl p-6 border border-[#37AFE1]/20 max-w-sm mx-auto">
+                      <div className="bg-gradient-to-br from-[#33cccc]/10 to-[#33cccc]/5 rounded-xl p-6 border border-[#33cccc]/20 max-w-sm mx-auto">
                         <p className="text-sm text-gray-600 mb-2">In the meantime, feel free to:</p>
                         <ul className="text-sm text-gray-700 space-y-2">
                           <li className="flex items-center gap-2">
@@ -231,7 +231,7 @@ export default function Contact() {
                       </div>
                       <Button 
                         onClick={() => setShowSuccess(false)}
-                        className="mt-8 bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1]"
+                        className="mt-8 bg-gradient-to-r from-[#33cccc] to-[#29a3a3] hover:from-[#29a3a3] hover:to-[#33cccc]"
                         data-testid="button-send-another"
                       >
                         Send Another Message
@@ -240,7 +240,7 @@ export default function Contact() {
                   </div>
                 ) : (
                   <>
-                    <div className="p-8 pb-4 bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8]">
+                    <div className="p-8 pb-4 bg-gradient-to-br from-[#33cccc] to-[#29a3a3]">
                       <h2 className="text-2xl font-bold text-white flex items-center gap-3">
                         <Send className="w-6 h-6" />
                         Send us a Message
@@ -309,7 +309,7 @@ export default function Contact() {
 
                           <Button 
                             type="submit" 
-                            className="w-full h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1] transition-all duration-300"
+                            className="w-full h-14 text-base font-semibold rounded-xl bg-gradient-to-r from-[#33cccc] to-[#29a3a3] hover:from-[#29a3a3] hover:to-[#33cccc] transition-all duration-300"
                             data-testid="button-submit-contact"
                           >
                             Send Message
@@ -397,7 +397,7 @@ export default function Contact() {
 
               <div className="text-center mt-8 pt-6 border-t border-gray-100">
                 <p className="text-gray-600 mb-4">Still have questions?</p>
-                <Button asChild className="bg-gradient-to-r from-[#37AFE1] to-[#2d8bb8] hover:from-[#2d8bb8] hover:to-[#37AFE1]">
+                <Button asChild className="bg-gradient-to-r from-[#33cccc] to-[#29a3a3] hover:from-[#29a3a3] hover:to-[#33cccc]">
                   <a href="mailto:info@printmegastore.com">
                     Email Us Directly
                   </a>
