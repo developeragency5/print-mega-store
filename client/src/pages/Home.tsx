@@ -5,7 +5,6 @@ import {
   ScanLine,
   Truck,
   ShieldCheck,
-  Headphones,
   Briefcase,
   ArrowRight,
   ChevronLeft,
@@ -13,14 +12,14 @@ import {
   Zap,
   FileText,
   Tag,
-  ThumbsUp,
-  Smile,
   BadgeCheck,
   Mail,
-  Award,
-  Users,
-  Clock,
-  Heart,
+  Layers,
+  Smartphone,
+  DollarSign,
+  Home as HomeIcon,
+  Building,
+  Building2,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useCreateSubscriber } from "@/hooks/use-subscribers";
@@ -49,13 +48,11 @@ const categoryIcons: Record<string, React.ReactNode> = {
 };
 
 const categoryDescriptions: Record<string, string> = {
-  "Home-Printers": "Compact and wireless home printers designed for everyday printing, homework, personal documents, and photos.",
-  "Office-Printers":
-    "High-volume office printers and multifunction devices designed to support productivity and team workflows.",
-  "Inkjet-Printers": "Color inkjet printers ideal for photos, creative projects, and flexible printing at home or in the office.",
-  "Laser-Printers": "Fast and efficient laser printers built for sharp documents and high-volume printing environments.",
-  "Document-Scanners":
-    "Professional scanners for digitizing paperwork, contracts, invoices, and archives.",
+  "Home-Printers": "Compact wireless printers designed for everyday home use, schoolwork, and photos.",
+  "Office-Printers": "High-volume printers designed for business productivity in home offices and corporate environments.",
+  "Inkjet-Printers": "Color inkjet printers with ink tanks, mobile printing support, and high quality output.",
+  "Laser-Printers": "Fast and efficient laser printers optimized for high print workloads and sharp documents.",
+  "Document-Scanners": "Professional scanners offering fast scan speed for digitizing paperwork and archives.",
 };
 
 function NewsletterForm() {
@@ -262,11 +259,7 @@ export default function Home() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed"
                       >
-                        Welcome to Print Mega Store. We are a reliable online store
-                        where you can buy high-quality inkjet printers, laser printers,
-                        and document scanners for home and office use. We help you find
-                        the right printer with reliable performance, modern features,
-                        and good prices.
+                        Welcome to Print Mega Store. We are your trusted online place to buy inkjet printers, laser printers, and document scanners for all your needs. Whether you are setting up a home printer or upgrading to an office printer, we offer reliable printing solutions.
                       </motion.p>
 
                       <motion.div
@@ -362,11 +355,7 @@ export default function Home() {
               Your Trusted Source for Home and Office Printers
             </h2>
             <p className="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed">
-              Print Mega Store is an online shop that helps customers find the
-              right printers and scanners. We cater to both everyday and
-              professional needs. We offer reliable home printers, office
-              printers, inkjet printers, and laser printers at good prices. Our
-              service is clear and puts customers first.
+              Print Mega Store is an online retailer. We focus on providing reliable home and office printer solutions. Our customers include individuals, home offices, small businesses, and corporate environments. Our mission is to make printer shopping easier. We offer trusted products, clear prices, and helpful information.
             </p>
           </motion.div>
 
@@ -392,11 +381,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-black">Who We Are</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Print Mega Store was built to remove confusion from printer
-                shopping. We focus on inkjet printers for colorful printing,
-                laser printers for quick document output, multifunction
-                all-in-one printers that boost productivity, and professional
-                document scanners for digitizing files.
+                Print Mega Store was built to remove confusion from buying printers online. We specialize exclusively in printers and scanners, allowing us to focus on quality, performance, and value. Our team picks products from trusted manufacturers. This helps ensure good results when you print documents, reports, photos, or business materials.
               </p>
             </motion.div>
 
@@ -421,12 +406,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-black">What We Offer</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Our catalog features a broad range of printing equipment
-                designed to support different users and workloads. Home users
-                can find compact wireless home printers ideal for personal
-                documents, homework, and photo printing. Small offices and
-                businesses can explore multifunction office printers that
-                combine printing, scanning, copying, and faxing.
+                Our catalog features a wide range of printing equipment designed for different use cases and budgets. Customers can look at small wireless home printers, fast office printers, and advanced multifunction devices. We offer inkjet printers with ink tanks and laser printers optimized for speed, durability, and high print volumes.
               </p>
             </motion.div>
           </div>
@@ -455,10 +435,7 @@ export default function Home() {
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Print Mega Store provides tailored printing solutions for a
-                wide range of users. Home users enjoy inkjet printers that
-                connect wirelessly, support mobile printing, and have compact
-                designs that fit easily into any space.
+                Print Mega Store provides printing solutions for every type of user. Home users benefit from compact inkjet printers that produce high quality photo and document prints with minimal setup. Small business users depend on multifunction printers with automatic duplex printing to reduce paper use.
               </p>
             </motion.div>
 
@@ -485,11 +462,7 @@ export default function Home() {
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Buying printers and scanners online should be simple,
-                transparent, and secure. Print Mega Store offers clear pricing,
-                detailed product information, and a secure checkout process
-                protected by industry-standard encryption. We provide fast
-                shipping and hassle-free returns.
+                Buying printers online should be convenient and secure. Print Mega Store has clear prices. They ensure safe payment processing. Strong encryption keeps your personal and payment information secure. We provide quick shipping, fair delivery rates, and easy returns.
               </p>
             </motion.div>
           </div>
@@ -501,11 +474,7 @@ export default function Home() {
             className="bg-gray-100 rounded-md p-6 text-center"
           >
             <p className="text-sm text-gray-500 leading-relaxed">
-              <strong>Disclaimer:</strong> Print Mega Store is an independent
-              retailer and is not affiliated with, endorsed by, or sponsored by
-              HP Inc., Hewlett-Packard Company, or any other manufacturer. All
-              product images, logos, and trademarks are the property of their
-              respective owners and are used for informational purposes only.
+              <strong>Disclaimer:</strong> Print Mega Store is an independent store. We do not connect to, support, or receive sponsorship from HP Inc., Hewlett-Packard Company, or any other manufacturer. All product names, logos, and trademarks belong to their owners. They are used here for identification only.
             </p>
           </motion.div>
         </div>
@@ -526,10 +495,7 @@ export default function Home() {
               Browse Home and Office Printing Solutions
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Our shop-by-category structure makes it easy to find the right
-              printer or scanner. Browse home printers, office printers, inkjet
-              printers, laser printers, and document scanners based on your
-              specific requirements.
+              Explore printers and scanners by category to quickly find the right printing solution for your needs.
             </p>
           </motion.div>
 
@@ -553,21 +519,16 @@ export default function Home() {
                   <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#33cccc] hover:shadow-lg transition-all duration-200 bg-white">
                     <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
                       <div className="w-20 h-20 rounded-md bg-[#33cccc]/10 flex items-center justify-center mb-5 group-hover:bg-[#33cccc] transition-colors duration-200">
-                        <div className="text-[#33cccc] group-hover:text-white transition-colors duration-200">
-                          {categoryIcons[category.slug] || (
-                            <Printer className="w-10 h-10" />
-                          )}
-                        </div>
+                        <span className="text-[#33cccc] group-hover:text-white transition-colors duration-200">
+                          {categoryIcons[category.slug]}
+                        </span>
                       </div>
-                      <h3 className="text-lg font-bold mb-2 text-black group-hover:text-[#33cccc] transition-colors">
+                      <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#33cccc] transition-colors">
                         {category.name}
                       </h3>
                       <p className="text-sm text-gray-600">
                         {categoryDescriptions[category.slug]}
                       </p>
-                      <div className="mt-4 flex items-center text-[#33cccc] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Shop Now <ArrowRight className="w-4 h-4 ml-1" />
-                      </div>
                     </CardContent>
                   </Card>
                 </a>
@@ -577,7 +538,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50" data-testid="featured-section">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -592,91 +553,125 @@ export default function Home() {
               Popular Home and Office Printing Equipment
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Explore our featured printers and scanners selected for
-              performance, reliability, and overall value. These products
-              represent some of the most trusted options for home printing,
-              office productivity, and professional document management.
+              Discover our most popular printers and scanners selected for reliability, features, and value.
             </p>
           </motion.div>
 
-          <div className="space-y-0">
-            {featuredProducts.map((product, index) => {
-              const category = STORE_CATEGORIES.find(
-                (c) => c.slug === product.categorySlug,
-              );
-              const isImageLeft = index % 2 === 0;
-              const isLast = index === featuredProducts.length - 1;
-
-              return (
-                <motion.div
-                  key={product.productId}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 md:py-16 ${!isLast ? "border-b border-gray-100" : ""}`}
-                >
-                  <div
-                    className={`${!isImageLeft ? "lg:order-2" : ""} flex justify-center`}
-                  >
-                    <a
-                      href={product.productUrl}
-                      className="block group"
-                      data-testid={`link-product-${product.productId}`}
-                    >
-                      <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] bg-white rounded-md border border-gray-200 p-6 flex items-center justify-center">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
-                          data-testid={`img-product-${product.productId}`}
-                        />
-                      </div>
-                    </a>
-                  </div>
-
-                  <div className={`${!isImageLeft ? "lg:order-1" : ""}`}>
-                    <div className="space-y-4">
-                      <span className="inline-block text-xs font-semibold text-[#33cccc] uppercase tracking-wider">
-                        {category?.name ||
-                          product.categorySlug.replace("-", " ")}
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          >
+            {featuredProducts.slice(0, 3).map((product, i) => (
+              <motion.div
+                key={product.productId}
+                variants={fadeInUp}
+                transition={{ delay: i * 0.1 }}
+              >
+                <a href={product.productUrl} data-testid={`card-product-${product.productId}`}>
+                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#33cccc] hover:shadow-lg transition-all duration-200 bg-white overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <span className="text-xs font-medium text-[#33cccc] uppercase tracking-wider">
+                        {product.categorySlug.replace("-", " ")}
                       </span>
-
-                      <h3 className="text-2xl lg:text-3xl font-extrabold text-black">
+                      <h3 className="text-lg font-bold text-gray-900 mt-2 mb-3 group-hover:text-[#33cccc] transition-colors line-clamp-2">
                         {product.name}
                       </h3>
-
-                      <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+                      <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                         {product.description}
                       </p>
-
-                      <div className="pt-4">
-                        <Button
-                          asChild
-                          className="bg-[#33cccc] hover:bg-[#2d9bc7] text-white"
-                        >
-                          <a
-                            href={product.productUrl}
-                            data-testid={`button-view-${product.productId}`}
+                      <div className="flex flex-wrap gap-2">
+                        {product.features.map((feature, idx) => (
+                          <span
+                            key={idx}
+                            className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
                           >
-                            View Product
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                          </a>
-                        </Button>
+                            {feature}
+                          </span>
+                        ))}
                       </div>
+                    </CardContent>
+                  </Card>
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-8 max-w-4xl mx-auto"
+          >
+            {featuredProducts.slice(3).map((product, i) => (
+              <motion.div
+                key={product.productId}
+                variants={fadeInUp}
+                transition={{ delay: i * 0.1 }}
+              >
+                <a href={product.productUrl} data-testid={`card-product-${product.productId}`}>
+                  <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#33cccc] hover:shadow-lg transition-all duration-200 bg-white overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                    <CardContent className="p-6">
+                      <span className="text-xs font-medium text-[#33cccc] uppercase tracking-wider">
+                        {product.categorySlug.replace("-", " ")}
+                      </span>
+                      <h3 className="text-lg font-bold text-gray-900 mt-2 mb-3 group-hover:text-[#33cccc] transition-colors line-clamp-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                        {product.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {product.features.map((feature, idx) => (
+                          <span
+                            key={idx}
+                            className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button asChild size="lg" className="text-lg font-semibold">
+              <a href="/shop" data-testid="button-view-all-products">
+                View All Products
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </Button>
+          </motion.div>
         </div>
       </section>
 
-      <section
-        className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white"
-        data-testid="why-choose-section"
-      >
+      <section className="py-16 md:py-24 bg-white" data-testid="why-choose-section">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -685,54 +680,44 @@ export default function Home() {
             className="text-center mb-12"
           >
             <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
-              The Print Mega Store Advantage
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
               Why Choose Print Mega Store?
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              Your Trusted Printing Partner
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Discover what makes us the preferred choice for buying printers
-              and scanners online.
-            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
             {[
               {
-                icon: <Printer className="w-8 h-8" />,
-                title: "Wide Selection of Home and Office Printers",
-                desc: "From compact home inkjet printers to enterprise-grade office laser printers, we offer solutions for every printing requirement.",
+                icon: <Layers className="w-8 h-8" />,
+                title: "Wide Range of Printers",
+                desc: "Choose from a wide range of inkjet and laser printers designed for home, small business, and office use.",
                 color: "from-[#33cccc] to-[#29a3a3]",
               },
               {
-                icon: <Zap className="w-8 h-8" />,
-                title: "Trusted Inkjet and Laser Technology",
-                desc: "Choose proven inkjet and laser printing technologies that deliver consistent quality, efficiency, and reliability.",
+                icon: <Printer className="w-8 h-8" />,
+                title: "High Quality Printing",
+                desc: "Our printers are designed to produce high quality prints with consistent performance.",
+                color: "from-blue-500 to-blue-600",
+              },
+              {
+                icon: <Smartphone className="w-8 h-8" />,
+                title: "Modern Features",
+                desc: "Enjoy automatic duplex printing, mobile printing from a smartphone or tablet, and efficient paper tray handling.",
                 color: "from-purple-500 to-purple-600",
               },
               {
-                icon: <Tag className="w-8 h-8" />,
-                title: "Competitive Online Pricing",
-                desc: "We continuously monitor the market to ensure excellent value when you buy printers online.",
+                icon: <DollarSign className="w-8 h-8" />,
+                title: "Competitive Pricing",
+                desc: "We offer excellent value compared to the suggested retail price.",
                 color: "from-green-500 to-green-600",
               },
               {
-                icon: <Truck className="w-8 h-8" />,
-                title: "Fast and Reliable Shipping",
-                desc: "Our trusted shipping partners deliver your printer or scanner quickly and safely.",
-                color: "from-orange-500 to-orange-600",
-              },
-              {
                 icon: <ShieldCheck className="w-8 h-8" />,
-                title: "Secure Shopping Experience",
-                desc: "Advanced encryption protects your personal and payment information during checkout.",
-                color: "from-pink-500 to-pink-600",
-              },
-              {
-                icon: <Award className="w-8 h-8" />,
-                title: "Customer Satisfaction Guaranteed",
-                desc: "Every purchase is supported by hassle-free returns and responsive customer service.",
-                color: "from-indigo-500 to-indigo-600",
+                title: "Fast & Secure Shopping",
+                desc: "Secure checkout, fast delivery, and trusted customer care.",
+                color: "from-orange-500 to-orange-600",
               },
             ].map((item, i) => (
               <motion.div
@@ -742,185 +727,25 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-                className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group"
+                className="bg-gray-50 rounded-xl p-6 cursor-pointer group text-center"
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mb-6`}
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mx-auto mb-4`}
                 >
                   <span className="text-white">{item.icon}</span>
                 </motion.div>
-                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#33cccc] transition-colors">
+                <h3 className="text-lg font-bold text-black mb-2 group-hover:text-[#33cccc] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black">
-              Why Shop at Print Mega Store?
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6">
-            {[
-              {
-                icon: <Tag className="w-10 h-10" />,
-                label: "Competitive Prices for Best Value",
-                color: "from-pink-500 to-pink-600",
-              },
-              {
-                icon: <ShieldCheck className="w-10 h-10" />,
-                label: "Secure and Flexible Payment Options",
-                color: "from-purple-500 to-purple-600",
-              },
-              {
-                icon: <ThumbsUp className="w-10 h-10" />,
-                label: "Customer Satisfaction is Our Priority",
-                color: "from-[#33cccc] to-[#29a3a3]",
-              },
-              {
-                icon: <Smile className="w-10 h-10" />,
-                label: "High-Quality Products You Can Trust",
-                color: "from-green-500 to-green-600",
-              },
-              {
-                icon: <BadgeCheck className="w-10 h-10" />,
-                label: "A Reliable and Trusted Online Retailer",
-                color: "from-orange-500 to-orange-600",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -6, scale: 1.02 }}
-                className="flex flex-col items-center text-center cursor-pointer group"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.15, rotate: 10 }}
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mb-4`}
-                >
-                  <span className="text-white">{item.icon}</span>
-                </motion.div>
-                <p className="text-sm font-semibold text-gray-700 uppercase tracking-wide leading-relaxed group-hover:text-[#33cccc] transition-colors">
-                  {item.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="py-16 md:py-24 bg-gradient-to-br from-[#33cccc]/5 via-white to-purple-50"
-        data-testid="seo-content-section"
-      >
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
-              Shop With Confidence
-            </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
-              Buy Printers Online with Confidence
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Looking to buy a printer online? Print Mega Store makes it easy to
-              find the perfect printing solution for your home or business.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
-            {[
-              {
-                icon: <Printer className="w-7 h-7" />,
-                title: "Home & Office Printers",
-                desc: "Our home printers are designed for families and remote workers who need reliable, compact devices. For larger teams, our office printers deliver high-volume printing with multifunction capabilities including printing, scanning, copying, and faxing.",
-                color: "from-[#33cccc] to-[#29a3a3]",
-              },
-              {
-                icon: <FileText className="w-7 h-7" />,
-                title: "Inkjet & Photo Printers",
-                desc: "Photographers and creative professionals love our inkjet printers for their vibrant color reproduction and stunning photo quality on various paper types. Perfect for printing memorable photos at home with vivid colors and fine details.",
-                color: "from-purple-500 to-purple-600",
-              },
-              {
-                icon: <Zap className="w-7 h-7" />,
-                title: "Laser Printers",
-                desc: "Businesses that prioritize speed and efficiency prefer our laser printers for their crisp text quality and lower cost-per-page on high-volume document printing. Get sharp, smudge-free results every time.",
-                color: "from-orange-500 to-orange-600",
-              },
-              {
-                icon: <ScanLine className="w-7 h-7" />,
-                title: "Document Scanners",
-                desc: "Going paperless? Our document scanners help you digitize receipts, contracts, photos, and archives quickly. From portable scanners to high-capacity sheet-fed scanners for enterprise document management.",
-                color: "from-green-500 to-green-600",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{
-                  y: -6,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.08)",
-                }}
-                className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group flex gap-6"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg shrink-0`}
-                >
-                  <span className="text-white">{item.icon}</span>
-                </motion.div>
-                <div>
-                  <h3 className="text-xl font-bold text-black mb-2 group-hover:text-[#33cccc] transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <p className="text-lg font-medium text-black bg-[#33cccc]/10 rounded-xl py-4 px-6 inline-block">
-              Shop today and discover why thousands of customers trust Print
-              Mega Store for their printing and scanning needs.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      <section
-        className="py-16 md:py-24 bg-gray-50"
-        data-testid="printing-guide-section"
-      >
+      <section className="py-16 md:py-24 bg-gray-50" data-testid="buyers-guide-section">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -931,35 +756,32 @@ export default function Home() {
             <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
               Essential Buying Guide
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
               How to Choose the Right Printer
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Choosing the right printer depends on your print volume, color
-              requirements, connectivity options, and total cost of ownership.
-              Understanding the differences between inkjet printers and laser
-              printers helps you select the best option for your needs.
+              Selecting the right printer depends on your print volume, color needs, and workflow.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 mb-10">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                step: "01",
+                icon: <HomeIcon className="w-8 h-8" />,
                 title: "Home Users",
-                desc: "Inkjet home printers offer affordable printing, wireless convenience, and the flexibility to print documents and photos.",
-                color: "from-pink-500 to-pink-600",
-              },
-              {
-                step: "02",
-                title: "Small Business and Office Users",
-                desc: "Office printers must handle higher volumes. Laser printers provide speed and efficiency, while multifunction inkjet printers offer versatility.",
+                desc: "A compact inkjet home printer with wireless printing and ink tanks is ideal for everyday use.",
                 color: "from-[#33cccc] to-[#29a3a3]",
               },
               {
-                step: "03",
-                title: "Enterprise Users",
-                desc: "Large organizations rely on high-speed laser printers, departmental multifunction devices, and enterprise document scanners to support demanding workflows.",
+                icon: <Building className="w-8 h-8" />,
+                title: "Small Business & Home Offices",
+                desc: "Multifunction printers with automatic duplexing and printing and scanning capabilities offer flexibility.",
+                color: "from-blue-500 to-blue-600",
+              },
+              {
+                icon: <Building2 className="w-8 h-8" />,
+                title: "Busy Office & Enterprise",
+                desc: "Laser printers that print many pages per minute, hold a lot of paper, and scan quickly are best for busy places.",
                 color: "from-purple-500 to-purple-600",
               },
             ].map((item, i) => (
@@ -968,28 +790,25 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                whileHover={{ y: -8, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
-                className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group relative overflow-visible"
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+                className="bg-white rounded-xl border border-gray-200 p-8 cursor-pointer group text-center"
               >
-                <div
-                  className={`absolute -top-4 -left-2 w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg`}
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mx-auto mb-6`}
                 >
-                  <span className="text-white font-bold text-lg">
-                    {item.step}
-                  </span>
-                </div>
-                <div className="pt-6">
-                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#33cccc] transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-                </div>
+                  <span className="text-white">{item.icon}</span>
+                </motion.div>
+                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#33cccc] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mt-8">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -998,18 +817,15 @@ export default function Home() {
               className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center shadow-lg">
-                  <ScanLine className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
+                  <FileText className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-black group-hover:text-[#33cccc] transition-colors">
-                  Enterprise Scanning
+                  Inkjet vs Laser Printers
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                For enterprise environments handling large volumes of documents,
-                our high-capacity document scanners streamline workflows with
-                automatic document feeders, OCR text recognition, and
-                direct-to-cloud scanning.
+                Choosing between an inkjet printer and a laser printer depends on your usage. Inkjet printers are ideal for color printing, photos, and flexible home office needs. Many inkjet models feature ink tanks and produce high quality output at a lower cost per page. Laser printers are designed for speed and efficiency, making them ideal for offices that print many text documents.
               </p>
             </motion.div>
 
@@ -1022,15 +838,14 @@ export default function Home() {
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
-                  <Headphones className="w-6 h-6 text-white" />
+                  <ScanLine className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white">
                   Find Your Perfect Printer
                 </h3>
               </div>
               <p className="text-white/90 leading-relaxed mb-4">
-                Not sure which printer is right for you? Browse our categories
-                to explore options for home, office, or business use.
+                Not sure which printer is right for you? Browse our categories to explore options for home, office, or business use.
               </p>
               <Button
                 asChild
@@ -1055,9 +870,7 @@ export default function Home() {
               Ready to Buy a Printer or Scanner?
             </h2>
             <p className="text-xl text-white/90 mb-10">
-              Browse our complete catalog of printers and scanners. Find home
-              printers, office printers, laser printers, inkjet printers, and
-              document scanners at competitive prices.
+              Browse our complete catalog of printers and scanners. Find home printers, office printers, laser printers, inkjet printers, and document scanners at competitive prices.
             </p>
             <Button
               asChild
@@ -1075,7 +888,7 @@ export default function Home() {
 
       <section
         className="py-16 md:py-24 bg-white"
-        data-testid="what-sets-us-apart-section"
+        data-testid="testimonials-section"
       >
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
@@ -1085,182 +898,51 @@ export default function Home() {
             className="text-center mb-12"
           >
             <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
-              Our Commitment
+              What Our Customers Say
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
-              What Sets Us Apart
+              Trusted by Thousands of Satisfied Customers
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Experience the Print Mega Store difference with our dedication to
-              quality, service, and customer satisfaction.
+              Home and Office Printing Solutions
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                icon: <Award className="w-8 h-8" />,
-                title: "Curated Selection",
-                desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
-                color: "from-[#33cccc] to-[#29a3a3]",
+                name: "Sarah M.",
+                role: "Home Office User",
+                text: "Print Mega Store made it easy to find the right printer for my home office. The ordering process was simple and delivery was fast.",
               },
               {
-                icon: <ShieldCheck className="w-8 h-8" />,
-                title: "Secure Checkout",
-                desc: "Shop with confidence using our safe and encrypted payment processing for all transactions.",
-                color: "from-purple-500 to-purple-600",
+                name: "David L.",
+                role: "Small Business Owner",
+                text: "We upgraded our office printers through Print Mega Store. Great selection of multifunction devices at competitive prices.",
               },
               {
-                icon: <Clock className="w-8 h-8" />,
-                title: "Quick Processing",
-                desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
-                color: "from-green-500 to-green-600",
+                name: "Jennifer K.",
+                role: "Remote Worker",
+                text: "Found a compact wireless printer that works perfectly for my needs. The product information helped me make the right choice.",
               },
-              {
-                icon: <Heart className="w-8 h-8" />,
-                title: "Customer First",
-                desc: "Your satisfaction is our priority. We go above and beyond to ensure a seamless shopping experience.",
-                color: "from-pink-500 to-pink-600",
-              },
-            ].map((item, i) => (
+            ].map((testimonial, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-                className="bg-gray-50 rounded-xl p-8 cursor-pointer group text-center"
+                className="bg-gray-50 rounded-xl p-8"
               >
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mx-auto mb-6`}
-                >
-                  <span className="text-white">{item.icon}</span>
-                </motion.div>
-                <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#33cccc] transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                <p className="text-gray-600 leading-relaxed mb-6 italic">
+                  "{testimonial.text}"
+                </p>
+                <div>
+                  <p className="font-bold text-black">{testimonial.name}</p>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="py-16 md:py-24 bg-gray-50"
-        data-testid="trust-section"
-      >
-        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid md:grid-cols-3 gap-12 md:gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
-                  <Headphones className="w-10 h-10 text-[#33cccc]" />
-                </div>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
-                Customer Satisfaction Is Our Priority
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                We aim to deliver exceptional customer service along every step
-                of the way. Whether you need to know which printer is right for
-                your home office, how to set up your new scanner, or how to
-                troubleshoot printing issues, our friendly and professional team
-                is ready to assist you.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4">
-                You may also browse through our product categories to find
-                detailed information about specifications, features, and
-                compatibility. However, if you cannot find what you are looking
-                for and you have questions about your purchase, simply send us a
-                message through our{" "}
-                <a href="/contact" className="text-[#33cccc] hover:underline">
-                  contact page
-                </a>
-                .
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4">
-                If we are unavailable, leave a message and we will get back to
-                you as soon as we can. You can also reach us via phone or email.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-center"
-            >
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
-                  <BadgeCheck className="w-10 h-10 text-[#33cccc]" />
-                </div>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
-                Quality Products You Can Trust
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Print Mega Store has always offered quality printers and
-                scanners from trusted manufacturers. From the beginning, we have
-                provided reliable printing equipment to households and
-                businesses at competitive prices. We take pride in offering
-                products that deliver consistent results.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4">
-                That is why we carefully select each product in our catalog. If
-                you are not completely satisfied with your purchase, please read
-                our return policy for more information on how we can help
-                resolve any concerns.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4">
-                For any questions about product specifications or compatibility,
-                feel free to reach out to us for assistance.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
-                  <Printer className="w-10 h-10 text-[#33cccc]" />
-                </div>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 uppercase tracking-wide mb-4">
-                Why Choose Print Mega Store?
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Print Mega Store is your reliable independent destination for
-                high-quality printers and scanners at budget-friendly prices. We
-                have a wide selection of products that work perfectly for home
-                offices, small businesses, and enterprise environments.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4">
-                We only offer products from reputable manufacturers to ensure
-                the best printing results for every page. Our curated catalog
-                includes home printers, office printers, inkjet printers, laser
-                printers, and document scanners from leading brands.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4">
-                Print Mega Store has established a track record of dependability
-                and excellence. Our prices are competitive but we never cut
-                corners when it comes to quality. We aim to make it easier for
-                our customers to quickly find affordable solutions to their
-                printing needs. Shop now and find the perfect printer today.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -1286,14 +968,11 @@ export default function Home() {
               Subscribe to Our Newsletter
             </h2>
             <p className="text-gray-600 mb-8">
-              Get exclusive deals, new product announcements, and expert tips
-              for choosing, using, and maintaining your home and office
-              printers.
+              Get exclusive deals, new product announcements, and expert tips for choosing and maintaining your printers.
             </p>
             <NewsletterForm />
             <p className="text-xs text-gray-500 mt-4">
-              By subscribing, you agree to receive promotional emails. You can
-              unsubscribe at any time. Please review our{" "}
+              By subscribing, you agree to receive promotional emails. You can unsubscribe at any time. Please review our{" "}
               <a href="/privacy" className="text-[#33cccc] hover:underline">
                 Privacy Policy
               </a>{" "}
