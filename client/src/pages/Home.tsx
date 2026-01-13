@@ -39,6 +39,7 @@ import inkjetPrinterImg from "@assets/HP_ENVY_Inspire_7955e_All-in-One_Printer_w
 import laserPrinterImg from "@assets/HP_LaserJet_M110w_Wireless_Black_&_White_Printer_1767905187439.png";
 import scannerImg from "@assets/9000_s1_1767905236089.jpg";
 import printerIcon from "@assets/printer_1768342581018.png";
+import telephoneAnimation from "@assets/telephone_1768342750520.json";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -703,7 +704,7 @@ export default function Home() {
                 color: "from-blue-500 to-blue-600",
               },
               {
-                icon: <Smartphone className="w-8 h-8" />,
+                icon: <Lottie animationData={telephoneAnimation} loop={true} className="w-8 h-8" />,
                 title: "Modern Features",
                 desc: "Enjoy automatic duplex printing, mobile printing from a smartphone or tablet, and efficient paper tray handling.",
                 color: "from-purple-500 to-purple-600",
