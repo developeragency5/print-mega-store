@@ -10,148 +10,129 @@ export default function Disclaimer() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-8" data-testid="heading-disclaimer">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-disclaimer">
               Disclaimer
             </h1>
-            <p className="text-gray-600 mb-8">
-              Last updated: January 2026
-            </p>
+            <p className="text-xl text-gray-600 mb-2">Print Mega Store</p>
+            <p className="text-gray-600 mb-8">Last Updated: January 2026</p>
 
-            <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
-              <p className="text-gray-700">
-                <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> info@printmegastore.com<br />
-                <strong>Phone:</strong> +1 (555) 123-4567<br />
-                <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
-              </p>
-            </div>
+            <p className="text-gray-600 mb-8">
+              The information provided on www.printmegastore.net ("Website") is intended for general informational and promotional purposes only. By using this Website you agree to this Disclaimer and understand its terms.
+            </p>
 
             <div className="space-y-8 text-gray-600 leading-relaxed">
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">General Disclaimer</h2>
-                <p>
-                  The information provided on the Print Mega Store website (www.printmegastore.com) is for general informational purposes only. While we strive to keep the information up to date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Independent Retailer Status</h2>
-                <p className="mb-4">
-                  <strong>Print Mega Store is an independent online retailer.</strong> We are not affiliated with, endorsed by, sponsored by, or in any way officially connected with HP Inc., Hewlett-Packard Company, Canon Inc., Epson Corporation, Brother Industries, or any other printer or scanner manufacturer.
-                </p>
-                <p className="mb-4">
-                  All product names, logos, brands, trademarks, and registered trademarks are the property of their respective owners. The use of these names, logos, and brands does not imply endorsement or affiliation. We use manufacturer names and product names solely for the purpose of identifying the products we sell.
-                </p>
-                <p>
-                  Any reference to specific manufacturers, products, or services does not constitute or imply an endorsement, recommendation, or affiliation unless explicitly stated otherwise.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Product Information Disclaimer</h2>
-                <p className="mb-4">
-                  We make every effort to display accurate product information, including descriptions, specifications, images, and pricing. However, we do not warrant that product descriptions or other content on our website is accurate, complete, reliable, current, or error-free.
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Product Images:</strong> Product images are provided for illustrative purposes only. Actual products may vary slightly from images shown due to lighting, photography, or monitor display differences.</li>
-                  <li><strong>Specifications:</strong> Product specifications are provided by manufacturers and may be updated without notice. Please verify specifications with the manufacturer before making a purchase decision.</li>
-                  <li><strong>Pricing:</strong> Prices are subject to change without notice. While we strive to maintain accurate pricing, errors may occur. We reserve the right to correct pricing errors and cancel orders placed at incorrect prices.</li>
-                  <li><strong>Availability:</strong> Product availability is subject to change without notice. We cannot guarantee that all products displayed on our website are in stock at all times.</li>
+                <h2 className="text-2xl font-bold text-black mb-4">1. No Manufacturer Affiliation</h2>
+                <p className="mb-2">Print Mega Store is an independent online retailer and is not:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Affiliated with</li>
+                  <li>Endorsed by</li>
+                  <li>Sponsored by</li>
                 </ul>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Trademark Disclaimer</h2>
                 <p className="mb-4">
-                  The following trademarks are the property of their respective owners and are used on our website for product identification purposes only:
+                  HP Inc., Hewlett-Packard Development Company, L.P., or any other printer manufacturer.
                 </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>HP, LaserJet, OfficeJet, DeskJet, ENVY, and related trademarks are registered trademarks of HP Inc.</li>
-                  <li>Canon, PIXMA, imageCLASS, and related trademarks are registered trademarks of Canon Inc.</li>
-                  <li>Epson, EcoTank, WorkForce, and related trademarks are registered trademarks of Seiko Epson Corporation.</li>
-                  <li>Brother and related trademarks are registered trademarks of Brother Industries, Ltd.</li>
-                  <li>All other trademarks are the property of their respective owners.</li>
-                </ul>
-                <p className="mt-4">
-                  The use of these trademarks does not imply any affiliation with or endorsement by the trademark owners. Print Mega Store is solely responsible for the content of this website and the products and services we offer.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">No Professional Advice</h2>
                 <p>
-                  The content on our website, including product descriptions, buying guides, and blog articles, is provided for general informational purposes only. It does not constitute professional advice of any kind, including but not limited to technical, legal, or financial advice. You should consult with appropriate professionals before making purchasing decisions based on your specific needs and circumstances.
+                  All product names, logos, trademarks, images, and brand identifiers shown on this Website are the property of their respective owners and are used for identification and informational purposes only.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Limitation of Liability</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">2. Product Information</h2>
+                <p className="mb-2">
+                  We make every reasonable effort to ensure that the product descriptions, specifications, and images on this Website are accurate and up to date. However, we do not guarantee that:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Product descriptions are free from errors</li>
+                  <li>Specifications are complete or current</li>
+                  <li>Colors or images exactly match the actual product</li>
+                </ul>
+                <p>
+                  Before making a purchase, please verify the product details and specifications with the manufacturer's official information.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">3. Pricing and Offers</h2>
+                <p className="mb-2">
+                  All product prices, discounts, promotions, and availability are subject to change without notice. Prices displayed on this Website:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>May differ from manufacturer suggested retail price (MSRP)</li>
+                  <li>May reflect promotional offers or limited-time pricing</li>
+                  <li>May change due to market availability</li>
+                </ul>
+                <p>
+                  Print Mega Store is not responsible for pricing errors and reserves the right to correct prices or cancel orders at any time.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">4. Warranty and Support</h2>
                 <p className="mb-4">
-                  To the fullest extent permitted by applicable law, Print Mega Store and its owners, officers, employees, agents, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+                  Products sold by Print Mega Store may be eligible for manufacturer warranty coverage where applicable. Print Mega Store does not provide manufacturer warranty service, technical support, or repair services.
                 </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Loss of profits, revenue, or business opportunities</li>
-                  <li>Loss of data or information</li>
-                  <li>Personal injury or property damage</li>
-                  <li>Any damages arising from the use or inability to use our website or products</li>
-                  <li>Any damages arising from unauthorized access to or alteration of your transmissions or data</li>
+                <p>
+                  For warranty service or product support, you must contact the manufacturer directly in accordance with their warranty terms and procedures.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">5. Use of Cookies and Tracking</h2>
+                <p className="mb-2">This Website uses cookies, pixels, and similar technologies to:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Improve user experience</li>
+                  <li>Personalize content</li>
+                  <li>Analyze site performance</li>
+                  <li>Serve relevant advertising</li>
                 </ul>
-                <p className="mt-4">
-                  This limitation of liability applies regardless of the legal theory upon which the claim is based, whether in contract, tort, negligence, strict liability, or otherwise, even if we have been advised of the possibility of such damages.
+                <p>
+                  Your use of the Website constitutes acceptance of our <a href="/cookies" className="text-[#33cccc] hover:underline">Cookie Policy</a> and <a href="/privacy" className="text-[#33cccc] hover:underline">Privacy Policy</a>.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">External Links Disclaimer</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">6. Third-Party Links</h2>
+                <p className="mb-4">
+                  This Website may contain links to third-party websites. These links are provided for convenience and do not imply endorsement or control by Print Mega Store.
+                </p>
                 <p>
-                  Our website may contain links to external websites that are not operated or controlled by Print Mega Store. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. We do not warrant the accuracy, completeness, or usefulness of any information provided by external websites. Visiting external links is at your own risk.
+                  Print Mega Store is not responsible for the content, availability, or accuracy of any third-party sites.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Manufacturer Warranties</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">7. Limitation of Liability</h2>
+                <p className="mb-2">
+                  To the maximum extent permitted by law, Print Mega Store, its affiliates, employees, agents, and partners will not be liable for:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Direct or indirect damages</li>
+                  <li>Loss of data, income, or profits</li>
+                  <li>Personal injury</li>
+                  <li>Property damage</li>
+                  <li>Any other loss arising from use of this Website or products purchased through it</li>
+                </ul>
                 <p>
-                  Products sold by Print Mega Store may be covered by manufacturer warranties. Print Mega Store is not the manufacturer of the products we sell and does not provide manufacturer warranties. All warranty claims should be directed to the respective manufacturers according to their warranty terms and conditions. We can assist customers in understanding warranty coverage and provide guidance on contacting manufacturers for warranty service.
+                  Your sole remedy for dissatisfaction with any product or service is to return the item under the <a href="/returns" className="text-[#33cccc] hover:underline">Return & Refund Policy</a> or contact us at <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a>.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Fair Use Notice</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">8. Changes to This Disclaimer</h2>
                 <p>
-                  Product images, logos, and other materials displayed on our website may be protected by copyright and are used in accordance with fair use principles for the purpose of product identification and consumer information. This use is intended for criticism, comment, news reporting, teaching, and research purposes and does not constitute copyright infringement under 17 U.S.C. Section 107.
+                  We may update this Disclaimer at any time by posting a revised version on this page. The updated Disclaimer takes effect when it is posted, and the Last Updated date will be revised accordingly.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Accuracy of Information</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">Contact Information</h2>
+                <p className="mb-4">If you have any questions about this Disclaimer or want to clarify any terms:</p>
                 <p>
-                  We do not guarantee that the information on our website is accurate, complete, or current. The material on our website is provided for general information only and should not be relied upon or used as the sole basis for making decisions. Any reliance you place on such information is strictly at your own risk. We disclaim all liability and responsibility arising from any reliance placed on such materials by you or any other visitor to our website.
+                  Email: <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a>
                 </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Changes to This Disclaimer</h2>
-                <p>
-                  We reserve the right to update or modify this Disclaimer at any time without prior notice. Changes will be effective immediately upon posting to our website. Your continued use of our website after any changes to this Disclaimer constitutes your acceptance of the revised terms. We encourage you to review this Disclaimer periodically for any updates.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Governing Law</h2>
-                <p>
-                  This Disclaimer shall be governed by and construed in accordance with the laws of the State of New York, United States, without regard to its conflict of law provisions. Any disputes arising from or related to this Disclaimer shall be subject to the exclusive jurisdiction of the courts located in New York County, New York.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Contact Us</h2>
-                <p>
-                  If you have any questions about this Disclaimer, please contact us:
-                </p>
-                <p className="mt-4">
-                  <strong>Email:</strong> info@printmegastore.com<br />
-                  <strong>Phone:</strong> +1 (555) 123-4567<br />
-                  <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
+                <p className="mt-4 text-sm text-gray-500">
+                  Print Mega Store — Independent Online Retailer
                 </p>
               </section>
             </div>
