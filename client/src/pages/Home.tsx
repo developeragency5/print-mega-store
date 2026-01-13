@@ -45,6 +45,7 @@ import inkjetIcon from "@assets/3d-printer_(1)_1768343431514.png";
 import laserIcon from "@assets/printer_(1)_1768343182930.png";
 import scannerIcon from "@assets/scanner_1768343254954.png";
 import dollarGif from "@assets/dollar_1768343622664.gif";
+import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -697,7 +698,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
             {[
               {
-                icon: <Layers className="w-8 h-8" />,
+                icon: <img src={layersGif} alt="Wide Range" className="w-8 h-8" />,
                 title: "Wide Range of Printers",
                 desc: "Choose from a wide range of inkjet and laser printers designed for home, small business, and office use.",
                 color: "from-[#33cccc] to-[#29a3a3]",
