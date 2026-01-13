@@ -22,6 +22,9 @@ import {
   Building2,
   Headphones,
   CheckCircle2,
+  Package,
+  Clock,
+  Heart,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useCreateSubscriber } from "@/hooks/use-subscribers";
@@ -835,6 +838,81 @@ export default function Home() {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-white" data-testid="commitment-section">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
+              Our Commitment
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
+              What Sets Us Apart
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Experience the Print Mega Store difference with our dedication to quality, service, and customer satisfaction.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: <Package className="w-6 h-6" />,
+                title: "Curated Selection",
+                desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
+                bgColor: "bg-[#33cccc]/10",
+                iconColor: "text-[#33cccc]",
+                highlighted: false,
+              },
+              {
+                icon: <ShieldCheck className="w-6 h-6" />,
+                title: "Secure Checkout",
+                desc: "Shop with confidence using our safe and encrypted payment processing for all transactions.",
+                bgColor: "bg-[#33cccc]/10",
+                iconColor: "text-[#33cccc]",
+                highlighted: false,
+              },
+              {
+                icon: <Clock className="w-6 h-6" />,
+                title: "Quick Processing",
+                desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
+                bgColor: "bg-green-100",
+                iconColor: "text-green-600",
+                highlighted: true,
+              },
+              {
+                icon: <Heart className="w-6 h-6" />,
+                title: "Customer First",
+                desc: "Your satisfaction is our priority. We go above and beyond to ensure a seamless shopping experience.",
+                bgColor: "bg-pink-100",
+                iconColor: "text-pink-500",
+                highlighted: false,
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`rounded-2xl p-6 text-center ${item.highlighted ? 'bg-[#33cccc]/5 border-2 border-[#33cccc]/20' : 'bg-gray-50'}`}
+              >
+                <div className={`w-14 h-14 ${item.bgColor} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <span className={item.iconColor}>{item.icon}</span>
+                </div>
+                <h3 className={`text-lg font-bold mb-3 ${item.highlighted ? 'text-[#33cccc]' : 'text-gray-900'}`}>
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
