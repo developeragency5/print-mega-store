@@ -115,8 +115,8 @@ export default function About() {
                     {
                       icon: <ShieldCheck className="w-6 h-6 text-white" />,
                       color: "from-blue-500 to-blue-600",
-                      title: "Quality & Authenticity",
-                      desc: "We source products from authorized distributors and manufacturers to ensure every item we sell meets the highest quality standards."
+                      title: "Quality Products",
+                      desc: "We carefully select products to ensure every item we sell meets high quality standards. Manufacturer warranty applies to all products."
                     },
                     {
                       icon: <HeartHandshake className="w-6 h-6 text-white" />,
