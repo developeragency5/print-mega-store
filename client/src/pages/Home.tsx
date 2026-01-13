@@ -54,6 +54,7 @@ import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
 import shieldGif from "@assets/shield_1768343929996.gif";
 import homeIconImg from "@assets/home_1768345063969.png";
 import smallBusinessIcon from "@assets/building_(1)_1768345193049.png";
+import enterpriseIcon from "@assets/house_1768345234701.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -793,7 +794,7 @@ export default function Home() {
                 desc: "Multifunction printers with automatic duplexing and printing and scanning capabilities offer flexibility.",
               },
               {
-                icon: <Building2 className="w-8 h-8 text-[#33cccc]" />,
+                icon: <img src={enterpriseIcon} alt="Enterprise" className="w-8 h-8" />,
                 title: "Busy Office & Enterprise",
                 desc: "Laser printers that print many pages per minute, hold a lot of paper, and scan quickly are best for busy places.",
               },
