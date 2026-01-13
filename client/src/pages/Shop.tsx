@@ -99,6 +99,22 @@ export default function Shop() {
     <div className="bg-gray-50 min-h-screen pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <CategoryBanner />
+        
+        {/* Catalog Introduction Section */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 mb-6">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <p className="text-gray-700 leading-relaxed">
+              Print Mega Store is a U.S.-based independent online retailer specializing in HP® printers and document scanners for home, office, and business use.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              We offer a curated selection of HP inkjet printers, laser printers, and professional scanners designed for everyday printing, home offices, small businesses, and enterprise environments.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Every product listed in our catalog is new, factory-sealed, and covered by the manufacturer's warranty. Orders are shipped directly from authorized distribution partners within the United States to ensure fast delivery and authentic products.
+            </p>
+          </div>
+        </div>
+
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 min-h-[600px]">
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-96 text-muted-foreground">
