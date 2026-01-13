@@ -741,7 +741,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-                className="bg-gray-50 rounded-xl p-6 cursor-pointer group text-center"
+                className="bg-white rounded-xl p-6 cursor-pointer group text-center"
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
