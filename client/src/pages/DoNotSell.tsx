@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 export default function DoNotSell() {
   return (
@@ -11,163 +10,129 @@ export default function DoNotSell() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-8" data-testid="heading-do-not-sell">
-              Do Not Sell My Personal Information
+            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-do-not-sell">
+              Do Not Sell My Personal Information (CCPA)
             </h1>
-            <p className="text-gray-600 mb-8">
-              Last updated: January 2026
-            </p>
+            <p className="text-xl text-gray-600 mb-2">Print Mega Store — California Privacy Rights</p>
+            <p className="text-gray-600 mb-8">Last Updated: January 2026</p>
 
-            <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
-              <p className="text-gray-700">
-                <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> info@printmegastore.com<br />
-                <strong>Phone:</strong> +1 (555) 123-4567<br />
-                <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
-              </p>
-            </div>
+            <p className="text-gray-600 mb-4">
+              This page explains how residents of California can exercise their rights under the California Consumer Privacy Act (CCPA) regarding the collection and use of their personal information when visiting or purchasing from www.printmegastore.net ("Website").
+            </p>
+            <p className="text-gray-600 mb-8">
+              If you are a California resident, you have specific rights regarding your personal information, including the right to opt out of the sale or sharing of your personal data. Print Mega Store does not knowingly sell personal information without consent.
+            </p>
 
             <div className="space-y-8 text-gray-600 leading-relaxed">
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Your California Privacy Rights</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">1. Personal Information We Collect</h2>
+                <p className="mb-2">
+                  We may collect the following categories of personal information when you interact with our Website or make a purchase:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Contact details (e.g., name, email address)</li>
+                  <li>Order information (products purchased, transaction data)</li>
+                  <li>Shipping and billing address</li>
+                  <li>Payment method details (processed securely by third parties)</li>
+                  <li>Website usage data, cookies & analytics data</li>
+                </ul>
                 <p>
-                  This page is provided in compliance with the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA). Under these laws, California residents have the right to opt out of the "sale" or "sharing" of their personal information. Print Mega Store respects your privacy and is committed to giving you control over your personal data.
+                  For details on how we use and protect this information, please see our <a href="/privacy" className="text-[#33cccc] hover:underline">Privacy Policy</a>.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">What is "Sale" or "Sharing" of Personal Information?</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">2. California Consumer Rights Under CCPA</h2>
+                <p className="mb-4">If you are a California resident, you may have the following rights:</p>
+                
+                <h3 className="text-xl font-semibold text-black mb-2">Right to Know</h3>
                 <p className="mb-4">
-                  Under the CCPA/CPRA, "sale" of personal information means selling, renting, releasing, disclosing, disseminating, making available, transferring, or otherwise communicating personal information to another business or third party for monetary or other valuable consideration.
+                  You can request information about the personal data we collect, use, disclose, and retain.
+                </p>
+
+                <h3 className="text-xl font-semibold text-black mb-2">Right to Access</h3>
+                <p className="mb-4">
+                  You can request access to the personal information we have collected about you.
+                </p>
+
+                <h3 className="text-xl font-semibold text-black mb-2">Right to Delete</h3>
+                <p className="mb-4">
+                  You can request that we delete personal information we have collected, subject to certain legal exceptions.
+                </p>
+
+                <h3 className="text-xl font-semibold text-black mb-2">Right to Opt-Out of Sale/Sharing</h3>
+                <p className="mb-4">
+                  Under the CCPA, you have the right to opt out of the sale or sharing of your personal information.
                 </p>
                 <p>
-                  "Sharing" means sharing personal information with a third party for cross-context behavioral advertising purposes, even if no money is exchanged. This includes sharing data with advertising networks for targeted advertising.
+                  Print Mega Store does not sell personal information unless you explicitly request data sharing with carefully selected partners for marketing — and you can opt out at any time.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Personal Information We May Share</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">3. Exercise Your Rights / Contact Us</h2>
+                <p className="mb-2">To request any of the following:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Access</li>
+                  <li>Disclosure</li>
+                  <li>Deletion</li>
+                  <li>Opt-Out</li>
+                </ul>
                 <p className="mb-4">
-                  In the course of operating our business, we may share certain categories of personal information with third parties for advertising and marketing purposes. This may include:
+                  Send an email to: <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a>
+                </p>
+                <p className="mb-2">Please include:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Your full name</li>
+                  <li>Email address or contact information</li>
+                  <li>Description of the request (access, delete, do not sell)</li>
+                </ul>
+                <p>
+                  We will verify your identity before processing your request.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">4. How to Opt-Out of Sale / Sharing</h2>
+                <p className="mb-2">
+                  Print Mega Store does not sell personal information without consent. However, we may share certain information with:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Marketing partners (for advertising, if you opt in)</li>
+                  <li>Analytics platforms (to improve your experience)</li>
+                </ul>
+                <p className="mb-2">If you want to opt out of interest-based advertising across platforms:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li><a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Google Ads Settings</a></li>
+                  <li><a href="https://privacy.microsoft.com/choices" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Microsoft Privacy Dashboard</a></li>
+                  <li><a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Meta (Facebook/Instagram) Ad Preferences</a></li>
+                  <li><a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Industry-wide opt-out</a></li>
+                </ul>
+                <p className="mb-4">
+                  You can also email <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a> requesting that we disable all marketing data sharing.
+                </p>
+                <p>
+                  Your request will be processed within the timeframes required by the CCPA.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">5. No Discrimination</h2>
+                <p className="mb-2">
+                  We will not discriminate against you for exercising your privacy rights under the CCPA, including:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Identifiers:</strong> Such as device identifiers, IP addresses, and cookie identifiers</li>
-                  <li><strong>Internet Activity:</strong> Such as browsing history on our website, search history, and interactions with our advertisements</li>
-                  <li><strong>Geolocation Data:</strong> General location information derived from IP address</li>
-                  <li><strong>Inferences:</strong> Such as preferences and characteristics derived from your browsing behavior</li>
+                  <li>Denying goods or services</li>
+                  <li>Charging different prices</li>
+                  <li>Providing different quality of services</li>
+                  <li>Retaliating in any other manner</li>
                 </ul>
-                <p className="mt-4">
-                  This information may be shared with advertising partners including Google, Microsoft, and Meta to deliver targeted advertisements and measure campaign effectiveness.
-                </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">How to Opt Out</h2>
-                <p className="mb-4">
-                  You have several options to opt out of the sale or sharing of your personal information:
-                </p>
-
-                <h3 className="text-xl font-semibold text-black mb-3 mt-6">Option 1: Submit an Opt-Out Request</h3>
-                <p className="mb-4">
-                  Contact us directly to opt out of the sale or sharing of your personal information:
-                </p>
-                <div className="bg-[#33cccc]/10 rounded-xl p-6 mb-6">
-                  <p className="mb-4">
-                    <strong>Email:</strong> info@printmegastore.com<br />
-                    <strong>Subject Line:</strong> "Do Not Sell My Personal Information"
-                  </p>
-                  <p className="mb-4">Please include in your email:</p>
-                  <ul className="list-disc pl-6 space-y-1">
-                    <li>Your full name</li>
-                    <li>Email address associated with your account (if any)</li>
-                    <li>Statement that you are a California resident</li>
-                    <li>Request to opt out of sale/sharing of personal information</li>
-                  </ul>
-                </div>
-                <Button asChild className="bg-[#33cccc] hover:bg-[#29a3a3] text-white mb-6">
-                  <a href="mailto:info@printmegastore.com?subject=Do%20Not%20Sell%20My%20Personal%20Information">
-                    Submit Opt-Out Request via Email
-                  </a>
-                </Button>
-
-                <h3 className="text-xl font-semibold text-black mb-3 mt-6">Option 2: Opt Out of Advertising Platforms</h3>
-                <p className="mb-4">
-                  You can also opt out directly with our advertising partners:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Google:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Google Ad Settings</a></li>
-                  <li><strong>Microsoft:</strong> <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Microsoft Privacy Dashboard</a></li>
-                  <li><strong>Meta (Facebook):</strong> <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Facebook Ad Preferences</a></li>
-                </ul>
-
-                <h3 className="text-xl font-semibold text-black mb-3 mt-6">Option 3: Industry Opt-Out Tools</h3>
-                <p className="mb-4">
-                  Use these industry-wide opt-out tools to limit targeted advertising across multiple companies:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li><a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Digital Advertising Alliance (DAA)</a></li>
-                  <li><a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Network Advertising Initiative (NAI)</a></li>
-                </ul>
-
-                <h3 className="text-xl font-semibold text-black mb-3 mt-6">Option 4: Global Privacy Control</h3>
+                <h2 className="text-2xl font-bold text-black mb-4">6. Updates to This Page</h2>
                 <p>
-                  We honor the Global Privacy Control (GPC) signal. If you use a browser or extension that sends a GPC signal, we will treat that as a valid opt-out request for the sale or sharing of your personal information.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Verification Process</h2>
-                <p>
-                  To protect your privacy and security, we may need to verify your identity before processing your opt-out request. We will use the information you provide in your request to verify your identity. In some cases, we may request additional information to complete the verification process. We will not use any personal information collected for verification purposes for any other purpose.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Authorized Agents</h2>
-                <p>
-                  You may designate an authorized agent to submit an opt-out request on your behalf. If you use an authorized agent, we may require: (1) proof of your written authorization for the agent to submit the request, and (2) verification of your identity directly with us. These requirements do not apply if you have provided your authorized agent with power of attorney pursuant to California Probate Code sections 4000 to 4465.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Non-Discrimination Notice</h2>
-                <p>
-                  Print Mega Store will not discriminate against you for exercising your privacy rights. We will not deny you goods or services, charge you different prices, provide you with a different level of service, or suggest that you may receive a different price or level of service for exercising your rights under the CCPA/CPRA.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Response Time</h2>
-                <p>
-                  We will acknowledge receipt of your opt-out request within 10 business days and will respond to your request within 45 days. If we need additional time to process your request, we will notify you of the extension and the reason for it.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Additional California Rights</h2>
-                <p className="mb-4">
-                  In addition to the right to opt out of sales/sharing, California residents have the following rights under CCPA/CPRA:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Right to Know:</strong> You can request information about the personal information we collect, use, and disclose.</li>
-                  <li><strong>Right to Delete:</strong> You can request that we delete your personal information, subject to certain exceptions.</li>
-                  <li><strong>Right to Correct:</strong> You can request that we correct inaccurate personal information.</li>
-                  <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> You can limit our use of sensitive personal information.</li>
-                </ul>
-                <p className="mt-4">
-                  For more information about your privacy rights, please see our <a href="/privacy" className="text-[#33cccc] hover:underline">Privacy Policy</a>.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Contact Us</h2>
-                <p>
-                  If you have any questions about this page or your California privacy rights, please contact us:
-                </p>
-                <p className="mt-4">
-                  <strong>Email:</strong> info@printmegastore.com<br />
-                  <strong>Phone:</strong> +1 (555) 123-4567<br />
-                  <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
+                  This Do Not Sell My Personal Information page may be updated periodically. The "Last Updated" date at the top will reflect changes.
                 </p>
               </section>
             </div>
