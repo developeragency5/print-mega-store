@@ -13,179 +13,172 @@ export default function Privacy() {
             <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-8" data-testid="heading-privacy">
               Privacy Policy
             </h1>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-4">
               Last updated: January 2026
             </p>
-
-            <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8">
-              <p className="text-gray-700">
-                <strong>Business Name:</strong> Print Mega Store<br />
-                <strong>Email:</strong> info@printmegastore.com<br />
-                <strong>Phone:</strong> +1 (555) 123-4567<br />
-                <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001, United States
-              </p>
-            </div>
+            <p className="text-gray-600 mb-8">
+              Print Mega Store ("we", "our", or "us") operates as an independent online retailer providing printers and document scanning products to customers in the United States. We are not affiliated with, endorsed by, or sponsored by any manufacturer, including HP Inc.
+            </p>
+            <p className="text-gray-600 mb-8">
+              This Privacy Policy explains how we collect, use, and protect your information when you visit our website or make a purchase.
+            </p>
 
             <div className="space-y-8 text-gray-600 leading-relaxed">
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Introduction</h2>
-                <p>
-                  Print Mega Store ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services. By using our website, you consent to the data practices described in this policy.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Information We Collect</h2>
-                <p className="mb-4">We may collect information about you in a variety of ways, including:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Personal Data:</strong> Name, email address, phone number, shipping address, and billing information when you make a purchase or create an account.</li>
-                  <li><strong>Payment Information:</strong> Credit card details and billing information processed securely through our payment provider (Ecwid/Lightspeed).</li>
-                  <li><strong>Usage Data:</strong> Information about how you interact with our website, including pages visited, time spent, and browsing patterns.</li>
-                  <li><strong>Device Information:</strong> Browser type, operating system, IP address, and device identifiers.</li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Email Marketing & Newsletter</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">1. Information We Collect</h2>
                 <p className="mb-4">
-                  When you subscribe to our newsletter or provide your email address, you agree to receive promotional emails from Print Mega Store. These emails may include:
+                  We collect information to process orders, provide support, and improve our services.
                 </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>New product announcements and updates</li>
-                  <li>Special offers, discounts, and promotional deals</li>
-                  <li>Helpful tips and guides about printers and scanners</li>
-                  <li>Company news and updates</li>
+                <p className="mb-2 font-semibold text-black">Information you provide:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Name</li>
+                  <li>Email address</li>
+                  <li>Billing and shipping address</li>
+                  <li>Order and support details</li>
                 </ul>
-                <p className="mt-4">
-                  <strong>Your Rights:</strong> You can unsubscribe from our marketing emails at any time by clicking the "unsubscribe" link at the bottom of any email or by contacting us directly. We respect your inbox and will never sell or share your email address with third parties for their marketing purposes.
+                <p className="mb-4">
+                  Payment information is processed securely by our payment provider. We do not store credit card numbers.
+                </p>
+                <p className="mb-2 font-semibold text-black">Information collected automatically:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>IP address</li>
+                  <li>Browser and device type</li>
+                  <li>Pages visited</li>
+                  <li>Time spent on pages</li>
+                </ul>
+                <p>
+                  This data is used for security, fraud prevention, analytics, and site improvements.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">How We Use Your Information</h2>
-                <p className="mb-4">We use the information we collect to:</p>
+                <h2 className="text-2xl font-bold text-black mb-4">2. How We Use Your Information</h2>
+                <p className="mb-4">We use your information to:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Process and fulfill your orders</li>
-                  <li>Send you order confirmations and shipping updates</li>
-                  <li>Send promotional emails if you have subscribed to our newsletter</li>
-                  <li>Respond to your inquiries and provide assistance</li>
+                  <li>Process and ship orders</li>
+                  <li>Send order confirmations and tracking updates</li>
+                  <li>Provide customer support</li>
+                  <li>Prevent fraud and abuse</li>
                   <li>Improve our website and services</li>
-                  <li>Detect and prevent fraud</li>
+                  <li>Send promotional emails (only if you opt in)</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Data Security</h2>
-                <p>
-                  We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. Our checkout process uses SSL encryption to ensure your payment information is transmitted securely.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Third-Party Services</h2>
-                <p>
-                  Our website uses Ecwid (Lightspeed) as our ecommerce platform. When you make a purchase, your information is also subject to Ecwid's privacy policy. We may also use third-party analytics services to understand how visitors use our website.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Cookies & Tracking Technologies</h2>
-                <p className="mb-4">
-                  We use cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, personalize content, and serve targeted advertisements. Cookies are small text files stored on your device that help us recognize you and remember your preferences.
-                </p>
-                <p className="mb-4"><strong>Types of cookies we use:</strong></p>
+                <h2 className="text-2xl font-bold text-black mb-4">3. Email & Marketing</h2>
+                <p className="mb-4">If you subscribe to our mailing list, you may receive:</p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
-                  <li><strong>Essential Cookies:</strong> Required for the website to function properly, including shopping cart and checkout functionality.</li>
-                  <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website to improve user experience.</li>
-                  <li><strong>Marketing Cookies:</strong> Used to track visitors across websites and display relevant advertisements.</li>
-                  <li><strong>Functional Cookies:</strong> Remember your preferences and settings for a personalized experience.</li>
+                  <li>Product updates</li>
+                  <li>Special offers</li>
+                  <li>Shopping tips</li>
                 </ul>
+                <p className="mb-4">
+                  You can unsubscribe at any time by clicking the link in our emails or contacting us.
+                </p>
                 <p>
-                  You can control cookie preferences through your browser settings. Please note that disabling certain cookies may affect the functionality of our website. For more information, please see our <a href="/cookies" className="text-[#33cccc] hover:underline">Cookie Policy</a>.
+                  We do not sell or rent your email address.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Analytics & Tracking Tools</h2>
-                <p className="mb-4">
-                  We use various analytics and tracking tools to understand how visitors use our website and to improve our services. These tools may collect information about your browsing behavior, including pages visited, time spent on pages, and actions taken.
+                <h2 className="text-2xl font-bold text-black mb-4">4. Payments & Security</h2>
+                <p>
+                  All payments are handled by secure, PCI-compliant third-party processors. We use SSL encryption and industry-standard security tools to protect your data.
                 </p>
-                <p className="mb-4"><strong>Analytics tools we use:</strong></p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Google Analytics:</strong> We use Google Analytics to analyze website traffic and user behavior. Google Analytics uses cookies to collect anonymous data about your visit. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Google's Privacy Policy</a>.</li>
-                  <li><strong>Google Tag Manager:</strong> Used to manage website tags and tracking scripts efficiently.</li>
-                </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Advertising & Remarketing</h2>
-                <p className="mb-4">
-                  We use advertising and remarketing services to show you relevant ads on other websites after you visit our site. These services use cookies and similar technologies to track your browsing activity and serve personalized advertisements.
-                </p>
-                <p className="mb-4"><strong>Advertising platforms we use:</strong></p>
+                <h2 className="text-2xl font-bold text-black mb-4">5. Cookies & Tracking</h2>
+                <p className="mb-4">We use cookies to:</p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
-                  <li><strong>Microsoft Advertising (Bing Ads):</strong> We use Microsoft Advertising to display ads on Microsoft properties and partner sites. Microsoft may collect data about your visits to serve relevant ads. For more information, see <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Microsoft's Privacy Statement</a>.</li>
-                  <li><strong>Google Ads:</strong> We use Google Ads for search and display advertising. Google may use cookies to serve ads based on your prior visits. For more information, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Google's Privacy Policy</a>.</li>
-                  <li><strong>Meta (Facebook) Pixel:</strong> We use Meta Pixel to measure ad effectiveness and serve targeted ads on Facebook and Instagram. For more information, see <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Meta's Privacy Policy</a>.</li>
+                  <li>Remember your cart</li>
+                  <li>Improve site performance</li>
+                  <li>Analyze traffic</li>
+                  <li>Show relevant ads</li>
                 </ul>
-                <p className="mb-4"><strong>Opting Out of Personalized Advertising:</strong></p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Google: <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Google Ad Settings</a></li>
-                  <li>Microsoft: <a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Microsoft Privacy Dashboard</a></li>
-                  <li>Meta: <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Facebook Ad Preferences</a></li>
-                  <li>Industry-wide opt-out: <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Digital Advertising Alliance</a></li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Your Rights</h2>
-                <p className="mb-4">Depending on your location, you may have the right to:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Access the personal information we hold about you</li>
-                  <li>Request correction of inaccurate information</li>
-                  <li>Request deletion of your personal information</li>
-                  <li>Opt out of marketing communications</li>
-                  <li>Object to processing of your personal information</li>
-                  <li>Opt out of the sale of your personal information (for California residents)</li>
-                  <li>Withdraw consent where processing is based on consent</li>
-                </ul>
-                <p className="mt-4">
-                  To exercise any of these rights, please contact us at info@printmegastore.com. California residents may also visit our <a href="/do-not-sell" className="text-[#33cccc] hover:underline">Do Not Sell My Personal Information</a> page.
+                <p>
+                  You may disable cookies in your browser settings.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">California Privacy Rights (CCPA)</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">6. Advertising & Analytics</h2>
+                <p className="mb-4">We use:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Google Analytics</li>
+                  <li>Google Ads</li>
+                  <li>Microsoft Advertising</li>
+                  <li>Meta (Facebook) Pixel</li>
+                </ul>
                 <p className="mb-4">
-                  If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA):
+                  These platforms may use cookies to display relevant ads based on your visit to our website.
                 </p>
+                <p className="mb-2">You may manage ad preferences through:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Right to Know:</strong> You can request information about the personal data we collect, use, and share.</li>
-                  <li><strong>Right to Delete:</strong> You can request deletion of your personal data, subject to certain exceptions.</li>
-                  <li><strong>Right to Opt-Out:</strong> You can opt out of the sale of your personal information.</li>
-                  <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+                  <li><a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Google Ad Settings</a></li>
+                  <li><a href="https://account.microsoft.com/privacy/ad-settings" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Microsoft Privacy Dashboard</a></li>
+                  <li><a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer" className="text-[#33cccc] hover:underline">Facebook Ad Preferences</a></li>
                 </ul>
-                <p className="mt-4">
-                  For more information, please visit our <a href="/do-not-sell" className="text-[#33cccc] hover:underline">Do Not Sell My Personal Information</a> page.
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">7. Sharing Your Information</h2>
+                <p className="mb-4">We may share limited data with:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Payment processors</li>
+                  <li>Shipping carriers</li>
+                  <li>Analytics and advertising platforms</li>
+                </ul>
+                <p>
+                  Only as needed to operate our business. We do not sell personal data.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Contact Us</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">8. Your Rights</h2>
+                <p className="mb-4">You may request:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Access to your data</li>
+                  <li>Corrections</li>
+                  <li>Deletion</li>
+                  <li>Marketing opt-out</li>
+                </ul>
                 <p>
-                  If you have any questions about this Privacy Policy or our data practices, please contact us at:
-                </p>
-                <p className="mt-4">
-                  <strong>Email:</strong> info@printmegastore.com<br />
-                  <strong>Phone:</strong> +1 (555) 123-4567<br />
-                  <strong>Address:</strong> 123 Printer Avenue, Tech District, NY 10001
+                  Contact us at: <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a>
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-black mb-4">Changes to This Policy</h2>
+                <h2 className="text-2xl font-bold text-black mb-4">9. California Residents (CCPA)</h2>
+                <p className="mb-4">California residents may:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-4">
+                  <li>Request information about their data</li>
+                  <li>Request deletion</li>
+                  <li>Opt out of data sharing</li>
+                </ul>
                 <p>
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+                  Use our <a href="/do-not-sell" className="text-[#33cccc] hover:underline">Do Not Sell My Information</a> page.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">10. Independent Retailer Notice</h2>
+                <p>
+                  Print Mega Store sells products as an independent retailer. We do not manufacture products. Manufacturer warranties and technical support are provided by HP or the respective brand.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">11. Policy Updates</h2>
+                <p>
+                  We may update this policy from time to time. The current version will always be available on this page.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-black mb-4">12. Contact</h2>
+                <p>
+                  Email: <a href="mailto:info@printmegastore.com" className="text-[#33cccc] hover:underline">info@printmegastore.com</a>
                 </p>
               </section>
             </div>
