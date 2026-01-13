@@ -49,13 +49,13 @@ const categoryIcons: Record<string, React.ReactNode> = {
 };
 
 const categoryDescriptions: Record<string, string> = {
-  "Home-Printers": "Compact wireless home printers designed for everyday documents, homework, and photos",
+  "Home-Printers": "Compact and wireless home printers designed for everyday printing, homework, personal documents, and photos.",
   "Office-Printers":
-    "High-volume office printers and multifunction devices built to support business workflows",
-  "Inkjet-Printers": "Color inkjet printers ideal for photos, creative projects, and flexible home or office use",
-  "Laser-Printers": "Fast and efficient laser printers for crisp documents and high-volume printing",
+    "High-volume office printers and multifunction devices designed to support productivity and team workflows.",
+  "Inkjet-Printers": "Color inkjet printers ideal for photos, creative projects, and flexible printing at home or in the office.",
+  "Laser-Printers": "Fast and efficient laser printers built for sharp documents and high-volume printing environments.",
   "Document-Scanners":
-    "Professional scanners for digitizing paperwork, records, and archives",
+    "Professional scanners for digitizing paperwork, contracts, invoices, and archives.",
 };
 
 function NewsletterForm() {
@@ -105,7 +105,7 @@ const featuredProducts = [
     categorySlug: "Home-Printers",
     name: "HP DeskJet 2827e Wireless All-in-One Printer",
     description:
-      "An affordable all-in-one home printer designed for printing, scanning, and copying everyday documents with wireless convenience.",
+      "A compact and affordable home printer designed for printing, scanning, and copying everyday documents. Wireless connectivity makes it easy to print from multiple devices.",
     features: [
       "Print, Scan & Copy",
       "Wireless Connectivity",
@@ -120,7 +120,7 @@ const featuredProducts = [
     categorySlug: "Office-Printers",
     name: "HP OfficeJet 8135e Wireless All-in-One Printer",
     description:
-      "A productivity-focused office printer offering high-volume printing and all-in-one functionality for business use.",
+      "A productivity-focused office printer offering high-volume printing, scanning, copying, and faxing for business environments.",
     features: [
       "All-in-One Office Solution",
       "3 Months Ink Trial",
@@ -135,7 +135,7 @@ const featuredProducts = [
     categorySlug: "Inkjet-Printers",
     name: "HP Envy 7955e Wireless Photo All-in-One Printer",
     description:
-      "A premium inkjet printer designed for photo-quality prints, duplex printing, and wireless home use.",
+      "A premium inkjet printer designed for photo-quality prints, duplex printing, and wireless convenience.",
     features: [
       "Photo Quality Prints",
       "Auto Duplex Printing",
@@ -150,7 +150,7 @@ const featuredProducts = [
     categorySlug: "Laser-Printers",
     name: "HP LaserJet M110w Compact Wireless Laser Printer",
     description:
-      "A compact laser printer delivering fast black-and-white printing with crisp text output.",
+      "A compact laser printer delivering fast black-and-white printing with crisp text output, ideal for home offices.",
     features: ["Compact Design", "Wireless Printing", "Fast Monochrome Output"],
     image: laserPrinterImg,
     productId: "laser-printer-1",
@@ -161,7 +161,7 @@ const featuredProducts = [
     categorySlug: "Document-Scanners",
     name: "HP ScanJet Enterprise Flow 9000 s1 Scanner",
     description:
-      "A high-performance enterprise document scanner built for heavy workloads and fast digitization.",
+      "A high-performance enterprise document scanner built for heavy workloads and fast, accurate digitization.",
     features: [
       "High-Volume Scanning",
       "Auto Document Feeder",
@@ -264,10 +264,9 @@ export default function Home() {
                       >
                         Welcome to Print Mega Store, your trusted online destination
                         to buy high-quality inkjet printers, laser printers, and
-                        document scanners for home and office use. Shop wireless
-                        all-in-one printers, color inkjet printers, and fast laser
-                        printers with competitive prices, secure checkout, and fast
-                        shipping.
+                        document scanners for home and office use. We make it easy to
+                        find the right home printer or office printer with reliable
+                        performance, modern features, and competitive pricing.
                       </motion.p>
 
                       <motion.div
@@ -363,14 +362,12 @@ export default function Home() {
               Your Trusted Source for Home and Office Printers
             </h2>
             <p className="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed">
-              Print Mega Store is a specialized online retailer focused on
-              delivering reliable home printers, office printers, and
-              professional printing equipment at competitive prices. Our mission
-              is to simplify printer shopping by offering trusted products,
-              transparent pricing, and clear information that helps customers
-              make confident decisions. We serve home users, students, small
-              businesses, and enterprises with printing solutions that balance
-              performance, durability, and value.
+              Print Mega Store is a specialized online retailer dedicated to
+              helping customers find the right printers and scanners for their
+              everyday and professional needs. We focus on offering reliable
+              home printers, office printers, inkjet printers, and laser
+              printers at competitive prices, backed by transparent information
+              and customer-first service.
             </p>
           </motion.div>
 
@@ -396,12 +393,11 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-black">Who We Are</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Print Mega Store was built to remove confusion from buying
-                printers online. We specialize in inkjet printers, laser
-                printers, multifunction all-in-one devices, and document
-                scanners that support both home and office workflows. Our team
-                carefully selects products from trusted manufacturers to ensure
-                consistent performance and long-term reliability.
+                Print Mega Store was built to remove confusion from printer
+                shopping. We specialize in inkjet printers for versatile color
+                printing, laser printers for fast and efficient document output,
+                multifunction all-in-one printers for productivity, and
+                professional document scanners for digitization.
               </p>
             </motion.div>
 
@@ -426,13 +422,12 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-black">What We Offer</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Our catalog includes a wide selection of printers and scanners
-                designed for different use cases and budgets. Customers can
-                explore compact wireless home printers for daily printing,
-                high-volume office printers built for productivity, and inkjet
-                printers ideal for photo printing and creative projects. Each
-                product listing includes detailed specifications and feature
-                highlights.
+                Our catalog features a broad range of printing equipment
+                designed to support different users and workloads. Home users
+                can find compact wireless home printers ideal for personal
+                documents, homework, and photo printing. Small offices and
+                businesses can explore multifunction office printers that
+                combine printing, scanning, copying, and faxing.
               </p>
             </motion.div>
           </div>
@@ -461,12 +456,10 @@ export default function Home() {
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Print Mega Store provides printing solutions for every type of
-                user. Home users can find inkjet home printers with wireless
-                connectivity for school assignments, personal documents, and
-                photos. Small offices and businesses benefit from multifunction
-                office printers that combine printing, scanning, copying, and
-                faxing.
+                Print Mega Store provides tailored printing solutions for a
+                wide range of users. Home users benefit from inkjet home
+                printers with wireless connectivity, mobile printing support,
+                and compact designs that fit easily into any space.
               </p>
             </motion.div>
 
@@ -493,11 +486,10 @@ export default function Home() {
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Buying printers and scanners online should be convenient and
-                secure. Print Mega Store provides clear pricing, secure payment
-                processing, and industry-standard encryption to protect your
-                personal and payment information. We also offer fast shipping,
-                competitive delivery rates, and hassle-free returns.
+                Buying printers and scanners online should be simple,
+                transparent, and secure. Print Mega Store offers clear pricing,
+                detailed product information, and a secure checkout process
+                protected by industry-standard encryption.
               </p>
             </motion.div>
           </div>
@@ -534,10 +526,10 @@ export default function Home() {
               Browse Home and Office Printing Solutions
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Explore printers and scanners by category to quickly find the
-              right printing solution. Our categories include home printers,
-              office printers, inkjet printers, laser printers, and document
-              scanners.
+              Our shop-by-category structure makes it easy to find the right
+              printer or scanner. Browse home printers, office printers, inkjet
+              printers, laser printers, and document scanners based on your
+              specific requirements.
             </p>
           </motion.div>
 
@@ -600,9 +592,10 @@ export default function Home() {
               Popular Home and Office Printing Equipment
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Discover our most popular printers and scanners selected for
-              reliability, features, and value across home and office
-              environments.
+              Explore our featured printers and scanners selected for
+              performance, reliability, and overall value. These products
+              represent some of the most trusted options for home printing,
+              office productivity, and professional document management.
             </p>
           </motion.div>
 
@@ -708,19 +701,19 @@ export default function Home() {
               {
                 icon: <Printer className="w-8 h-8" />,
                 title: "Wide Selection of Home and Office Printers",
-                desc: "From compact home inkjet printers to enterprise-grade office laser printers, we offer solutions for every requirement and budget.",
+                desc: "From compact home inkjet printers to enterprise-grade office laser printers, we offer solutions for every printing requirement.",
                 color: "from-[#33cccc] to-[#29a3a3]",
               },
               {
                 icon: <Zap className="w-8 h-8" />,
                 title: "Trusted Inkjet and Laser Technology",
-                desc: "Choose proven inkjet and laser printing technologies that deliver consistent quality and efficiency.",
+                desc: "Choose proven inkjet and laser printing technologies that deliver consistent quality, efficiency, and reliability.",
                 color: "from-purple-500 to-purple-600",
               },
               {
                 icon: <Tag className="w-8 h-8" />,
                 title: "Competitive Online Pricing",
-                desc: "We monitor the market to ensure excellent value when you buy printers online.",
+                desc: "We continuously monitor the market to ensure excellent value when you buy printers online.",
                 color: "from-green-500 to-green-600",
               },
               {
@@ -732,13 +725,13 @@ export default function Home() {
               {
                 icon: <ShieldCheck className="w-8 h-8" />,
                 title: "Secure Shopping Experience",
-                desc: "Advanced encryption protects your personal and payment information.",
+                desc: "Advanced encryption protects your personal and payment information during checkout.",
                 color: "from-pink-500 to-pink-600",
               },
               {
                 icon: <Award className="w-8 h-8" />,
                 title: "Customer Satisfaction Guaranteed",
-                desc: "We support every purchase with hassle-free returns and dedicated customer service.",
+                desc: "Every purchase is supported by hassle-free returns and responsive customer service.",
                 color: "from-indigo-500 to-indigo-600",
               },
             ].map((item, i) => (
@@ -799,12 +792,12 @@ export default function Home() {
               },
               {
                 icon: <Smile className="w-10 h-10" />,
-                label: "Quality Products You Can Trust",
+                label: "High-Quality Products You Can Trust",
                 color: "from-green-500 to-green-600",
               },
               {
                 icon: <BadgeCheck className="w-10 h-10" />,
-                label: "A Reliable Online Retailer",
+                label: "A Reliable and Trusted Online Retailer",
                 color: "from-orange-500 to-orange-600",
               },
             ].map((item, i) => (
@@ -942,10 +935,10 @@ export default function Home() {
               How to Choose the Right Printer
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Selecting the right printer depends on print volume, color needs,
-              connectivity, and long-term operating costs. Understanding the
-              difference between inkjet printers and laser printers helps you
-              make the best choice.
+              Choosing the right printer depends on your print volume, color
+              requirements, connectivity options, and total cost of ownership.
+              Understanding the differences between inkjet printers and laser
+              printers helps you select the best option for your needs.
             </p>
           </motion.div>
 
@@ -954,19 +947,19 @@ export default function Home() {
               {
                 step: "01",
                 title: "Home Users",
-                desc: "Inkjet home printers offer wireless convenience and affordable printing for documents and photos.",
+                desc: "Inkjet home printers offer affordable printing, wireless convenience, and the flexibility to print documents and photos.",
                 color: "from-pink-500 to-pink-600",
               },
               {
                 step: "02",
                 title: "Small Business and Office Users",
-                desc: "Office printers must handle higher volumes. Laser printers are ideal for speed, while multifunction inkjet printers provide versatility.",
+                desc: "Office printers must handle higher volumes. Laser printers provide speed and efficiency, while multifunction inkjet printers offer versatility.",
                 color: "from-[#33cccc] to-[#29a3a3]",
               },
               {
                 step: "03",
                 title: "Enterprise Users",
-                desc: "Large organizations rely on high-speed laser printers and enterprise document scanners for demanding workflows.",
+                desc: "Large organizations rely on high-speed laser printers, departmental multifunction devices, and enterprise document scanners to support demanding workflows.",
                 color: "from-purple-500 to-purple-600",
               },
             ].map((item, i) => (
@@ -1293,8 +1286,9 @@ export default function Home() {
               Subscribe to Our Newsletter
             </h2>
             <p className="text-gray-600 mb-8">
-              Get exclusive deals, new product announcements, and helpful tips
-              for choosing and maintaining your home and office printers.
+              Get exclusive deals, new product announcements, and expert tips
+              for choosing, using, and maintaining your home and office
+              printers.
             </p>
             <NewsletterForm />
             <p className="text-xs text-gray-500 mt-4">
