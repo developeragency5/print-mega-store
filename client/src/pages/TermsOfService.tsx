@@ -121,10 +121,10 @@ export default function TermsOfService() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">8. Manufacturer Warranty</h2>
                 <p className="mb-4">
-                  All products are covered by the manufacturer's warranty, where applicable.
+                  Manufacturer warranty coverage may be available and is provided by the manufacturer according to their warranty terms.
                 </p>
                 <p className="mb-4">
-                  Print Mega Store does not provide manufacturer warranty service. Warranty claims, support, and repairs must be handled directly through the manufacturer (e.g., HP).
+                  Print Mega Store does not provide manufacturer warranty service. Warranty claims, support, and repairs must be handled directly through the manufacturer.
                 </p>
                 <p>
                   Warranty coverage may vary by product, region, and registration status.

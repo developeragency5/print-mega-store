@@ -164,7 +164,7 @@ export default function Privacy() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">10. Independent Retailer Notice</h2>
                 <p>
-                  Print Mega Store sells products as an independent retailer. We do not manufacture products. Manufacturer warranties and technical support are provided by HP or the respective brand.
+                  Print Mega Store sells products as an independent retailer. We do not manufacture products. Warranty service and technical support are provided by the manufacturer in accordance with their warranty policies.
                 </p>
               </section>
 

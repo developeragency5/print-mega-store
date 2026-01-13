@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 import homePrintersImg from "@assets/HP_DeskJet_4255e_All-in-One_Printer_with_3_Months_of_Instant_I_1767897872063.jpg";
 import officePrintersImg from "@assets/HP_OfficeJet_8015e_All-in-One_Printer_with_6_Months_of_Instant_1767897902002.jpg";
@@ -180,14 +181,19 @@ export function CategoryBanner() {
 
   return (
     <>
-      <section 
-        className="bg-white rounded-xl border border-gray-100 p-6 md:p-10 mb-6"
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-100 p-8 md:p-12 mb-6 shadow-sm"
         data-testid={`category-banner-${categorySlug}`}
       >
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-3/5 text-center md:text-left">
+            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-3">
+              Print Mega Store
+            </span>
             <h1 
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+              className="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
               data-testid="category-banner-title"
             >
               {banner.title}
@@ -198,63 +204,87 @@ export function CategoryBanner() {
             >
               {banner.description}
             </p>
-            <button
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               onClick={scrollToProducts}
-              className="inline-flex items-center gap-2 bg-[#33cccc] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#29a3a3] transition-all"
+              className="inline-flex items-center gap-2 bg-[#33cccc] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#29a3a3] transition-all shadow-md"
               data-testid="category-banner-browse-button"
             >
               Browse Collection
-              <ArrowDown className="w-4 h-4" />
-            </button>
+              <ArrowDown className="w-5 h-5" />
+            </motion.button>
           </div>
-          <div className="w-full md:w-2/5 flex justify-center">
-            <img
-              src={banner.image}
-              alt={banner.title}
-              className="max-h-[220px] md:max-h-[260px] w-auto object-contain"
-              data-testid="category-banner-image"
-            />
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+            className="w-full md:w-2/5 flex justify-center"
+          >
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <img
+                src={banner.image}
+                alt={banner.title}
+                className="max-h-[220px] md:max-h-[280px] w-auto object-contain"
+                data-testid="category-banner-image"
+              />
+            </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {buyerGuide && (
-        <section 
-          className="bg-white rounded-xl border border-gray-100 p-6 md:p-8 mb-6"
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="bg-white rounded-2xl border border-gray-100 p-8 md:p-10 mb-6 shadow-sm"
           data-testid={`buyer-guide-${categorySlug}`}
         >
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-            {buyerGuide.title}
-          </h2>
-          <div className="space-y-4">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#33cccc]/10 rounded-lg flex items-center justify-center">
+              <CheckCircle className="w-5 h-5 text-[#33cccc]" />
+            </div>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900">
+              {buyerGuide.title}
+            </h2>
+          </div>
+          <div className="space-y-4 pl-0 md:pl-13">
             {buyerGuide.paragraphs.map((paragraph, index) => (
               <p key={index} className="text-gray-600 leading-relaxed">
                 {paragraph}
               </p>
             ))}
           </div>
-        </section>
+        </motion.section>
       )}
 
       {productRange && (
-        <section 
-          className="bg-white rounded-xl border border-gray-100 p-6 md:p-8 mb-6"
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-gradient-to-br from-[#33cccc]/5 to-white rounded-2xl border border-gray-100 p-8 md:p-10 mb-6 shadow-sm"
           data-testid={`product-range-${categorySlug}`}
         >
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
             {productRange.title}
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
+          <p className="text-gray-600 leading-relaxed mb-6">
             {productRange.intro}
           </p>
-          <ul className="space-y-2">
+          <div className="grid md:grid-cols-3 gap-4">
             {productRange.items.map((item, index) => (
-              <li key={index} className="text-gray-600 leading-relaxed">
-                <span className="font-semibold text-gray-900">{item.name}</span> {item.description}
-              </li>
+              <div key={index} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:border-[#33cccc] hover:shadow-md transition-all">
+                <div className="w-8 h-8 bg-[#33cccc]/10 rounded-lg flex items-center justify-center mb-3">
+                  <span className="text-[#33cccc] font-bold text-sm">{index + 1}</span>
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">{item.name}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              </div>
             ))}
-          </ul>
-        </section>
+          </div>
+        </motion.section>
       )}
     </>
   );

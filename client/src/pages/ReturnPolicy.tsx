@@ -117,7 +117,7 @@ export default function ReturnPolicy() {
               <section>
                 <h2 className="text-2xl font-bold text-black mb-4">8. Warranty Claims</h2>
                 <p className="mb-4">
-                  All products are covered by the manufacturer's warranty where applicable (e.g., HP warranty).
+                  Manufacturer warranty coverage may be available and is provided by the manufacturer according to their warranty terms.
                 </p>
                 <p>
                   Print Mega Store does not provide manufacturer warranty service. Warranty claims must be made directly with the manufacturer and are subject to their terms and conditions.
