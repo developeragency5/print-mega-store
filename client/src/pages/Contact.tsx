@@ -112,12 +112,39 @@ export default function Contact() {
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#37AFE1] to-[#2d8bb8] mb-6">
               <Mail className="w-10 h-10 text-white" />
             </div>
+            <p className="text-sm font-semibold text-[#37AFE1] uppercase tracking-wider mb-2">Print Mega Store</p>
             <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4" data-testid="heading-contact">
-              Get in Touch
+              Contact Us
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Have questions about a product or need assistance? Our dedicated team is here to help you find the perfect printing solution.
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            className="bg-white rounded-xl border border-gray-200 p-6 max-w-2xl mx-auto mb-12"
+          >
+            <div className="grid md:grid-cols-3 gap-4 text-center">
+              <div>
+                <h3 className="font-bold text-black text-sm mb-1">Business Name</h3>
+                <p className="text-gray-600 text-sm">Print Mega Store</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-black text-sm mb-1">Email</h3>
+                <a href="mailto:info@printmegastore.com" className="text-[#37AFE1] text-sm hover:underline">info@printmegastore.com</a>
+              </div>
+              <div>
+                <h3 className="font-bold text-black text-sm mb-1">Phone</h3>
+                <a href="tel:+15551234567" className="text-[#37AFE1] text-sm hover:underline">+1 (555) 123-4567</a>
+              </div>
+            </div>
+            <div className="border-t border-gray-100 mt-4 pt-4 text-center">
+              <h3 className="font-bold text-black text-sm mb-1">Mailing Address</h3>
+              <p className="text-gray-600 text-sm">123 Printer Avenue, Tech District, NY 10001, United States</p>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto mb-20">
