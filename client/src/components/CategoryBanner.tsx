@@ -41,6 +41,49 @@ const categoryBanners: Record<string, CategoryBannerData> = {
   }
 };
 
+interface BuyerGuideData {
+  title: string;
+  paragraphs: string[];
+}
+
+const categoryBuyerGuides: Record<string, BuyerGuideData> = {
+  "Home-Printers": {
+    title: "Choosing the Right Home Printer",
+    paragraphs: [
+      "Home printers are designed for everyday printing, scanning, and copying tasks such as schoolwork, bills, photos, and personal documents. When selecting a home printer, it's important to consider print volume, ink efficiency, wireless connectivity, and whether you need scanning and copying features.",
+      "Our Home Printer collection includes compact HP inkjet and Smart Tank models that provide reliable print quality, easy setup, and affordable long-term operation for families, students, and home offices."
+    ]
+  },
+  "Office-Printers": {
+    title: "Choosing the Right Office Printer",
+    paragraphs: [
+      "Office printers are built for higher workloads, shared use, and business environments. When selecting an office printer, consider monthly print volume, print speed, paper capacity, duplex printing, and network connectivity options.",
+      "Our Office Printer collection includes HP OfficeJet and LaserJet models designed for productivity, reliability, and cost-efficiency in home offices, small businesses, and corporate environments."
+    ]
+  },
+  "Inkjet-Printers": {
+    title: "Choosing the Right Inkjet Printer",
+    paragraphs: [
+      "Inkjet printers are ideal for color printing, photos, and mixed media. They use liquid ink to produce vibrant colors and are popular for homes, students, and creative projects requiring high-quality photo and graphics output.",
+      "Our Inkjet Printer collection includes HP DeskJet, ENVY, and Smart Tank models offering wireless connectivity, mobile printing support, and cost-effective ink solutions for everyday and specialty printing needs."
+    ]
+  },
+  "Laser-Printers": {
+    title: "Choosing the Right Laser Printer",
+    paragraphs: [
+      "Laser printers are designed for fast, high-volume text printing with crisp, professional-quality output. They use toner instead of ink, making them more cost-efficient for offices and businesses that print frequently.",
+      "Our Laser Printer collection includes HP LaserJet models optimized for speed, durability, and low cost per page, ideal for business documents, reports, and high-volume printing environments."
+    ]
+  },
+  "Document-Scanners": {
+    title: "Choosing the Right Document Scanner",
+    paragraphs: [
+      "Document scanners are professional devices for digitizing paperwork, invoices, contracts, and archives. When selecting a scanner, consider scan speed, automatic document feeders, duplex scanning, and software integration capabilities.",
+      "Our Document Scanner collection includes HP ScanJet models designed for high-volume scanning, accurate document capture, and seamless integration with document management workflows."
+    ]
+  }
+};
+
 function parseCategorySlugFromHash(hash: string): string | null {
   const match = hash.match(/^#!\/([^/]+)\/c\//);
   return match ? match[1] : null;
@@ -78,43 +121,65 @@ export function CategoryBanner() {
     }
   };
 
+  const buyerGuide = categoryBuyerGuides[categorySlug];
+
   return (
-    <section 
-      className="bg-white rounded-xl border border-gray-100 p-6 md:p-10 mb-8"
-      data-testid={`category-banner-${categorySlug}`}
-    >
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        <div className="w-full md:w-3/5 text-center md:text-left">
-          <h1 
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-            data-testid="category-banner-title"
-          >
-            {banner.title}
-          </h1>
-          <p 
-            className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg"
-            data-testid="category-banner-description"
-          >
-            {banner.description}
-          </p>
-          <button
-            onClick={scrollToProducts}
-            className="inline-flex items-center gap-2 bg-[#33cccc] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#29a3a3] transition-all"
-            data-testid="category-banner-browse-button"
-          >
-            Browse Collection
-            <ArrowDown className="w-4 h-4" />
-          </button>
+    <>
+      <section 
+        className="bg-white rounded-xl border border-gray-100 p-6 md:p-10 mb-6"
+        data-testid={`category-banner-${categorySlug}`}
+      >
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <div className="w-full md:w-3/5 text-center md:text-left">
+            <h1 
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+              data-testid="category-banner-title"
+            >
+              {banner.title}
+            </h1>
+            <p 
+              className="text-gray-600 leading-relaxed mb-6 text-base md:text-lg"
+              data-testid="category-banner-description"
+            >
+              {banner.description}
+            </p>
+            <button
+              onClick={scrollToProducts}
+              className="inline-flex items-center gap-2 bg-[#33cccc] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#29a3a3] transition-all"
+              data-testid="category-banner-browse-button"
+            >
+              Browse Collection
+              <ArrowDown className="w-4 h-4" />
+            </button>
+          </div>
+          <div className="w-full md:w-2/5 flex justify-center">
+            <img
+              src={banner.image}
+              alt={banner.title}
+              className="max-h-[220px] md:max-h-[260px] w-auto object-contain"
+              data-testid="category-banner-image"
+            />
+          </div>
         </div>
-        <div className="w-full md:w-2/5 flex justify-center">
-          <img
-            src={banner.image}
-            alt={banner.title}
-            className="max-h-[220px] md:max-h-[260px] w-auto object-contain"
-            data-testid="category-banner-image"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
+
+      {buyerGuide && (
+        <section 
+          className="bg-white rounded-xl border border-gray-100 p-6 md:p-8 mb-6"
+          data-testid={`buyer-guide-${categorySlug}`}
+        >
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+            {buyerGuide.title}
+          </h2>
+          <div className="space-y-4">
+            {buyerGuide.paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-gray-600 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   );
 }
