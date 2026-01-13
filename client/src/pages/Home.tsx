@@ -52,6 +52,7 @@ import scannerIcon from "@assets/scanner_1768343254954.png";
 import dollarGif from "@assets/dollar_1768343622664.gif";
 import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
 import shieldGif from "@assets/shield_1768343929996.gif";
+import homeIconImg from "@assets/home_1768345063969.png";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "Home-Printers": <img src={printerIcon} alt="Home Printers" className="w-10 h-10" />,
@@ -781,22 +782,19 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                icon: <HomeIcon className="w-8 h-8" />,
+                icon: <img src={homeIconImg} alt="Home Users" className="w-8 h-8" />,
                 title: "Home Users",
                 desc: "A compact inkjet home printer with wireless printing and ink tanks is ideal for everyday use.",
-                color: "from-[#33cccc] to-[#29a3a3]",
               },
               {
-                icon: <Building className="w-8 h-8" />,
+                icon: <Building className="w-8 h-8 text-[#33cccc]" />,
                 title: "Small Business & Home Offices",
                 desc: "Multifunction printers with automatic duplexing and printing and scanning capabilities offer flexibility.",
-                color: "from-blue-500 to-blue-600",
               },
               {
-                icon: <Building2 className="w-8 h-8" />,
+                icon: <Building2 className="w-8 h-8 text-[#33cccc]" />,
                 title: "Busy Office & Enterprise",
                 desc: "Laser printers that print many pages per minute, hold a lot of paper, and scan quickly are best for busy places.",
-                color: "from-purple-500 to-purple-600",
               },
             ].map((item, i) => (
               <motion.div
@@ -810,9 +808,9 @@ export default function Home() {
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg mx-auto mb-6`}
+                  className="w-16 h-16 rounded-xl bg-white flex items-center justify-center shadow-lg mx-auto mb-6"
                 >
-                  <span className="text-white">{item.icon}</span>
+                  {item.icon}
                 </motion.div>
                 <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#33cccc] transition-colors">
                   {item.title}
