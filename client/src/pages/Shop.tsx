@@ -1,7 +1,12 @@
 import { useEffect, useState, useRef } from "react";
-import { Loader2 } from "lucide-react";
+import { Loader2, ShieldCheck } from "lucide-react";
 import { STORE_ID } from "@/lib/ecwid";
 import { CategoryBanner } from "@/components/CategoryBanner";
+
+function parseCategorySlugFromHash(hash: string): string | null {
+  const match = hash.match(/^#!\/([^/]+)\/c\//);
+  return match ? match[1] : null;
+}
 
 declare global {
   interface Window {
@@ -14,7 +19,18 @@ declare global {
 
 export default function Shop() {
   const [isLoading, setIsLoading] = useState(true);
+  const [categorySlug, setCategorySlug] = useState<string | null>(() => 
+    parseCategorySlugFromHash(window.location.hash)
+  );
   const widgetInitialized = useRef(false);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCategorySlug(parseCategorySlugFromHash(window.location.hash));
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   useEffect(() => {
     window.ecwid_script_defer = true;
@@ -196,6 +212,26 @@ export default function Shop() {
             </ul>
           </div>
         </div>
+
+        {/* Product Authenticity & Warranty Block - Shows on category pages */}
+        {categorySlug && (
+          <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6 sm:p-8 mt-6" data-testid="warranty-authenticity-block">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <ShieldCheck className="w-6 h-6 text-primary" />
+                <h2 className="text-xl font-bold text-gray-900">Product Authenticity & Warranty</h2>
+              </div>
+              <div className="space-y-4 text-center">
+                <p className="text-gray-700 leading-relaxed">
+                  All products sold by Print Mega Store are genuine HP products sourced through authorized U.S. distribution partners. Every printer and scanner is new, factory sealed, and includes the original manufacturer's warranty.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  HP provides warranty service, firmware updates, and technical support for all eligible products.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
