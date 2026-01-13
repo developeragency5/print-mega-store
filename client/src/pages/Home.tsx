@@ -927,7 +927,7 @@ export default function Home() {
                 icon: <Package className="w-6 h-6" />,
                 title: "Curated Selection",
                 desc: "Every product in our catalog is carefully selected to ensure quality and reliability for your printing needs.",
-                bgColor: "bg-[#33cccc]/10",
+                bgColor: "bg-white",
                 iconColor: "text-[#33cccc]",
                 highlighted: false,
               },
@@ -935,7 +935,7 @@ export default function Home() {
                 icon: <ShieldCheck className="w-6 h-6" />,
                 title: "Secure Checkout",
                 desc: "Shop with confidence using our safe and encrypted payment processing for all transactions.",
-                bgColor: "bg-[#33cccc]/10",
+                bgColor: "bg-white",
                 iconColor: "text-[#33cccc]",
                 highlighted: false,
               },
@@ -943,7 +943,7 @@ export default function Home() {
                 icon: <Clock className="w-6 h-6" />,
                 title: "Quick Processing",
                 desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
-                bgColor: "bg-green-100",
+                bgColor: "bg-white",
                 iconColor: "text-green-600",
                 highlighted: true,
               },
@@ -951,7 +951,7 @@ export default function Home() {
                 icon: <Heart className="w-6 h-6" />,
                 title: "Customer First",
                 desc: "Your satisfaction is our priority. We go above and beyond to ensure a seamless shopping experience.",
-                bgColor: "bg-pink-100",
+                bgColor: "bg-white",
                 iconColor: "text-pink-500",
                 highlighted: false,
               },
@@ -964,7 +964,7 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className={`rounded-2xl p-6 text-center ${item.highlighted ? 'bg-[#33cccc]/5 border-2 border-[#33cccc]/20' : 'bg-gray-50'}`}
               >
-                <div className={`w-14 h-14 ${item.bgColor} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                <div className={`w-14 h-14 ${item.bgColor} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
                   <span className={item.iconColor}>{item.icon}</span>
                 </div>
                 <h3 className={`text-lg font-bold mb-3 ${item.highlighted ? 'text-[#33cccc]' : 'text-gray-900'}`}>
