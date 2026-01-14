@@ -51,6 +51,7 @@ import scannerIcon from "@assets/scanner_1768343254954.png";
 import dollarGif from "@assets/dollar_1768343622664.gif";
 import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
 import shieldGif from "@assets/shield_1768343929996.gif";
+import shieldIcon from "@assets/shield_1768349371391.png";
 import homeIconImg from "@assets/home_1768345063969.png";
 import smallBusinessIcon from "@assets/building_(1)_1768345193049.png";
 import enterpriseIcon from "@assets/house_1768345234701.png";
@@ -700,7 +701,7 @@ export default function Home() {
                 color: "from-green-500 to-green-600",
               },
               {
-                icon: <img src={shieldGif} alt="Secure Shopping" className="w-8 h-8" />,
+                icon: <img src={shieldIcon} alt="Secure Shopping" className="w-8 h-8" />,
                 title: "Fast & Secure Shopping",
                 desc: "Secure checkout, fast delivery, and trusted customer care.",
                 color: "from-orange-500 to-orange-600",
