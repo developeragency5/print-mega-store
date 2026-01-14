@@ -10,6 +10,10 @@ function parseCategorySlugFromHash(hash: string): string | null {
   return match ? match[1] : null;
 }
 
+function isProductPageHash(hash: string): boolean {
+  return hash.includes('/p/') || hash.includes('#!/~/');
+}
+
 declare global {
   interface Window {
     xProductBrowser: (...args: string[]) => void;
@@ -24,11 +28,15 @@ export default function Shop() {
   const [categorySlug, setCategorySlug] = useState<string | null>(() => 
     parseCategorySlugFromHash(window.location.hash)
   );
+  const [isProductPage, setIsProductPage] = useState<boolean>(() => 
+    isProductPageHash(window.location.hash)
+  );
   const widgetInitialized = useRef(false);
 
   useEffect(() => {
     const handleHashChange = () => {
       setCategorySlug(parseCategorySlugFromHash(window.location.hash));
+      setIsProductPage(isProductPageHash(window.location.hash));
     };
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
@@ -123,8 +131,8 @@ export default function Shop() {
   return (
     <div className="bg-gray-50 min-h-screen pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Shop Page Hero Banner - shows when no category selected */}
-        {!categorySlug && (
+        {/* Shop Page Hero Banner - shows when no category selected and not on product/cart pages */}
+        {!categorySlug && !isProductPage && (
           <motion.section 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -166,9 +174,10 @@ export default function Shop() {
           </motion.section>
         )}
 
-        <CategoryBanner />
+        {!isProductPage && <CategoryBanner />}
         
-        {/* Catalog Introduction Section */}
+        {/* Catalog Introduction Section - hidden on product/cart pages */}
+        {!isProductPage && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -188,8 +197,10 @@ export default function Shop() {
             </div>
           </div>
         </motion.div>
+        )}
 
-        {/* How to Choose Section */}
+        {/* How to Choose Section - hidden on product/cart pages */}
+        {!isProductPage && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -247,6 +258,7 @@ export default function Shop() {
             </div>
           </div>
         </motion.div>
+        )}
 
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 min-h-[600px]">
           {isLoading && (
@@ -262,7 +274,8 @@ export default function Shop() {
           <div id={`my-store-${STORE_ID}`} data-testid="ecwid-store-container"></div>
         </div>
 
-        {/* Ordering, Shipping & Support Summary */}
+        {/* Ordering, Shipping & Support Summary - hidden on product/cart pages */}
+        {!isProductPage && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -320,9 +333,10 @@ export default function Shop() {
             </div>
           </div>
         </motion.div>
+        )}
 
         {/* Product Authenticity & Warranty Block - Shows on category pages */}
-        {categorySlug && (
+        {categorySlug && !isProductPage && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
