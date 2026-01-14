@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowDown, CheckCircle } from "lucide-react";
+import { ArrowDown, CheckCircle, Layers } from "lucide-react";
 import { motion } from "framer-motion";
 
 import homePrintersImg from "@assets/HP_DeskJet_4255e_All-in-One_Printer_with_3_Months_of_Instant_I_1767897872063.jpg";
@@ -184,29 +184,29 @@ export function CategoryBanner() {
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-xl border border-gray-100 p-6 md:p-10 mb-6 shadow-sm"
+        className="bg-white rounded-xl border border-gray-100 p-8 md:p-12 mb-8"
         data-testid={`category-banner-${categorySlug}`}
       >
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-3/5 text-center md:text-left">
-            <span className="inline-block text-[#33cccc] font-semibold text-xs uppercase tracking-wider mb-2">
+            <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
               Print Mega Store
             </span>
             <h1 
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+              className="text-4xl md:text-5xl font-extrabold text-black mb-6"
               data-testid="category-banner-title"
             >
               {banner.title}
             </h1>
             <p 
-              className="text-gray-600 leading-relaxed mb-6 text-sm md:text-base"
+              className="text-gray-600 text-lg leading-relaxed mb-6"
               data-testid="category-banner-description"
             >
               {banner.description}
             </p>
             <button
               onClick={scrollToProducts}
-              className="inline-flex items-center gap-2 bg-[#33cccc] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#29a3a3] transition-all"
+              className="inline-flex items-center gap-2 bg-[#33cccc] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#29a3a3] transition-all"
               data-testid="category-banner-browse-button"
             >
               Browse Collection
@@ -217,7 +217,7 @@ export function CategoryBanner() {
             <img
               src={banner.image}
               alt={banner.title}
-              className="max-h-[200px] md:max-h-[240px] w-auto object-contain"
+              className="max-h-[220px] md:max-h-[280px] w-auto object-contain"
               data-testid="category-banner-image"
             />
           </div>
@@ -229,18 +229,18 @@ export function CategoryBanner() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="p-6 bg-white rounded-xl shadow-md mb-6"
+          className="bg-white rounded-lg border border-gray-200 p-8 mb-8"
           data-testid={`buyer-guide-${categorySlug}`}
         >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
-              <CheckCircle className="w-5 h-5 text-[#33cccc]" />
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 rounded-xl bg-[#33cccc]/10 flex items-center justify-center">
+              <CheckCircle className="w-7 h-7 text-[#33cccc]" />
             </div>
-            <h2 className="text-sm font-semibold tracking-wide text-gray-900 uppercase">
+            <h2 className="text-xl font-bold text-black">
               {buyerGuide.title}
             </h2>
           </div>
-          <div className="text-sm leading-relaxed text-gray-600 space-y-4">
+          <div className="text-gray-600 leading-relaxed space-y-4">
             {buyerGuide.paragraphs.map((paragraph, index) => (
               <p key={index}>
                 {paragraph}
@@ -255,28 +255,28 @@ export function CategoryBanner() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="p-6 bg-white rounded-xl shadow-md mb-6"
+          className="bg-white rounded-lg border border-gray-200 p-8 mb-8"
           data-testid={`product-range-${categorySlug}`}
         >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
-              <CheckCircle className="w-5 h-5 text-[#33cccc]" />
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 rounded-xl bg-[#33cccc]/10 flex items-center justify-center">
+              <Layers className="w-7 h-7 text-[#33cccc]" />
             </div>
-            <h2 className="text-sm font-semibold tracking-wide text-gray-900 uppercase">
+            <h2 className="text-xl font-bold text-black">
               {productRange.title}
             </h2>
           </div>
-          <p className="text-sm leading-relaxed text-gray-600 mb-6">
+          <p className="text-gray-600 leading-relaxed mb-6">
             {productRange.intro}
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-6">
             {productRange.items.map((item, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-[#33cccc] hover:shadow-md transition-all">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-teal-50 mb-3">
-                  <span className="text-[#33cccc] font-bold text-sm">{index + 1}</span>
+              <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#33cccc] hover:shadow-lg transition-all">
+                <div className="w-10 h-10 rounded-lg bg-[#33cccc]/10 flex items-center justify-center mb-4">
+                  <span className="text-[#33cccc] font-bold">{index + 1}</span>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">{item.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.name}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
