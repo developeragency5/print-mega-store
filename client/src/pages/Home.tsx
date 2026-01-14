@@ -51,6 +51,7 @@ import scannerIcon from "@assets/scanner_1768343254954.png";
 import dollarGif from "@assets/dollar_1768343622664.gif";
 import costIcon from "@assets/cost_1768350355934.png";
 import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
+import wideRangePrinterIcon from "@assets/printer_(3)_1768350657224.png";
 import shieldGif from "@assets/shield_1768343929996.gif";
 import shieldIcon from "@assets/shield_1768349371391.png";
 import homeIconImg from "@assets/home_1768345063969.png";
@@ -678,7 +679,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
             {[
               {
-                icon: <img src={layersGif} alt="Wide Range" className="w-8 h-8" />,
+                icon: <img src={wideRangePrinterIcon} alt="Wide Range" className="w-8 h-8" />,
                 title: "Wide Range of Printers",
                 desc: "Choose from a wide range of inkjet and laser printers designed for home, small business, and office use.",
                 color: "from-[#33cccc] to-[#29a3a3]",
