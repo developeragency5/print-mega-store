@@ -49,6 +49,7 @@ import inkjetIcon from "@assets/3d-printer_(1)_1768343431514.png";
 import laserIcon from "@assets/printer_(1)_1768343182930.png";
 import scannerIcon from "@assets/scanner_1768343254954.png";
 import dollarGif from "@assets/dollar_1768343622664.gif";
+import costIcon from "@assets/cost_1768350355934.png";
 import layersGif from "@assets/layers-selection-tool_1768343797554.gif";
 import shieldGif from "@assets/shield_1768343929996.gif";
 import shieldIcon from "@assets/shield_1768349371391.png";
@@ -695,7 +696,7 @@ export default function Home() {
                 color: "from-purple-500 to-purple-600",
               },
               {
-                icon: <img src={dollarGif} alt="Competitive Pricing" className="w-8 h-8" />,
+                icon: <img src={costIcon} alt="Competitive Pricing" className="w-8 h-8" />,
                 title: "Competitive Pricing",
                 desc: "We offer excellent value compared to the suggested retail price.",
                 color: "from-green-500 to-green-600",
