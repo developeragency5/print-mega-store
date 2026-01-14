@@ -719,12 +719,9 @@ export default function Home() {
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
                 className="bg-white rounded-xl p-6 cursor-pointer group text-center"
               >
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-16 h-16 rounded-xl bg-white flex items-center justify-center shadow-lg mx-auto mb-4"
-                >
-                  <span className="text-[#33cccc]">{item.icon}</span>
-                </motion.div>
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  {item.icon}
+                </div>
                 <h3 className="text-lg font-bold text-black mb-2 group-hover:text-[#33cccc] transition-colors">
                   {item.title}
                 </h3>
