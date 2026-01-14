@@ -502,7 +502,7 @@ export default function Home() {
             className="bg-gray-100 rounded-md p-6 text-center"
           >
             <p className="text-sm text-gray-500 leading-relaxed">
-              <strong>Disclaimer:</strong> Print Mega Store is an independent store. We do not connect to, support, or receive sponsorship from HP Inc., Hewlett-Packard Company, or any other manufacturer. All product names, logos, and trademarks belong to their owners. They are used here for identification only.
+              <strong>Disclaimer:</strong> HP® is a registered trademark of Hewlett-Packard Development Company, L.P. Print Mega Store is an independent retailer and is not affiliated with, endorsed by, or sponsored by HP Inc. All product names, logos, and trademarks are the property of their respective owners and are used for identification purposes only.
             </p>
           </motion.div>
         </div>
