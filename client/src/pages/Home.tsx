@@ -916,7 +916,7 @@ export default function Home() {
                 desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
                 bgColor: "bg-white",
                 iconColor: "",
-                highlighted: true,
+                highlighted: false,
               },
               {
                 icon: <img src={heartIcon} alt="Customer First" className="w-6 h-6" />,
