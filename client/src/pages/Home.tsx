@@ -911,8 +911,8 @@ export default function Home() {
                 highlighted: false,
               },
               {
-                icon: <img src={waitIcon} alt="Quick Processing" className="w-6 h-6" />,
-                title: "Quick Processing",
+                icon: <img src={waitIcon} alt="Fast Order Processing" className="w-6 h-6" />,
+                title: "Fast Order Processing",
                 desc: "We process orders promptly to ensure your new printing equipment arrives when you need it most.",
                 bgColor: "bg-white",
                 iconColor: "",
