@@ -183,7 +183,7 @@ export default function Shop() {
                 We offer a curated selection of HP inkjet printers, laser printers, and professional scanners designed for everyday printing, home offices, small businesses, and enterprise environments.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Every product listed in our catalog is new and factory-sealed. Orders are fulfilled by authorized third-party logistics and distribution partners.
+                Every product listed in our catalog is new and factory-sealed. Orders are fulfilled by third-party logistics and distribution partners.
               </p>
             </div>
           </div>
@@ -338,7 +338,7 @@ export default function Shop() {
               <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4">Product Authenticity & Warranty</h2>
               <div className="space-y-4 text-center">
                 <p className="text-gray-700 leading-relaxed">
-                  All products sold by Print Mega Store are new, factory-sealed products sourced from independent U.S. distributors.
+                  All products sold by Print Mega Store are new, factory-sealed products sourced from independent authorized distribution channels.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   Manufacturer warranty coverage may be available and is provided by the manufacturer according to their terms.
