@@ -752,17 +752,17 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                icon: <img src={homeIconImg} alt="Home Users" className="w-12 h-12" />,
+                icon: <img src={homeIconImg} alt="Home Users" className="w-14 h-14" />,
                 title: "Home Users",
                 desc: "A compact inkjet home printer with wireless printing and ink tanks is ideal for everyday use.",
               },
               {
-                icon: <img src={smallBusinessIcon} alt="Small Business" className="w-12 h-12" />,
+                icon: <img src={smallBusinessIcon} alt="Small Business" className="w-14 h-14" />,
                 title: "Small Business & Home Offices",
                 desc: "Multifunction printers with automatic duplexing and printing and scanning capabilities offer flexibility.",
               },
               {
-                icon: <img src={enterpriseIcon} alt="Enterprise" className="w-12 h-12" />,
+                icon: <img src={enterpriseIcon} alt="Enterprise" className="w-14 h-14" />,
                 title: "Busy Office & Enterprise",
                 desc: "Laser printers that print many pages per minute, hold a lot of paper, and scan quickly are best for busy places.",
               },
@@ -796,7 +796,7 @@ export default function Home() {
               className="bg-white rounded-xl border border-gray-100 p-8 cursor-pointer group"
             >
               <div className="flex items-center gap-4 mb-4">
-                <img src={notesIcon} alt="Notes" className="w-10 h-10" />
+                <img src={notesIcon} alt="Notes" className="w-12 h-12" />
                 <h3 className="text-xl font-bold text-black group-hover:text-[#33cccc] transition-colors">
                   Inkjet vs Laser Printers
                 </h3>
