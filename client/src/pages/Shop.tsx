@@ -4,7 +4,7 @@ import { STORE_ID } from "@/lib/ecwid";
 import { CategoryBanner } from "@/components/CategoryBanner";
 import { motion } from "framer-motion";
 import shopBannerImg from "@assets/HP_OfficeJet_8015e_All-in-One_Printer_with_6_Months_of_Instant_1767897902002.jpg";
-import cartBannerImg from "@assets/Ecommerce_checkout_laptop-bro_1768350860859.png";
+import cartBannerImg from "@assets/Screenshot_2026-01-13_at_7.41.50_pm_1768351312770.png";
 
 function parseCategorySlugFromHash(hash: string): string | null {
   const match = hash.match(/^#!\/([^/]+)\/c\//);
