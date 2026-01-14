@@ -968,7 +968,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
-                  <div className="flex flex-col p-6 bg-white rounded-xl shadow-md">
+                  <div className="p-6 bg-white rounded-xl shadow-md flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
                         <img src={helpdeskIcon} alt="Customer Satisfaction" className="w-5 h-5" />
@@ -977,7 +977,7 @@ export default function Home() {
                         Customer Satisfaction Is Our Priority
                       </h3>
                     </div>
-                    <div className="text-sm leading-relaxed text-gray-600 space-y-4">
+                    <div className="text-sm leading-relaxed text-gray-600 space-y-4 flex-grow">
                       <p>
                         We aim to deliver exceptional customer service along every step of the way. Whether you need to know which printer is right for your home office, how to set up your new scanner, or how to troubleshoot printing issues, our friendly and professional team is ready to assist you.
                       </p>
@@ -998,7 +998,7 @@ export default function Home() {
                   transition={{ delay: 0.1 }}
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
-                  <div className="flex flex-col p-6 bg-white rounded-xl shadow-md">
+                  <div className="p-6 bg-white rounded-xl shadow-md flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
                         <img src={medalIcon} alt="Quality Products" className="w-5 h-5" />
@@ -1007,7 +1007,7 @@ export default function Home() {
                         Quality Products You Can Trust
                       </h3>
                     </div>
-                    <div className="text-sm leading-relaxed text-gray-600 space-y-4">
+                    <div className="text-sm leading-relaxed text-gray-600 space-y-4 flex-grow">
                       <p>
                         Print Mega Store has always offered quality printers and scanners from trusted manufacturers. From the beginning, we have provided reliable printing equipment to households and businesses at competitive prices. We take pride in offering products that deliver consistent results.
                       </p>
@@ -1028,7 +1028,7 @@ export default function Home() {
                   transition={{ delay: 0.2 }}
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
-                  <div className="flex flex-col p-6 bg-white rounded-xl shadow-md">
+                  <div className="p-6 bg-white rounded-xl shadow-md flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
                         <img src={printerIcon3} alt="Why Choose Us" className="w-5 h-5" />
@@ -1037,7 +1037,7 @@ export default function Home() {
                         Why Choose Print Mega Store?
                       </h3>
                     </div>
-                    <div className="text-sm leading-relaxed text-gray-600 space-y-4">
+                    <div className="text-sm leading-relaxed text-gray-600 space-y-4 flex-grow">
                       <p>
                         Print Mega Store is your reliable independent destination for high-quality printers and scanners at budget-friendly prices. We have a wide selection of products that work perfectly for home offices, small businesses, and enterprise environments.
                       </p>
