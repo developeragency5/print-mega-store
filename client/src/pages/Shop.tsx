@@ -366,24 +366,22 @@ export default function Shop() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-2xl border border-gray-200 p-8 sm:p-10 mt-6 shadow-sm" 
+            className="p-6 bg-white rounded-xl shadow-md mt-6" 
             data-testid="warranty-authenticity-block"
           >
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
-                  <ShieldCheck className="w-6 h-6 text-[#33cccc]" />
-                </div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-teal-50">
+                <ShieldCheck className="w-5 h-5 text-[#33cccc]" />
               </div>
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4">Product Authenticity & Warranty</h2>
-              <div className="space-y-4 text-center">
-                <p className="text-gray-700 leading-relaxed">
-                  All products sold by Print Mega Store are new, factory-sealed products sourced from independent authorized distribution channels.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  Manufacturer warranty coverage may be available and is provided by the manufacturer according to their terms.
-                </p>
-              </div>
+              <h2 className="text-sm font-semibold tracking-wide text-gray-900 uppercase">Product Authenticity & Warranty</h2>
+            </div>
+            <div className="text-sm leading-relaxed text-gray-600 space-y-4">
+              <p>
+                All products sold by Print Mega Store are new, factory-sealed products sourced from independent authorized distribution channels.
+              </p>
+              <p>
+                Manufacturer warranty coverage may be available and is provided by the manufacturer according to their terms.
+              </p>
             </div>
           </motion.div>
         )}
