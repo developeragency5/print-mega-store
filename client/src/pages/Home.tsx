@@ -956,12 +956,12 @@ export default function Home() {
               <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl">Our Promise To You</h2>
             </div>
 
-            <div className="relative mt-8 md:mt-10">
-              <div className="absolute -inset-x-1 inset-y-4 md:-inset-x-2 md:-inset-y-4">
+            <div className="relative mt-10 md:mt-16">
+              <div className="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6">
                 <div className="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter" style={{ background: "linear-gradient(90deg, #33cccc -0.55%, #44b0ff 22.86%, #33cccc 48.36%, #29a3a3 73.33%, #44b0ff 99.34%)" }}></div>
               </div>
 
-              <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-8 md:grid-cols-3">
+              <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -969,11 +969,11 @@ export default function Home() {
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
                   <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
-                        <img src={helpdeskIcon} alt="Customer Satisfaction" className="w-6 h-6" />
+                    <div className="flex items-center mb-3">
+                      <div className="w-10 h-10 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
+                        <img src={helpdeskIcon} alt="Customer Satisfaction" className="w-5 h-5" />
                       </div>
-                      <h3 className="ml-4 text-lg font-bold text-gray-900 uppercase tracking-wide">
+                      <h3 className="ml-3 text-base font-bold text-gray-900 uppercase tracking-wide">
                         Customer Satisfaction Is Our Priority
                       </h3>
                     </div>
@@ -999,11 +999,11 @@ export default function Home() {
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
                   <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
-                        <img src={medalIcon} alt="Quality Products" className="w-6 h-6" />
+                    <div className="flex items-center mb-3">
+                      <div className="w-10 h-10 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
+                        <img src={medalIcon} alt="Quality Products" className="w-5 h-5" />
                       </div>
-                      <h3 className="ml-4 text-lg font-bold text-gray-900 uppercase tracking-wide">
+                      <h3 className="ml-3 text-base font-bold text-gray-900 uppercase tracking-wide">
                         Quality Products You Can Trust
                       </h3>
                     </div>
@@ -1029,11 +1029,11 @@ export default function Home() {
                   className="flex flex-col overflow-hidden shadow-xl rounded-lg"
                 >
                   <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
-                        <img src={printerIcon3} alt="Why Choose Us" className="w-6 h-6" />
+                    <div className="flex items-center mb-3">
+                      <div className="w-10 h-10 bg-[#33cccc]/10 rounded-full flex items-center justify-center">
+                        <img src={printerIcon3} alt="Why Choose Us" className="w-5 h-5" />
                       </div>
-                      <h3 className="ml-4 text-lg font-bold text-gray-900 uppercase tracking-wide">
+                      <h3 className="ml-3 text-base font-bold text-gray-900 uppercase tracking-wide">
                         Why Choose Print Mega Store?
                       </h3>
                     </div>
