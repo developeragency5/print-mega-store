@@ -557,10 +557,8 @@ export default function Home() {
                 >
                   <Card className="group h-full cursor-pointer border border-gray-200 hover:border-[#33cccc] hover:shadow-lg transition-all duration-200 bg-white">
                     <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
-                      <div className="w-20 h-20 rounded-md bg-[#33cccc]/10 flex items-center justify-center mb-5 group-hover:bg-[#33cccc] transition-colors duration-200">
-                        <span className="text-[#33cccc] group-hover:text-white transition-colors duration-200">
-                          {categoryIcons[category.slug]}
-                        </span>
+                      <div className="w-20 h-20 flex items-center justify-center mb-5">
+                        {categoryIcons[category.slug]}
                       </div>
                       <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#33cccc] transition-colors">
                         {category.name}
