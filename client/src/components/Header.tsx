@@ -9,7 +9,7 @@ import phoneIcon from "@assets/phone_1768348600813.png";
 import searchIcon from "@assets/magnifying-glass_1768508427596.png";
 import favoritesIcon from "@assets/like_1768508473767.png";
 import profileIcon from "@assets/userr_1768508906929.png";
-import cartIcon from "@assets/shopping-bag_1768508640529.png";
+import cartIcon from "@assets/bag_1768508990237.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
