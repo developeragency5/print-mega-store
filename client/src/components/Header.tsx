@@ -8,6 +8,8 @@ import logoImg from "@assets/ChatGPT_Image_Jan_13,_2026,_07_50_24_PM(1)_17683518
 import phoneIcon from "@assets/phone_1768348600813.png";
 import searchIcon from "@assets/magnifying-glass_1768508427596.png";
 import favoritesIcon from "@assets/like_1768508473767.png";
+import profileIcon from "@assets/profile_1768508640529.png";
+import cartIcon from "@assets/shopping-bag_1768508640529.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -115,20 +117,20 @@ export function Header() {
               {/* Sign In Button */}
               <a
                 href="/shop#!/~/signin"
-                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:opacity-70"
                 data-testid="link-signin"
               >
-                <User className="w-4 h-4" />
+                <img src={profileIcon} alt="Sign In" className="w-5 h-5" />
                 <span className="hidden lg:inline">Sign In</span>
               </a>
 
               {/* Cart Button */}
               <a
                 href="/shop#!/~/cart"
-                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:opacity-70"
                 data-testid="link-cart"
               >
-                <ShoppingCart className="w-4 h-4" />
+                <img src={cartIcon} alt="Cart" className="w-5 h-5" />
                 <span className="hidden lg:inline">Cart</span>
               </a>
 
