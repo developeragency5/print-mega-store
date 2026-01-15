@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { STORE_CATEGORIES, getCategoryUrl, STORE_ID } from "@/lib/ecwid";
 import logoImg from "@assets/ChatGPT_Image_Jan_13,_2026,_07_50_24_PM(1)_1768351875558.png";
 import phoneIcon from "@assets/phone_1768348600813.png";
+import searchIcon from "@assets/magnifying-glass_1768508427596.png";
+import favoritesIcon from "@assets/like_1768508473767.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -148,96 +150,98 @@ export function Header() {
       {/* Bottom Nav Bar - Navigation Links */}
       <div className="hidden lg:block bg-gray-50/80">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center justify-center gap-1">
-            <Link
-              href="/"
-              className={cn(
-                "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                location === "/" 
-                  ? "border-primary text-primary"
-                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
-              )}
-              data-testid="link-home"
-            >
-              Home
-            </Link>
-
-            <a
-              href="/shop"
-              className={cn(
-                "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                isShopPage && !hasActiveCategory
-                  ? "border-primary text-primary"
-                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
-              )}
-              data-testid="link-shop"
-            >
-              All Products
-            </a>
-
-            {STORE_CATEGORIES.map((category) => (
-              <a
-                key={category.id}
-                href={getCategoryUrl(category)}
+          <nav className="flex items-center justify-between">
+            <div className="flex items-center gap-1">
+              <Link
+                href="/"
                 className={cn(
                   "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                  isActiveCategory(category.slug)
+                  location === "/" 
                     ? "border-primary text-primary"
                     : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
                 )}
-                data-testid={`link-nav-${category.slug}`}
+                data-testid="link-home"
               >
-                {category.name}
+                Home
+              </Link>
+
+              <a
+                href="/shop"
+                className={cn(
+                  "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
+                  isShopPage && !hasActiveCategory
+                    ? "border-primary text-primary"
+                    : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                )}
+                data-testid="link-shop"
+              >
+                All Products
               </a>
-            ))}
 
-            <Link
-              href="/about"
-              className={cn(
-                "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                location === "/about" 
-                  ? "border-primary text-primary"
-                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
-              )}
-              data-testid="link-about"
-            >
-              About
-            </Link>
+              {STORE_CATEGORIES.map((category) => (
+                <a
+                  key={category.id}
+                  href={getCategoryUrl(category)}
+                  className={cn(
+                    "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
+                    isActiveCategory(category.slug)
+                      ? "border-primary text-primary"
+                      : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                  )}
+                  data-testid={`link-nav-${category.slug}`}
+                >
+                  {category.name}
+                </a>
+              ))}
 
-            <Link
-              href="/contact"
-              className={cn(
-                "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
-                location === "/contact" 
-                  ? "border-primary text-primary"
-                  : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
-              )}
-              data-testid="link-contact"
-            >
-              Contact
-            </Link>
+              <Link
+                href="/about"
+                className={cn(
+                  "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
+                  location === "/about" 
+                    ? "border-primary text-primary"
+                    : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                )}
+                data-testid="link-about"
+              >
+                About
+              </Link>
 
-            <div className="w-px h-5 bg-gray-300 mx-2" />
+              <Link
+                href="/contact"
+                className={cn(
+                  "px-5 py-3 text-sm font-medium transition-all duration-300 border-b-2",
+                  location === "/contact" 
+                    ? "border-primary text-primary"
+                    : "border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300"
+                )}
+                data-testid="link-contact"
+              >
+                Contact
+              </Link>
+            </div>
 
-            {/* Search Icon */}
-            <a
-              href="/shop#!/~/search"
-              className="px-3 py-3 text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="link-search"
-              title="Search"
-            >
-              <Search className="w-5 h-5" />
-            </a>
+            <div className="flex items-center gap-2">
+              {/* Search Icon */}
+              <a
+                href="/shop#!/~/search"
+                className="p-2 hover:opacity-70 transition-opacity"
+                data-testid="link-search"
+                title="Search"
+              >
+                <img src={searchIcon} alt="Search" className="w-6 h-6" />
+              </a>
 
-            {/* Favorites Icon */}
-            <a
-              href="/shop#!/~/favorites"
-              className="px-3 py-3 text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="link-favorites"
-              title="Favorites"
-            >
-              <Heart className="w-5 h-5" />
-            </a>
+              {/* Favorites Icon */}
+              <a
+                href="/shop#!/~/favorites"
+                className="p-2 hover:opacity-70 transition-opacity"
+                data-testid="link-favorites"
+                title="Favorites"
+              >
+                <img src={favoritesIcon} alt="Favorites" className="w-6 h-6" />
+              </a>
+            </div>
           </nav>
         </div>
       </div>
