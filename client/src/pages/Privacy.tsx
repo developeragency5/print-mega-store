@@ -16,6 +16,9 @@ export default function Privacy() {
             <p className="text-gray-600 mb-4">
               Last updated: January 2026
             </p>
+            <p className="text-gray-600 mb-4">
+              This website is operated by CINCINNATI COMMERCE LLC, doing business as Print Mega Store.
+            </p>
             <p className="text-gray-600 mb-8">
               Print Mega Store ("we", "our", or "us") is an independent online retailer serving customers in the United States. We provide printers and document scanning products. We are not affiliated with, endorsed by, or sponsored by any manufacturer, including HP Inc.
             </p>

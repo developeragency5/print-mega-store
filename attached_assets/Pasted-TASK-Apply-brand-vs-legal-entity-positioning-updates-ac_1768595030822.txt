@@ -1,0 +1,103 @@
+TASK: Apply brand vs legal-entity positioning updates across the website.
+
+IMPORTANT POSITIONING RULES (DO NOT VIOLATE):
+- Customer-facing brand: Print Mega Store
+- Legal owner (disclosure only): CINCINNATI COMMERCE LLC
+- Address usage: Administrative / mailing only
+- Phone: Business contact (not “support center”)
+- No physical storefront or headquarters representation
+
+────────────────────────
+SECTION 1: WEBSITE FOOTER (PRIMARY & REQUIRED)
+────────────────────────
+
+REPLACE the existing footer identity / business description block with the following
+(USE EXACTLY — COPY/PASTE):
+
+Print Mega Store is an independent online retailer serving customers in the United States.  
+Operated by CINCINNATI COMMERCE LLC.  
+Administrative mailing address available upon request.  
+All trademarks belong to their respective owners. No affiliation or endorsement implied.
+
+STRICT RULES:
+- Do NOT display any street address in the footer
+- Do NOT use words like “Headquarters”, “Office”, “Store”, or “Location”
+- Keep brand name “Print Mega Store” primary
+
+────────────────────────
+SECTION 2: ABOUT US PAGE — LEGAL ENTITY DISCLOSURE
+────────────────────────
+
+ADD a new section near the bottom of the About Us page.
+
+SECTION TITLE:
+Legal & Business Information
+
+SECTION CONTENT (USE EXACTLY):
+
+Print Mega Store is operated by CINCINNATI COMMERCE LLC, a U.S. registered business.
+
+Administrative Mailing Address:  
+727 Martin Luther King Dr W, Apt 905  
+Cincinnati, OH 45220, United States
+
+Business Contact:  
++1-567-323-0815
+
+This address is used for administrative and correspondence purposes. Product fulfillment and logistics are handled through third-party distribution partners.
+
+RULES:
+- Do NOT move this section higher on the page
+- Do NOT label the address as “office”, “HQ”, or “store”
+- Keep wording exactly as written
+
+────────────────────────
+SECTION 3: CONTACT PAGE (BRAND-FIRST, NO MIXING)
+────────────────────────
+
+ENSURE the Contact page follows this structure:
+
+A) PAGE HEADER:
+Contact Print Mega Store
+
+B) MAIN CONTACT DETAILS:
+- Email (brand email)
+- Phone labeled as:
+
+Business Contact: +1-567-323-0815
+
+C) SMALL LEGAL LINE (LOW VISIBILITY):
+Add this line in small text near the bottom of the page:
+
+Business Operator: CINCINNATI COMMERCE LLC  
+Administrative correspondence only
+
+STRICTLY DO NOT:
+- Describe the address as a support center
+- Invite visits (“visit our office”, “store location”)
+- Mix LLC branding into the main page header
+
+────────────────────────
+SECTION 4: PRIVACY POLICY & TERMS (ONE LINE ONLY)
+────────────────────────
+
+ADD this single sentence (once per page, usually near the top or in “Who We Are”):
+
+This website is operated by CINCINNATI COMMERCE LLC, doing business as Print Mega Store.
+
+RULES:
+- One sentence only
+- Do NOT add address here
+- Do NOT add extra explanations
+
+────────────────────────
+FINAL ACCEPTANCE CHECK:
+- Brand shown to users: Print Mega Store
+- Legal entity appears only as operator / disclosure
+- No physical storefront or HQ implied anywhere
+- Address clearly marked as administrative only
+- Phone labeled as business contact, not support center
+- Footer does NOT show a street address
+
+GOAL:
+Correctly separate brand presentation from legal ownership to avoid ad-platform misclassification, fake-store flags, and policy violations while maintaining transparency.

@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Mail, MapPin, Phone, ArrowRight, CheckCircle } from "lucide-react";
+import { Mail, Phone, ArrowRight, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { STORE_CATEGORIES, getCategoryUrl } from "@/lib/ecwid";
 import logoImg from "@assets/ChatGPT_Image_Jan_13,_2026,_07_50_24_PM(1)_1768351875558.png";
@@ -31,10 +31,12 @@ export function Footer() {
                   className="h-10 w-auto object-contain" 
                 />
               </Link>
-              <p className="text-base leading-relaxed text-gray-400 max-w-sm">
-                Where quality meets convenience. Find the perfect printing solution for every need, 
-                from home offices to enterprise workspaces.
-              </p>
+              <div className="text-sm leading-relaxed text-gray-400 max-w-sm space-y-2">
+                <p>Print Mega Store is an independent online retailer serving customers in the United States.</p>
+                <p>Operated by CINCINNATI COMMERCE LLC.</p>
+                <p>Administrative mailing address available upon request.</p>
+                <p>All trademarks belong to their respective owners. No affiliation or endorsement implied.</p>
+              </div>
             </div>
 
             <div className="lg:col-span-2">
@@ -121,15 +123,9 @@ export function Footer() {
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-4 text-gray-400">
                   <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-sm">123 Printer Avenue, Tech District, NY 10001</span>
-                </div>
-                <div className="flex items-center gap-4 text-gray-400">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-sm">+1 (555) 123-4567</span>
+                  <span className="text-sm">+1-567-323-0815</span>
                 </div>
                 <div className="flex items-center gap-4 text-gray-400">
                   <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">

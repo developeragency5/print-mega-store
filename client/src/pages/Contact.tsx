@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Send, Clock, MessageCircle, Headphones, HelpCircle, CheckCircle } from "lucide-react";
+import { Mail, Phone, Send, Clock, MessageCircle, Headphones, HelpCircle, CheckCircle } from "lucide-react";
 
 const SimpleTextarea = forwardRef<HTMLTextAreaElement, React.TextareaHTMLAttributes<HTMLTextAreaElement>>(
   ({ className, ...props }, ref) => {
@@ -49,10 +49,10 @@ export default function Contact() {
     {
       icon: <Phone className="w-6 h-6 text-white" />,
       color: "from-blue-500 to-blue-600",
-      title: "Call Us",
+      title: "Business Contact",
       subtitle: "Mon-Fri from 9am to 6pm EST",
-      content: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      content: "+1-567-323-0815",
+      href: "tel:+15673230815"
     },
     {
       icon: <Mail className="w-6 h-6 text-white" />,
@@ -61,14 +61,6 @@ export default function Contact() {
       subtitle: "We'll respond within 24 hours",
       content: "info@printmegastore.com",
       href: "mailto:info@printmegastore.com"
-    },
-    {
-      icon: <MapPin className="w-6 h-6 text-white" />,
-      color: "from-purple-500 to-purple-600",
-      title: "Our Location",
-      subtitle: "United States",
-      content: "123 Printer Avenue, Tech District, NY 10001",
-      href: "#"
     }
   ];
 
@@ -135,13 +127,9 @@ export default function Contact() {
                 <a href="mailto:info@printmegastore.com" className="text-[#33cccc] text-sm hover:underline">info@printmegastore.com</a>
               </div>
               <div>
-                <h3 className="font-bold text-black text-sm mb-1">Phone</h3>
-                <a href="tel:+15551234567" className="text-[#33cccc] text-sm hover:underline">+1 (555) 123-4567</a>
+                <h3 className="font-bold text-black text-sm mb-1">Business Contact</h3>
+                <a href="tel:+15673230815" className="text-[#33cccc] text-sm hover:underline">+1-567-323-0815</a>
               </div>
-            </div>
-            <div className="border-t border-gray-100 mt-4 pt-4 text-center">
-              <h3 className="font-bold text-black text-sm mb-1">Mailing Address</h3>
-              <p className="text-gray-600 text-sm">123 Printer Avenue, Tech District, NY 10001, United States</p>
             </div>
           </motion.div>
 
@@ -428,6 +416,18 @@ export default function Contact() {
               </div>
             </div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-xs text-gray-400">
+              Business Operator: CINCINNATI COMMERCE LLC<br />
+              Administrative correspondence only
+            </p>
+          </motion.div>
         </div>
       </section>
     </div>

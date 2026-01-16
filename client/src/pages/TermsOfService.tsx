@@ -14,7 +14,11 @@ export default function TermsOfService() {
               Terms of Service
             </h1>
             <p className="text-xl text-gray-600 mb-2">Print Mega Store</p>
-            <p className="text-gray-600 mb-8">Last updated: January 2026</p>
+            <p className="text-gray-600 mb-4">Last updated: January 2026</p>
+
+            <p className="text-gray-600 mb-4">
+              This website is operated by CINCINNATI COMMERCE LLC, doing business as Print Mega Store.
+            </p>
 
             <p className="text-gray-600 mb-8">
               These Terms of Service ("Terms") govern your use of the website www.printmegastore.net and the purchase of products from Print Mega Store ("we," "us," or "our"). By accessing our website or placing an order, you agree to be bound by these Terms.

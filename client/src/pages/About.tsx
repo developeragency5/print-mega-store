@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users, Target, Award, MapPin, Mail, Phone, Printer, ShieldCheck, Truck, HeartHandshake } from "lucide-react";
+import { Users, Target, Award, Mail, Phone, Printer, ShieldCheck, Truck, HeartHandshake } from "lucide-react";
 import Lottie from "lottie-react";
 import briefcaseAnimation from "@assets/briefcase_1768334865450.json";
 import giftAnimation from "@assets/gift_1768334880508.json";
@@ -292,57 +292,41 @@ export default function About() {
             className="text-center mb-12"
           >
             <span className="inline-block text-[#33cccc] font-semibold text-sm uppercase tracking-wider mb-4">
-              Get In Touch
+              Legal & Business Information
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-black">
-              Contact Information
+              Business Details
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              We love hearing from our customers! Whether you have a question about a product, need help with an order, or just want to say hello, we're here to help.
-            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white rounded-lg border border-gray-200 p-8"
             >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#33cccc] to-[#29a3a3] flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
+              <p className="text-gray-700 text-lg mb-6">
+                Print Mega Store is operated by CINCINNATI COMMERCE LLC, a U.S. registered business.
+              </p>
+              
+              <div className="space-y-4 text-gray-600">
                 <div>
-                  <h3 className="font-bold text-black mb-1">Contact Us</h3>
-                  <p className="text-gray-600 text-sm">
-                    Email: info@printmegastore.com<br />
-                    Phone: +1 (555) 123-4567<br />
-                    Hours: Monday - Friday, 9:00 AM - 6:00 PM EST
+                  <h3 className="font-bold text-black mb-2">Administrative Mailing Address:</h3>
+                  <p>
+                    727 Martin Luther King Dr W, Apt 905<br />
+                    Cincinnati, OH 45220, United States
                   </p>
                 </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-lg border border-gray-200 p-8"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
+                
                 <div>
-                  <h3 className="font-bold text-black mb-1">Mailing Address</h3>
-                  <p className="text-gray-600 text-sm">
-                    Print Mega Store<br />
-                    123 Printer Avenue<br />
-                    Tech District, NY 10001<br />
-                    United States
-                  </p>
+                  <h3 className="font-bold text-black mb-2">Business Contact:</h3>
+                  <p>+1-567-323-0815</p>
                 </div>
+                
+                <p className="text-sm text-gray-500 pt-4 border-t border-gray-100">
+                  This address is used for administrative and correspondence purposes. Product fulfillment and logistics are handled through third-party distribution partners.
+                </p>
               </div>
             </motion.div>
           </div>
