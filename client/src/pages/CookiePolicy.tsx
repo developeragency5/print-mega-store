@@ -8,6 +8,8 @@ export default function CookiePolicy() {
         <title>Cookie Policy | Print Mega Store</title>
         <meta name="description" content="Learn about Print Mega Store's use of cookies and tracking technologies. Understand how we use cookies to improve your shopping experience." />
         <meta property="og:title" content="Cookie Policy | Print Mega Store" />
+        <meta property="og:description" content="Learn about our use of cookies and tracking technologies to improve your shopping experience." />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.printmegastore.net/cookies" />
         <link rel="canonical" href="https://www.printmegastore.net/cookies" />
       </Helmet>

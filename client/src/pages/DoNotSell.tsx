@@ -8,6 +8,8 @@ export default function DoNotSell() {
         <title>Do Not Sell My Personal Information | Print Mega Store</title>
         <meta name="description" content="Exercise your California privacy rights under CCPA. Learn how Print Mega Store handles personal information and how to opt out of data sharing." />
         <meta property="og:title" content="Do Not Sell My Personal Information | Print Mega Store" />
+        <meta property="og:description" content="Exercise your California privacy rights under CCPA and learn how to opt out of data sharing." />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.printmegastore.net/do-not-sell" />
         <link rel="canonical" href="https://www.printmegastore.net/do-not-sell" />
       </Helmet>

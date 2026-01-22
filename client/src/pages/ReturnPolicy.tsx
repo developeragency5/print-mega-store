@@ -8,6 +8,8 @@ export default function ReturnPolicy() {
         <title>Returns & Refunds Policy | Print Mega Store</title>
         <meta name="description" content="Read Print Mega Store's returns and refunds policy. Learn about our return process, refund timeline, and conditions for printer and scanner returns." />
         <meta property="og:title" content="Returns & Refunds Policy | Print Mega Store" />
+        <meta property="og:description" content="Learn about our return process, refund timeline, and conditions for printer and scanner returns." />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.printmegastore.net/returns" />
         <link rel="canonical" href="https://www.printmegastore.net/returns" />
       </Helmet>

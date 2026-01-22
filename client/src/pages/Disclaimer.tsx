@@ -8,6 +8,8 @@ export default function Disclaimer() {
         <title>Disclaimer | Print Mega Store</title>
         <meta name="description" content="Read Print Mega Store's disclaimer regarding product information, third-party links, and limitations of liability." />
         <meta property="og:title" content="Disclaimer | Print Mega Store" />
+        <meta property="og:description" content="Read our disclaimer regarding product information, third-party links, and limitations of liability." />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.printmegastore.net/disclaimer" />
         <link rel="canonical" href="https://www.printmegastore.net/disclaimer" />
       </Helmet>

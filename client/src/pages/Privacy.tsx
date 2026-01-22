@@ -8,6 +8,8 @@ export default function Privacy() {
         <title>Privacy Policy | Print Mega Store</title>
         <meta name="description" content="Read Print Mega Store's privacy policy. Learn how we collect, use, and protect your personal information when you shop for printers and scanners." />
         <meta property="og:title" content="Privacy Policy | Print Mega Store" />
+        <meta property="og:description" content="Learn how Print Mega Store collects, uses, and protects your personal information when you shop for printers and scanners." />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.printmegastore.net/privacy" />
         <link rel="canonical" href="https://www.printmegastore.net/privacy" />
       </Helmet>

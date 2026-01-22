@@ -8,6 +8,8 @@ export default function ShippingPolicy() {
         <title>Shipping Policy | Print Mega Store</title>
         <meta name="description" content="Learn about Print Mega Store's shipping policy including delivery times, shipping methods, and tracking for printers and scanners." />
         <meta property="og:title" content="Shipping Policy | Print Mega Store" />
+        <meta property="og:description" content="Learn about shipping policy including delivery times, shipping methods, and tracking for printers and scanners." />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.printmegastore.net/shipping" />
         <link rel="canonical" href="https://www.printmegastore.net/shipping" />
       </Helmet>

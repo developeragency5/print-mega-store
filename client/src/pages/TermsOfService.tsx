@@ -8,6 +8,8 @@ export default function TermsOfService() {
         <title>Terms of Service | Print Mega Store</title>
         <meta name="description" content="Read Print Mega Store's terms of service. Understand the terms and conditions governing your use of our website and purchase of printers and scanners." />
         <meta property="og:title" content="Terms of Service | Print Mega Store" />
+        <meta property="og:description" content="Understand the terms and conditions governing your use of Print Mega Store and purchase of printers and scanners." />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.printmegastore.net/terms" />
         <link rel="canonical" href="https://www.printmegastore.net/terms" />
       </Helmet>
