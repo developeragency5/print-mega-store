@@ -1,8 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 export default function CookiePolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Cookie Policy | Print Mega Store</title>
+        <meta name="description" content="Learn about Print Mega Store's use of cookies and tracking technologies. Understand how we use cookies to improve your shopping experience." />
+        <meta property="og:title" content="Cookie Policy | Print Mega Store" />
+        <meta property="og:url" content="https://www.printmegastore.net/cookies" />
+        <link rel="canonical" href="https://www.printmegastore.net/cookies" />
+      </Helmet>
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div

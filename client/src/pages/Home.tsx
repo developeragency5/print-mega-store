@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -263,6 +264,16 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Print Mega Store | HP Printers, Inkjet, Laser Printers & Scanners</title>
+        <meta name="description" content="Shop HP printers, inkjet printers, laser printers, all-in-one printers, and document scanners at Print Mega Store. Free shipping on select orders. Best prices on wireless printers for home and office." />
+        <meta name="keywords" content="HP printer, inkjet printer, laser printer, wireless printer, all in one printer, document scanner, home printer, office printer" />
+        <meta property="og:title" content="Print Mega Store | Professional Printing Solutions" />
+        <meta property="og:description" content="Your trusted source for HP printers, inkjet printers, laser printers, and document scanners. Shop now for the best deals on wireless printers for home and office." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.printmegastore.net/" />
+        <link rel="canonical" href="https://www.printmegastore.net/" />
+      </Helmet>
       <section className="relative w-full overflow-hidden" data-testid="hero-section">
         <div className="relative w-full">
           {banners.map((banner, index) => {

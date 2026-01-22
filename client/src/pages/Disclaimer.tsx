@@ -1,8 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 export default function Disclaimer() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Disclaimer | Print Mega Store</title>
+        <meta name="description" content="Read Print Mega Store's disclaimer regarding product information, third-party links, and limitations of liability." />
+        <meta property="og:title" content="Disclaimer | Print Mega Store" />
+        <meta property="og:url" content="https://www.printmegastore.net/disclaimer" />
+        <link rel="canonical" href="https://www.printmegastore.net/disclaimer" />
+      </Helmet>
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div

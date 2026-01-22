@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Users, Target, Award, Mail, Phone, Printer, ShieldCheck, Truck, HeartHandshake } from "lucide-react";
 import Lottie from "lottie-react";
@@ -9,6 +10,16 @@ import shoppingCartAnimation from "@assets/shopping-cart_1768334943652.json";
 export default function About() {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>About Us | Print Mega Store - Your Trusted Printer Retailer</title>
+        <meta name="description" content="Learn about Print Mega Store, an independent online retailer serving customers in the United States with HP printers, inkjet printers, laser printers, and document scanners." />
+        <meta name="keywords" content="print mega store, printer retailer, HP printer store, printing solutions, about us" />
+        <meta property="og:title" content="About Print Mega Store" />
+        <meta property="og:description" content="Your trusted source for home and office printers. We offer HP inkjet printers, laser printers, and document scanners with competitive prices." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.printmegastore.net/about" />
+        <link rel="canonical" href="https://www.printmegastore.net/about" />
+      </Helmet>
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div

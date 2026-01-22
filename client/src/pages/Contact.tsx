@@ -1,4 +1,5 @@
 import { forwardRef, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
@@ -93,6 +94,16 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Contact Us | Print Mega Store - Printer Inquiries & Assistance</title>
+        <meta name="description" content="Contact Print Mega Store for questions about HP printers, inkjet printers, laser printers, and document scanners. Get help choosing the right printer for your home or office." />
+        <meta name="keywords" content="contact print mega store, printer help, printer questions, printer inquiry, printer assistance" />
+        <meta property="og:title" content="Contact Print Mega Store" />
+        <meta property="og:description" content="Have questions about printers or need assistance? Contact our team for help with HP printers, inkjet printers, laser printers, and document scanners." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.printmegastore.net/contact" />
+        <link rel="canonical" href="https://www.printmegastore.net/contact" />
+      </Helmet>
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div

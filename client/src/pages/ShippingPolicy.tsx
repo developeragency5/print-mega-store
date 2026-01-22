@@ -1,8 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 export default function ShippingPolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Shipping Policy | Print Mega Store</title>
+        <meta name="description" content="Learn about Print Mega Store's shipping policy including delivery times, shipping methods, and tracking for printers and scanners." />
+        <meta property="og:title" content="Shipping Policy | Print Mega Store" />
+        <meta property="og:url" content="https://www.printmegastore.net/shipping" />
+        <link rel="canonical" href="https://www.printmegastore.net/shipping" />
+      </Helmet>
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div

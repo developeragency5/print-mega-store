@@ -1,8 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 export default function PurchaseTerms() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Purchase Terms & Conditions | Print Mega Store</title>
+        <meta name="description" content="Review Print Mega Store's purchase terms and conditions including order placement, shipping, returns, and warranty information for printers and scanners." />
+        <meta property="og:title" content="Purchase Terms & Conditions | Print Mega Store" />
+        <meta property="og:url" content="https://www.printmegastore.net/purchase-terms" />
+        <link rel="canonical" href="https://www.printmegastore.net/purchase-terms" />
+      </Helmet>
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div

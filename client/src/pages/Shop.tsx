@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { Loader2, ArrowDown, ShieldCheck } from "lucide-react";
 import { STORE_ID } from "@/lib/ecwid";
 import { CategoryBanner } from "@/components/CategoryBanner";
@@ -144,6 +145,16 @@ export default function Shop() {
 
   return (
     <div className="bg-gray-50 min-h-screen pb-12">
+      <Helmet>
+        <title>Shop Printers & Scanners | HP Inkjet, Laser, All-in-One | Print Mega Store</title>
+        <meta name="description" content="Buy HP printers online - inkjet printers, laser printers, all-in-one printers, wireless printers, and document scanners. Best prices on home printers and office printers with fast shipping." />
+        <meta name="keywords" content="buy HP printer, inkjet printer online, laser printer for sale, wireless printer, all in one printer, document scanner, home printer, office printer" />
+        <meta property="og:title" content="Shop Printers & Scanners | Print Mega Store" />
+        <meta property="og:description" content="Browse our complete selection of HP inkjet printers, laser printers, all-in-one printers, and document scanners. Free shipping on select orders." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.printmegastore.net/shop" />
+        <link rel="canonical" href="https://www.printmegastore.net/shop" />
+      </Helmet>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cart Page Banner - shows only on cart page */}
         {isCartPage && (

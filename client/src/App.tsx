@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { EcwidProvider } from "@/lib/ecwid";
+import { HelmetProvider } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -54,21 +55,23 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <EcwidProvider>
-          <ScrollToTop />
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1 pt-[120px]">
-              <Router />
-            </main>
-            <Footer />
-          </div>
-        </EcwidProvider>
-        <Toaster />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <EcwidProvider>
+            <ScrollToTop />
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-1 pt-[120px]">
+                <Router />
+              </main>
+              <Footer />
+            </div>
+          </EcwidProvider>
+          <Toaster />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 }
 

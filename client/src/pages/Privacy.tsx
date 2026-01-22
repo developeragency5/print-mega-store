@@ -1,8 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Privacy Policy | Print Mega Store</title>
+        <meta name="description" content="Read Print Mega Store's privacy policy. Learn how we collect, use, and protect your personal information when you shop for printers and scanners." />
+        <meta property="og:title" content="Privacy Policy | Print Mega Store" />
+        <meta property="og:url" content="https://www.printmegastore.net/privacy" />
+        <link rel="canonical" href="https://www.printmegastore.net/privacy" />
+      </Helmet>
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <motion.div
